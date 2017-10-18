@@ -9,24 +9,19 @@ require('./styles/style.sass');
 
 general();
 // homePage();
-coursesList();
-aboutUsPage();
-faqPage();
-aboutCoursePage();
-spaces();
+// coursesList();
+// aboutUsPage();
+// faqPage();
+// spaces();
 
-console.log('i`m index js file: ', window.location.pathname);
-//if (window.location.pathname === '/courses-list.html') {
-//} else if (window.location.pathname === '/home-page.html') {
-//
-//} else if (window.location.pathname === '/about-us-page.html') {
-//}else if (window.location.pathname === '/faq.html') {
-//
-//}else if (window.location.pathname === '/about-course-page.html') {
-//
-//  // aboutUsPage();
-//}else if (window.location.pathname === '/spaces.html') {
-//
-//} else {
-//  console.info('no js, everything is ok!');
-//}
+// console.log('i`m js file: ', !!window.location.pathname.match(/creative/));
+if (!!window.location.pathname.match(/product/) && !window.location.pathname.match(/product-category/)) {
+  console.log('i`m product file: ', !!window.location.pathname.match(/product/));
+  aboutCoursePage();
+} else if (!!window.location.pathname.match(/product-category/)) {
+  console.log('i`m coursesList file: ', !!window.location.pathname.match(/coursesList/));
+  coursesList();
+} else {
+  console.log('i`m homepage file: ', !!window.location.pathname.match(/creative/));
+  homePage();
+}
