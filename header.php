@@ -121,7 +121,7 @@ ob_start('ob_html_compress');
                     <div class="cr-contacts">
                         <hr>
                         <div class="cr-contacts--location">
-                            Головний офіс:
+	                        <?php the_field( 'office','option' ); ?>
                         </div>
                         <ul class="cr-social-list">
                             <li class="cr-social-list__item"><a href="instagram.com">
