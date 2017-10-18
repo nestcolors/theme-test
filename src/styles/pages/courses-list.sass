@@ -1,0 +1,150 @@
+// @import "variables"
+// nav
+//   a
+//     position: absolute
+//     top: 40px
+//     right: 40px
+//     background-color: white
+//     height: 40px
+//     width: 40px
+// a
+//   font-size: 20px
+//   color: tomato !important
+//   text-decoration: none
+//   color: $primary-color !important
+//   background-color: grey
+// .color-container
+//   margin: 100px 0
+// .box
+//   height: 140px
+//   width: 140px
+//   display: inline-block
+//   margin: 2px
+//   transition: 0.2s
+//   box-shadow: 3px 3px 10px rgba(0,0,0,0.1)
+//   &:hover
+//     box-shadow: 3px 3px 10px rgba(0,0,0,0.4)
+//     opacity: 0.9
+//     transform: translateY(-2px)
+
+
+// .red
+//   background-color: red
+// .green
+//   background-color: green
+// .blue
+//   background-color: blue
+
+#courses-list
+	position: relative
+	padding: 0
+	margin: 0
+	.modal-view
+		margin-top: 0
+	.cr-section__header-top
+		width: 100%
+		@include media(mobile)
+			font-size: 18px
+			width: 100%
+			letter-spacing: 1.8px
+	.cr-modal-header-row
+		.cr-type-select
+			color: $white
+			margin: 80px -16px 0 0
+			font-family: 'Proxima Regular'
+			border: 2px solid $white
+	.courses-list-page
+		background-color: $white
+		padding: 10px 15px 40px
+		min-height: 100vh
+	.cta
+		margin-top: 12px
+		a
+			padding: 8px 14px
+			color: $light_gray
+			border: 2px solid $light_gray
+			margin-right: 20px
+			letter-spacing: 1.6px
+			display: inline-block
+			font-family: $bold
+			@include media(mobile)
+				margin-bottom: 20px
+				&:first-child
+					position: relative
+					top: 0
+					text-align: center
+					width: 100%
+			&:hover
+				color: $white
+				border: 2px solid $dark
+				background-color: $dark
+		.active
+			color: $white
+			border: 2px solid $dark
+			background-color: $dark
+	.box
+		margin-top: 35px
+		@include media(to_tablet)
+			margin-bottom: 40px
+		@include media(mobile)
+			margin-bottom: 10px
+		.cr-button
+			top: 0
+	.cr-collection
+		border-bottom: 5px solid $mint
+		.course-level-normal
+			background-color: $mint
+			color: $black
+	.course-level-normal
+		background-color: $white
+		border: 1px solid $mint
+		color: $mint
+	.course-level-intensive
+		background-color: $yellow
+		color: $black
+		border: 0px solid white
+	.course-level
+		padding: 2px 6px
+	.mode-button
+		&:before
+			position: absolute
+			top: -42px
+			font-size: 18px
+			background-color: $black
+			color: $white
+			font-family: $semibold
+			padding: 8px 19px
+			right: -2px
+			letter-spacing: 1.6px
+			@include media(mobile)
+				top: 0
+				padding: 5px 10px
+				margin: 10px
+	.mode-sale
+		&:before
+			content: "SALE"
+	.mode-new
+		&:before
+			content: "NEW"
+	.mode-best-prise
+		&:before
+			content: "BEST PRISE"
+	.cr-courses__chose-level
+		@include media(mobile)
+			position: absolute
+			right: 0
+			top: 0
+			padding: 5px 10px
+			margin: 10px
+
+	.t-bold
+		margin: 60px 0 40px
+		text-align: left
+		display: block
+		@include media(mobile)
+			margin: 40px 0 0
+.cr-courses__item
+	@include media(mobile)
+		margin-left: 0
+		width: 100%
+		padding: 20px 10px

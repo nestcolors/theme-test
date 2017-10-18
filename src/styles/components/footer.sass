@@ -1,0 +1,48 @@
+.cr-footer
+  background-color: $dark
+  padding-top: 20px
+  position: relative
+  .cr-horizontal-list
+    margin: 5px 0 0 0
+    display: inline-block
+    color: $white
+    @include media(to_tablet)
+      float: left
+    .cr-horizontal-list__item + .cr-horizontal-list__item
+      margin-left: 10px
+    @include media(mobile)
+      display: none
+  .cr-button
+    float: right
+    @include media(mobile)
+     float: none !important
+  .cr-social-list__item
+    & + .cr-social-list__item
+      margin-left: 25px
+.cr-social-list
+  margin: 0
+  padding: 0
+  list-style: none
+  @include media(to_tablet)
+    margin-top: 38px
+    left: 20px
+    position: relative
+  @include media(mobile)
+    margin: 60px 0 20px
+
+.cr-social-list__item
+  display: inline-block
+
+.cr-footer__copyright
+  font-size: 14px
+  color: rgba(255, 255, 255, 0.5)
+  text-align: center
+  padding: 16px 0
+  @include media(to_tablet)
+    float: right
+    margin-right: 150px
+  @include media(mobile)
+    position: absolute
+    right: 30px
+    bottom: 0px
+    margin-right: 0

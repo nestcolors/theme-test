@@ -1,0 +1,64 @@
+body
+  color: $black
+  background-color: $white
+  font-family: $light
+  transition: 0.2s
+  overflow-x: hidden
+  @include media(to_tablet)
+    padding-top: 45px
+
+p
+  font-size: 16px
+  @include media(mobile)
+  font-size: 14px
+.cr-horizontal-list
+  list-style: none
+  padding-left: 0
+.cr-horizontal-list__item
+  display: inline-block
+.clear
+  clear: both
+button, a
+  &:focus
+    outline: 0
+div
+  outline: 0
+
+.margin-left-xs
+  margin-left: 5px
+.margin-right-xs
+  margin-right: 5px
+.margin-top-xs
+  margin-top: 5px
+.margin-xs
+  margin: 5px
+
+.margin-left-sm
+  margin-left: 10px
+.margin-right-sm
+  margin-right: 10px
+.margin-top-sm
+  margin-top: 10px
+.margin-sm
+  margin: 10px
+
+.margin-left-md
+  margin-left: 20px
+.margin-right-md
+  margin-right: 20px
+.margin-top-md
+  margin-top: 20px
+.margin-md
+  margin: 20px
+
+body
+  // cursor: url(~/src/images/icons/selector.svg), auto
+.page-wrapper
+  // cursor: url(~/src/images/icons/scrolling.svg), auto
+a
+  // cursor: url(~/src/images/icons/selector.svg), auto
+.cursor-pointer
+  cursor: pointer
+
+.js-paralax-effect
+  // transition: all .05s

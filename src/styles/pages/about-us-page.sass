@@ -1,0 +1,121 @@
+.cr-about-us-hero
+  margin-top: 190px
+
+.cr-text-block__small-title
+  @extend h2
+  text-transform: uppercase
+  font-family: $bold
+  letter-spacing: 2px
+
+.cr-text-block__big-title
+  @extend h1
+  text-transform: uppercase
+  letter-spacing: 0px
+  @include media(to_tablet)
+    color: #fbf7f6
+    letter-spacing: -2px
+  @include media(mobile)
+    font-size: 35px
+    line-height: 1.89
+    letter-spacing: 6.6px
+    text-align: left
+
+.cr-black-board
+  width: 527px
+  padding: 30px 50px 30px 70px
+  background-color: $dark
+  color: #fff
+  position: relative
+  margin-left: -70px
+  @include media(xwide)
+    &.cooperation
+      padding: 30px 50px 110px 70px !important
+      margin-top: 50px !important
+  @include media(wide)
+    &.cooperation
+      padding: 30px 50px 70px 70px
+      margin-top: 0px
+  @include media(tablet)
+    background-color: transparent
+  @include media(mobile)
+    background-color: transparent
+    margin-left: 0
+  .cr-button-email
+    float: left
+    position: relative
+    left: -397px
+    @include media(to_tablet)
+      left: 0
+      border: 2px solid $white
+    @include media(mobile)
+      display: block
+      float: none
+      border: none
+      padding: 0
+      margin-bottom: 52px
+  .cr-button-write
+    float: left
+    bottom: 40px
+    left: -70px
+    @include media(to_tablet)
+      float: right
+      bottom: 0
+      left: 0
+    @include media(mobile)
+      float: none
+  h3
+    margin-top: 0
+    font-size: 20px
+    line-height: 21px
+    letter-spacing: 2px
+    & + p
+      margin-top: 40px
+      &:first-letter
+        padding-left: 20px
+    @include media(mobile)
+      text-align: left
+  p
+    font-size: 18px
+    margin-bottom: 25px
+    line-height: 1.5
+    @include media(mobile)
+      margin-top: 0
+      margin-bottom: 45px
+      text-align: left
+  .cr-button
+    color: $white
+    float: right
+    background: $dark
+    @include media(to_tablet)
+      left: 46px
+    @include media(mobile)
+      left: 0
+      float: none
+  @include media(to_tablet)
+    padding: 0 0 0 69px
+    width: auto
+  @include media(mobile)
+    padding: 0
+    left: 0
+    text-align: center
+.curator
+  bottom: -310px
+  @include media(to_tablet)
+    bottom: 0
+    margin-top: 50px
+.recommended-courses
+  top: 0
+  margin: 30px 0 50px
+  @include media(mobile)
+    margin: 0
+.cr-courses__item .slick-cloned
+  margin: 0 50px
+.cr-recommendation-slider
+  img
+    display: inline-block
+  .slick-arrow
+    bottom: 25px
+    right: 100px
+  .slick-prev
+    right: 150px
+    z-index: 999

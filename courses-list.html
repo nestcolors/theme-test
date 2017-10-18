@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>courses list page</title>
+  <meta name="description" content="Free Web tutorials courses-list">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript courses-list">
+  <meta name="author" content="John Doe courses-list">
+  <link rel="stylesheet" href="src/styles/vendors/bootstrap.min.css">
+</head>
+<body id="courses-list">
+  <div class="modal-view">
+    <div class="cr-section mod-black">
+      <div class="container">
+        <div class="row cr-modal-header-row">
+          <div class="col-xs-12">
+            <a href="./home-page.html" class="cr-header__logo">
+              <img src="src/images/assets/logo-creative-w.svg" alt="logo" class="">
+            </a>
+            <div class="row cr-modal-header">
+              <div class="col-xs-12 col-sm-8">
+                <div class="cr-section__header">
+                  <div class="cr-section__header-top">всі курси та напрямки —  </div>
+                  All courses
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <div class="cr-type-select">
+                  Дизайн
+                  <ul class="cr-type-select-value show-on-click">
+                    <li><a href="./about-course-page.html">Бізнес</a></li>
+                    <li><a href="./about-course-page.html">Креатив</a></li>
+                    <li><a href="./about-course-page.html">Junior</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="./home-page.html">
+              <div class="close-icon"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="courses-list-container" class="courses-list-page row">
+          <div class="cta filter">
+            <a class="all active" data-filter="all" href="#" role="button">Показати всі</a>
+            <a class="seredovysche" data-filter="seredovysche" href="#" role="button">Середовище</a>
+            <a class="graphic" data-filter="graphic" href="#" role="button">Графіка</a>
+            <a class="clothes" data-filter="clothes" href="#" role="button">Костюм</a>
+            <a class="intensives" data-filter="intensives" href="#" role="button">Інтенсиви</a>
+          </div>
+
+          <div class="col-xs-12 boxes">
+            <div class="color-container row" data-category="seredovysche-container">
+              <h3 id="design">СЕРЕДОВИЩЕ —</h3>
+              <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="seredovysche">
+                <div class="cr-courses__item mode-gray cr-collection">
+                  <span class="course-level course-level-normal">базус</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> маркетинг послуг очима клієнта
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="seredovysche">
+                <div class="cr-courses__item mode-gray mode-sale mode-button cr-collection">
+                  <span class="course-level course-level-normal">профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> маркетинг послуг очима клієнта
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="seredovysche">
+                <div class="cr-courses__item mode-gray cr-collection">
+                  <span class="course-level course-level-normal">базус+профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> маркетинг послуг очима клієнта
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="seredovysche">
+                <div class="cr-courses__item mode-gray mode-new mode-button">
+                  <span class="course-level course-level-normal course-level-intensive">інтенсив</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> маркетинг
+                    послуг очима
+                    клієнта
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="seredovysche">
+                <div class="cr-courses__item mode-gray">
+                  <span class="course-level course-level-normal">базус</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування інтер’єрів
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="seredovysche">
+                <div class="cr-courses__item mode-gray">
+                  <span class="course-level course-level-normal">профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування інтер’єрів
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+            </div>
+            <div class="color-container row" data-category="graphic-container">
+              <h3 id="graph-design">ГРАФІКА —</h3>
+              <div class="graphic box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="graphic">
+                <div class="cr-courses__item mode-gray cr-collection">
+                  <span class="course-level course-level-normal">базус</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Рисунок та графіка
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="graphic box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="graphic">
+                <div class="cr-courses__item mode-gray mode-sale mode-button cr-collection">
+                  <span class="course-level course-level-normal">профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Рисунок та графіка
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="graphic box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="graphic">
+                <div class="cr-courses__item mode-gray cr-collection">
+                  <span class="course-level course-level-normal">базус+профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Рисунок та графіка
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="graphic box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="graphic">
+                <div class="cr-courses__item mode-gray mode-new mode-button">
+                  <span class="course-level course-level-normal course-level-intensive">інтенсив</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Рисунок та графіка
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="graphic box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="graphic">
+                <div class="cr-courses__item mode-gray">
+                  <span class="course-level course-level-normal">базус</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування інтер’єрів
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="graphic box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="graphic">
+                <div class="cr-courses__item mode-gray">
+                  <span class="course-level course-level-normal">профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування інтер’єрів
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+            </div>
+            <div class="color-container row" data-category="clothes-container">
+              <h3 id="clothes-design">КОСТЮМ —</h3>
+              <div class="clothes box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="clothes">
+                <div class="cr-courses__item mode-gray cr-collection">
+                  <span class="course-level course-level-normal">базус</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування та дизайн одягу
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="clothes box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="clothes">
+                <div class="cr-courses__item mode-gray mode-sale mode-button cr-collection">
+                  <span class="course-level course-level-normal">профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування та дизайн одягу
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="clothes box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="clothes">
+                <div class="cr-courses__item mode-gray cr-collection">
+                  <span class="course-level course-level-normal">базус+профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування та дизайн одягу
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="clothes box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="clothes">
+                <div class="cr-courses__item mode-gray mode-new mode-button">
+                  <span class="course-level course-level-normal course-level-intensive">інтенсив</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування та дизайн одягу
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="clothes box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="clothes">
+                <div class="cr-courses__item mode-gray">
+                  <span class="course-level course-level-normal">базус</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування інтер’єрів
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+              <div class="clothes box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="clothes">
+                <div class="cr-courses__item mode-gray">
+                  <span class="course-level course-level-normal">профі</span>
+                  <p class="cr-courses__title">
+                    <span>Design.</span> Проектування інтер’єрів
+                  </p>
+                  <p class="course-start">
+                    Початок: <strong>вересень</strong>
+                  </p>
+                  <p class="course-price">
+                    Вартість: <strong>13 000 грн,</strong>
+                  </p>
+                  <p class="discount">
+                    (при повній оплаті до 20.08 - 5% )
+                  </p>
+                  <a class="cr-button center-block" href="./about-course-page.html">переглянути</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./dist/index.bundle.js"></script>
+    </body>
+    </html>

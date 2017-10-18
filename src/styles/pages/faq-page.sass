@@ -1,0 +1,69 @@
+.cr-faq-modal
+  padding-top: 60px
+  padding-bottom: 50px
+  .row + .row
+    margin-top: 55px
+.cr-faq-row-caption
+  padding-left: 130px
+  font-size: 18px
+  color: #080808
+  font-family: $bold
+  position: relative
+  @include media(to_tablet)
+    padding-left: 30px
+  &:after
+    content: ""
+    width: 50px
+    height: 2px
+    background: #ccc
+    bottom: -30px
+    position: absolute
+    left: 130px
+    @include media(to_tablet)
+      display: none
+.cr-faq-row-answer
+  font-size: 14px
+  padding-left: 95px
+  padding-right: 115px
+  margin-top: 0
+  @include media(to_tablet)
+    padding-left: 30px
+  @include media(mobile)
+    padding-right: 20px
+
+.cr-faq-modal__header
+  padding-left: 15px
+
+.cr-faq-modal__header-top
+  text-transform: uppercase
+  font-family: $bold
+  color: #929292
+  margin-bottom: 15px
+  line-height: 1
+  font-size: 20px
+.cr-faq-modal__header-bottom
+  margin-bottom: 50px
+  text-transform: uppercase
+  font-size: 65px
+  font-family: $bold
+  color: #080808
+  line-height: 1
+
+.cr-faq-modal__close-btn
+  position: absolute
+  right: 35px
+  top: 25px
+  width: 40px
+  height: 40px
+  display: block
+  span
+    position: absolute
+    top: 18px
+    left: 0
+    width: 40px
+    height: 2px
+    background-color: #080808
+    &:first-child
+      transform: rotate(45deg)
+    &:last-child
+      transform: rotate(-45deg)

@@ -1,0 +1,285 @@
+@keyframes appear-list
+from {transform: translateY(20px); opacity: 0;}
+to {transform: translateY(0px); opacity: 1;}
+
+.cr-header
+  position: fixed
+  top: 0
+  width: 100%
+  left: 0
+  right: 0
+  background: #fff
+  z-index: 10
+  @include media(to_tablet)
+    height: 45px
+    border-bottom: 4px solid $dark
+    position: fixed
+    width: 100vw
+  .cr-horizontal-list
+    margin-top: 25px
+  .cr-horizontal-list__item
+    & + .cr-horizontal-list__item
+      margin-left: 40px
+
+.cr-header__link
+  padding: 3px 5px
+  font-size: 14px
+  color: $dark
+  font-family: $regular
+  text-transform: uppercase
+  letter-spacing: 1.5px
+  font-weight: bold
+  padding-bottom: 18px
+  &:hover
+    text-decoration: none
+    color: $mint
+  &.mod-active
+    color: $mint
+// border-bottom: 4px solid #7dc5ba
+.cr-header__motto
+  text-align: center
+  color: $light_gray
+  padding-top: 10px
+  padding-bottom: 15px
+  font-size: 14px
+  line-height: 27px
+  letter-spacing: .4px
+  @include media(to_tablet)
+    display: none
+
+.cr-header__fixed-part
+  background-color: #FFF
+  border-bottom: 4px solid $dark
+  height: 65px
+  position: relative
+  width: 100%
+  @include media(to_tablet)
+    z-index: 1
+    position: fixed
+    top: 45px
+    width: 100%
+    min-height: 100%
+    background-color: rgba(8, 8, 8, 0.8)
+    transform: translate(0, 100%)
+    opacity: 0
+    transition: all .2s
+    .mod-mobile-opened &
+      transform: translate(0)
+      opacity: 1
+    .cr-header__link
+      color: #fff
+      font-size: 14px
+      display: block
+      padding: 10px 40px
+      &:hover, &.mod-active
+        border: none
+    .cr-horizontal-list
+      float: none !important
+      margin-top: 80px
+    .cr-horizontal-list__item
+      & + .cr-horizontal-list__item
+        display: block
+        margin-left: 0
+  &.mod-fixed
+    position: fixed
+    top: 0
+    z-index: 999
+    @include media(to_tablet)
+      top: 45px
+  .cr-horizontal-list
+    position: relative
+    li.cr-horizontal-list__item
+      position: relative
+    li.cr-horizontal-list__item.cr-sublist-container
+      & > .cr-header__link
+        &.mod-active:after
+          border-color: $mint
+        &:after
+          position: absolute
+          width: 6px
+          height: 6px
+          border-right: 1px solid black
+          border-bottom: 1px solid black
+          content: ''
+          right: -10px
+          top: 6px
+          transform: rotateZ(45deg)
+    .cr-horizontal-list-sub-menu
+      display: none
+      position: absolute
+      list-style-type: none
+      background-color: white
+      padding: 10px 70px 30px 30px
+      top: 36px
+      border-top: 4px solid black
+      width: 200px
+      .cr-sub-menu-item
+        margin-top: 30px
+        a
+          color: $black
+          &:hover
+            color: $mint
+    .show-cr-list-sub-menu
+      display: block
+      animation: appear-list
+      animation-duration: 0.15s
+
+// &.mod-mobile-menu-closed
+//   @include media(to_tablet)
+//     display: none
+
+.cr-header__logo
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  img
+    height: 20px
+  @include media(to_tablet)
+    top: 16px
+    transform: translate(-50%)
+  @include media(mobile)
+    top: 15px !important
+
+body
+  position: relative
+  &.header-is-fixed
+    padding-top: 65px
+
+.cr-close-btn
+  @include media(to_tablet)
+    cursor: pointer
+    padding: 10px
+    right: 25px
+    top: 10px
+    position: absolute
+    width: 20px
+    height: 20px
+    background-size: 100%
+    background-image: url("/src/images/icons/close-icon.png")
+    background-repeat: no-repeat
+    background-position: center center
+
+.cr-header__mobile
+  position: relative
+// .cr-header__logo
+//   width: 89px
+//   @include media(mobile)
+//     top: 0
+//   img
+//     height: 20px
+//     max-width: 100%
+//     margin-top: 0px
+.cr-burger-btn
+  position: absolute
+  width: 40px
+  height: 40px
+  right: 10px
+  top: 0
+  cursor: pointer
+  &:after,  &:before
+    content: ''
+    width: 23px
+    height: 2px
+    background-color: $dark
+    position: absolute
+    left: 10px
+    top: 20px
+    transform: rotate(0)
+    transition: transform .3s
+  &:after
+    top: 25px
+  .cr-header.mod-mobile-opened &
+    &:after
+      // transition: transform .3s
+      top: 25px
+      transform: rotate(-45deg)
+    &:before
+      // transition: transform .3s
+      top: 25px
+      transform: rotate(45deg)
+
+.cr-header-popup
+  width: 430px
+  padding: 42px 27px 17px 22px
+  position: absolute
+  top: 36px
+  background-color: #fff
+  border-top: 4px solid black
+  right: 0
+  display: none
+  &.show-header-popup
+    display: block
+    animation: appear-list
+    animation-duration: 0.15s
+
+
+.cr-contacts
+  text-align: right
+  font-family: $regular
+  hr
+    margin-top: 10px
+    margin-bottom: 10px
+    border-color: #979797
+  .cr-social-list__item
+    & + .cr-social-list__item
+      margin-left: 25px
+.cr-contacts--location
+  font-size: 14px
+.cr-contacts--address
+  color: $black
+  font-size: 18px
+  font-family: $bold
+.cr-contacts--working-hour
+  font-size: 14px
+  margin-top: 30px
+  font-family: $regular
+.cr-contacts--phone
+  font-size: 18px
+  font-family: $bold
+  margin-bottom: 20px
+  color: $black
+.cr-contacts--phone-separator
+  display: inline-block
+  height: 13px
+  vertical-align: middle
+  border-right: solid 1px #979797
+.cr-contacts--email
+  font-size: 16px
+  &:hover
+    color: $mint
+
+.cr-mobile-menu-wrapper
+  .cr-social-list
+    margin-top: 0
+    left: auto
+    margin-bottom: 40px
+  .cr-vertical-list
+    display: block
+    text-align: center
+    width: 100%
+    color: $white
+    font-family: $bold
+    font-size: 16px
+    margin: 45px 0
+    list-style: none
+    padding: 0
+    &:first-child
+      margin-bottom: 40px
+  .cr-vertical-list__item
+    padding: 10px 0
+    text-transform: uppercase
+    a
+      color: $white
+      &:hover
+        color: #fff
+  hr
+    border-color: #fff
+  .cr-contacts--phone-separato
+    border-color: #fff
+  .cr-contacts--address
+    font-size: 16px
+    color: #fff
+  .cr-contacts--phone
+    margin: 10px 0
+    color: #fff

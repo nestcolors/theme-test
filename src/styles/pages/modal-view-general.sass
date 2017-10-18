@@ -1,0 +1,42 @@
+.modal-view
+  padding-top: 0
+  position: relative
+  @include media(tablet)
+    margin-top: -45px
+  @include media(mobile)
+    margin-top: -45px
+  .mod-black
+    background: #000
+    margin-top: 0
+    padding-bottom: 28px
+    // cursor: url(~/src/images/icons/cursor-close-icon.png), auto
+    z-index: 99
+    .modal-body
+      cursor: default
+      position: relative
+      z-index: 999
+    .cr-modal-header-row
+      .cr-section__header
+        padding: 0
+        margin-bottom: 20px
+      .cr-modal-header
+        margin-top: 100px
+    .close-icon
+      display: block
+      background: url(~/src/images/icons/close-icon.png)
+      background-repeat: no-repeat
+      background-size: 40px
+      height: 40px
+      width: 40px
+      position: absolute
+      right: 0
+      top: 25px
+      transition: 0.2s
+      &:hover
+        transform: scale(1.1, 1.1)
+      @include media(mobile)
+        top: 15px
+        right: 15px
+        height: 20px
+        width: 20px
+        background-size: 100%

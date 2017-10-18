@@ -1,0 +1,60 @@
+// COLORS
+// $dark: #080808
+$dark: #000
+$light_gray: #929292
+$white: #fbf7f6
+
+$mint: #7dc5ba
+
+$lilac: #be639c
+$blue: #00b5ad
+$yellow: #fff450
+$orange: #f5954f
+
+$black: #131313
+
+// FONTS
+
+$light: "Proxima Light"
+$regular: "Proxima Regular"
+$semibold: "Proxima Semibold"
+$bold: "Proxima Bold"
+
+
+// $font-stack: sans-serif;
+// $primary-color: white;
+// $secondary-color: #ddd;
+
+// MIXIN FOR RESPONSIVE
+@mixin media($media)
+  @if $media == mobile
+    @media only screen and (max-width: 500px)
+      @content
+  @else if $media == to_mobile
+    @media only screen and (max-width: 767px)
+      @content
+  @else if $media == tablet
+    @media only screen and (min-width: 768px) and (max-width: 991px)
+      @content
+  @else if $media == to_tablet
+    @media only screen and (max-width: 991px)
+      @content
+  @else if $media == wide
+    @media only screen and (min-width: 992px)
+      @content
+  @else if $media == swide
+    @media only (min-height: 780px) and (min-width: 1200px)
+      @content
+  @else if $media == xwide
+    @media only (min-height: 900px) and (min-width: 1380px)
+      @content
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content

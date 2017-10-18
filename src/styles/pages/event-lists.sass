@@ -1,0 +1,48 @@
+.cr-events-list
+	background: #fbf7f6
+	padding-top: 60px
+	.courses-link
+		position: relative
+		display: block
+		color: $black
+		.row
+			position: relative
+			&:hover
+				background: rgba(192, 192, 192, .1)
+	.cr-link
+		margin-bottom: 30px
+		letter-spacing: 1.6px
+
+.mod-black
+	a
+		top: 37px
+.cr-events-list .courses-link .row:after
+		content: ""
+		width: 50px
+		height: 2px
+		background: #ccc
+		bottom: -20px
+		position: relative
+		left: 15%
+		@include media(to_tablet)
+			width: 0
+			height: 0
+		@include media(mobile)
+			width: 0
+			height: 0
+
+.courses-link.special
+	&:after
+		content: ''
+		background-image: url(~/src/images/icons/star-black.svg)
+		width: 20px
+		height: 20px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		position: absolute
+		display: block
+		right: 0
+		top: 0
+		// transform: translate(0, -50%)
+

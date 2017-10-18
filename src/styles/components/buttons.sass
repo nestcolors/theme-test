@@ -1,0 +1,253 @@
+a
+  text-decoration: none !important
+.cr-button
+  border: 2px solid $black
+  padding: 10px 70px 10px 20px
+  line-height: 1
+  font-size: 16px
+  background: none
+  font-family: $bold
+  position: relative
+  letter-spacing: 1.6px
+  cursor: pointer
+  color: $dark
+  &:hover
+    background: $dark
+    color: $white
+    &:after
+      right: 12px
+      border-color: $white
+      width: 43px
+    &:before
+      right: 12px
+      border-color: $white
+  &:after
+    content: ''
+    position: absolute
+    right: 21px
+    top: 19px
+    border-top: 1px solid $dark
+    width: 34px
+    transition: 0.2s
+  &:before
+    content: ''
+    position: absolute
+    right: 21px
+    top: 15.5px
+    width: 8px
+    height: 8px
+    border-top: 1px solid $dark
+    border-right: 1px solid $dark
+    transform: rotate(45deg)
+    transition: 0.2s
+  &.mod-white
+    border-color: #fff
+    color: #fff
+    &:after, &:before
+      border-color: #fff
+      color: #fff
+.cr-button.transparent
+  &:hover
+    background: rgba(0,0,0,0)
+.cr-button-email
+  border: 2px solid $dark
+  padding: 10px 20px 10px 20px
+  line-height: 1
+  font-size: 16px
+  background: $dark
+  font-family: $bold
+  position: relative
+  letter-spacing: 1.6px
+  color: $white
+  cursor: pointer
+  text-decoration: none
+  &:hover
+    color: $white
+.cr-button-write
+  border: 2px solid $mint
+  padding: 10px 20px 10px 20px
+  line-height: 1
+  font-size: 16px
+  background: $mint
+  font-family: $bold
+  position: relative
+  letter-spacing: 1.6px
+  color: $white
+  cursor: pointer
+  text-decoration: none
+  @include media(mobile)
+    padding: 10px 32px 10px 32px
+  &:hover
+    background-color: $white
+    color: $mint
+button.cr-button--vertical
+  @extend .cr-button
+  width: 58px
+  height: 126px
+  padding: 0
+  position: relative
+  cursor: pointer
+  &:hover
+    background: $dark
+    color: $white
+    &:after
+      right: -16.5px !important
+      bottom: 8px
+    &:before
+      right: 22px !important
+      bottom: 8px
+  .cr-button__label
+    position: absolute
+    top: 35px
+    white-space: nowrap
+    left: 50%
+    transform: translate(-50%, 0)
+    letter-spacing: 9.6px
+    font-size: 16px
+    text-transform: uppercase
+    font-family: $bold
+  &:after
+    border-top: none
+    border-left: 1px solid $dark
+    width: 0
+    height: 34px
+    right: 25.5px
+    bottom: 15px
+    top: auto
+  &:before
+    transform: rotate(135deg)
+    right: 22px
+    bottom: 15px
+    top: auto
+
+.cr-link
+  color: $mint
+  text-decoration: underline
+  font-family: $bold
+  font-size: 16px
+  letter-spacing: 1.6px
+  cursor: pointer
+  &:hover
+    color: $dark
+
+.cr-link--white
+  color: $white
+
+.cr-back-link
+  padding-left: 30px
+  position: relative
+  font-size: 16px
+  letter-spacing: 1.6px
+  line-height: 25px
+  color: $dark
+  font-family: $bold
+  text-decoration: none
+  &:hover
+    color: $mint
+    text-decoration: none
+    &:after, &:before
+      left: -5px
+      transition: 0.2s
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 10px
+    border-top: 1px solid $dark
+    width: 22px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 7px
+    width: 8px
+    height: 8px
+    border-top: 1px solid $dark
+    border-right: 1px solid $dark
+    transform: rotate(-135deg)
+
+.cr-button-accent
+  background-color: $mint
+  color: #fff
+  height: 40px
+  line-height: 39px
+  padding: 10px 20px 10px 20px
+  border: none
+  box-shadow: none
+  font-family: $bold
+  letter-spacing: 1.6px
+  font-size: 16px
+  cursor: pointer
+  margin: 0 25px
+  border: 2px solid $mint
+  text-align: center
+  @include media(mobile)
+    margin-top: 25px
+  &:hover
+    background-color: $white
+    color: $mint
+
+
+.cr-button-sign-in
+  border: 2px solid $white
+  padding: 10px 70px 10px 20px
+  line-height: 1
+  font-size: 16px
+  background: none
+  font-family: $bold
+  position: relative
+  letter-spacing: 1.6px
+  cursor: pointer
+  color: $white
+  &:after
+    content: ''
+    position: absolute
+    right: 15px
+    top: 19px
+    border-top: 1px solid $white
+    width: 34px
+  &:before
+    content: ''
+    position: absolute
+    right: 15px
+    top: 16px
+    width: 8px
+    height: 8px
+    border-top: 1px solid $white
+    border-right: 1px solid $white
+    transform: rotate(45deg)
+  &.mod-white
+    border-color: #fff
+    &:after, &:before
+      border-color: #fff
+.no-border-xs
+  @include media(mobile)
+    border: none
+    color: $mint
+    width: 100%
+    padding: 0
+    margin-top: 20px
+    &:after
+      content: ''
+      display: none
+    &:before
+      content: ''
+      display: none
+
+.cr-button-registration
+  border: 2px solid $mint
+  padding: 10px 20px 10px 20px
+  line-height: 1
+  font-size: 16px
+  background: $mint
+  font-family: $bold
+  position: relative
+  letter-spacing: 1.6px
+  color: $white
+  cursor: pointer
+  text-decoration: none !important
+  @include media(mobile)
+    padding: 10px 32px 10px 32px
+  &:hover
+    background-color: $white
+    color: $mint

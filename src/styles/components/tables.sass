@@ -1,0 +1,60 @@
+.cr-white-table
+  width: 100%
+  font-size: 16px
+  margin-bottom: 20px
+  @include media(mobile)
+    thead
+      display: none
+    &, tbody, tr, td
+      display: block
+  th
+    padding-bottom: 15px
+    font-size: 16px
+  tbody
+    transition: 0.2s
+    @include media(to_tablet)
+      background-color: #F6F2F2
+      border-top: 10px solid #F6F2F2
+      border-bottom: 21px solid $white
+    @include media(mobile)
+      padding-left: 30px
+    td
+      padding-bottom: 40px
+      vertical-align: top
+    &:hover
+      cursor: pointer
+      color: #7dc5ba
+      .cr-table__row-caption>div
+        background-color: $mint
+        color: $white
+.cr-table__row-caption
+  font-family: $bold
+  font-size: 18px
+  padding-right: 100px
+  text-align: right
+  letter-spacing: 1.8px
+  @include media(to_tablet)
+    padding-right: 80px
+  @include media(mobile)
+    padding-right: 0
+    text-align: left
+  div
+    padding-left: 39px
+    padding-right: 16px
+    @include media(mobile)
+      padding-left: 0
+.t-col--400
+  width: 400px
+.cr-cell-label
+  font-size: 16px
+  font-family: $light
+  font-weight: bold
+  padding-right: 5px
+
+
+.cr-flex-table
+  margin-top: 80px
+  margin-bottom: 50px
+.cr-flex-table__item
+  & + .cr-flex-table__item
+    margin-top: 20px

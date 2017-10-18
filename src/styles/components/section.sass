@@ -1,0 +1,69 @@
+.cr-section
+  margin-top: 120px
+  @include media(wide)
+    margin-top: 80px
+  &.less-margin
+    margin-top: 70px
+  &.sm-margin
+    margin-top: 50px
+  &.extra-margin
+    margin-top: 150px
+  &.mod-no-margin-tablets
+    @include media(to_tablet)
+      margin-top: 0
+  &.mod-black
+    background-color: $black
+    .cr-section__header
+      padding: 80px 0 60px
+      color: #fff
+      margin-bottom: 0
+      margin-bottom: 0
+      @include media(mobile)
+        padding: 80px 0 40px
+  &.mod-margin-to-hero
+    margin-top: -230px
+    @include media(xwide)
+      margin-top: -100px
+    @include media(to_tablet)
+      margin-top: -150px
+    @include media(mobile)
+      margin-top: 0px
+  .cr-link
+    display: block
+    margin-bottom: 50px
+.cr-section__header
+  line-height: 50px
+  @extend h1
+  text-transform: uppercase
+  letter-spacing: 0px
+  margin-bottom: 30px
+  @include media(to_tablet)
+    letter-spacing: -2px
+    margin-bottom: 28px
+  @include media(mobile)
+    margin: 10px 0
+    line-height: 45px
+.cr-section__header-top
+  margin: 0
+  @extend h2
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-family: $bold
+  @include media(to_tablet)
+    width: 450px
+  @include media(mobile)
+    line-height: 0
+    margin-bottom: 10px
+.cr-section__header-desrc
+  font-family: $regular
+  font-size: 16px
+  line-height: 21px
+  margin: 60px
+  @include media(to_tablet)
+    margin: 0
+  @include media(mobile)
+    margin: 0
+.inline-block-tablet
+  @include media(to_tablet)
+    display: inline-block
+    margin-top: 0 !important

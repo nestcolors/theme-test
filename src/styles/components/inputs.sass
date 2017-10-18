@@ -1,0 +1,33 @@
+.cr-type-select
+	min-width: 230px
+	border: 2px solid $black
+	background-color: rgba(52, 73, 94, 0.1)
+	-webkit-appearance: none
+	-moz-appearance: none
+	text-indent: 1px
+	text-overflow: ''
+	height: 47px
+	padding-left: 45px
+	@include media(mobile)
+		width: 100%
+		margin-bottom: 50px
+.cr-type-email
+	width: 330px
+	height: 40px
+	background-color: transparent
+	border: 2px solid $black
+	padding: 19px 14px 21px
+	margin-right: 11px
+	cursor: pointer
+	@include media(mobile)
+		width: 290px
+		height: 40px
+	@include placeholder
+		font-family: $regular
+		font-size: 16px
+		line-height: 2.21
+		letter-spacing: 1.6px
+		color: #cac6c6
+		text-align: center
+	@include media(mobile)
+		margin-bottom: 30px

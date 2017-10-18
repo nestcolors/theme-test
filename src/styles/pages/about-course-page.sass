@@ -1,0 +1,272 @@
+@keyframes bg-size
+  from {transform: scale(1)}
+  to {transform: scale(1.05, 1.05)}
+@keyframes appear-list
+  from {transform: translateY(20px); opacity: 0;}
+  to {transform: translateY(0px); opacity: 1;}
+// to {background-color: yellow;}
+.slick-list
+  padding-bottom: 20px
+  @include media(mobile)
+    padding-bottom: 0px
+.cr-course-block
+  background-color: $white
+  width: 100%
+  padding: 43px 67px
+  @include media(to_tablet)
+    padding: 30px 60px
+  @include media(mobile)
+    padding: 0px 10px
+  .cr-section__header
+    margin-bottom: 50px
+    @include media(mobile)
+      margin-bottom: 5px
+  .cr-type-select
+    @include media(mobile)
+      margin-bottom: 20px
+      ul
+        margin-left: 2px
+  .google-registration
+    opacity: 0.5
+    font-family: $light
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.5
+    float: right
+    color: rgba(8, 8, 8, 0.5)
+    margin-top: 20px
+  .no-border-xs
+    @include media(to_mobile)
+      padding: 10px 20px 10px 20px
+      text-align: center
+      display: block
+      margin-bottom: 20px
+  .cr-button-accent
+    @include media(to_mobile)
+      display: block
+      padding: 0
+      margin-top: 0
+
+.cr-hero-container
+  height: 620px
+  position: relative
+  @include media(to_tablet)
+    height: 575px
+  @include media(mobile)
+    height: 280px
+    margin-bottom: 25px
+  .cr-hero
+    height: 920px
+    width: 100%
+    background-repeat: repeat-x
+    background-size: cover
+    background-attachment: fixed
+    background-position: center
+    background-center: left
+    animation-name: bg-size
+    animation-duration: 15s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    animation-direction: alternate
+    @include media(xwide)
+      max-height: 820px
+    @include media(to_tablet)
+      height: 575px
+      background-size: 100%
+      background-position: top
+    @include media(mobile)
+      background-attachment: inherit
+      height: 310px
+      background-size: 100%
+      background-position: top
+.cr-section
+  @include media(mobile)
+    margin-top: 40px
+    .cr-slider__text-block
+      margin-top: -20px
+.cr-schedule-table
+  @include media(mobile)
+    margin-bottom: 20px
+    .thead
+      margin-top: 20px
+    .cr-flex-table__item + .cr-flex-table__item
+      margin: 10px 0
+.cr-course-block__footer
+  margin-top: 35px
+.fixed-to-screen
+  .cr-course-block__footer
+    margin-top: 0
+  display: none
+  position: fixed
+  width: 100%
+  background-color: white
+  bottom: 0
+  z-index: 999
+  left: 0
+  margin: 0
+  padding: 10px 50px
+  .cr-button
+    display: inline-block
+  .back-to
+    margin-top: 10px
+  @include media(mobile)
+    padding: 10px 0
+    .cr-course-block__footer
+      margin-top: 10px
+    .cr-button
+      padding-right: 20px
+      display: inline-block
+      &::after, &::before
+        display: none
+    .back-to
+      margin-top: 0px
+      .cr-back-link
+        margin-top: 8px
+        display: block
+.cr-two-columns
+  font-size: 18px
+  line-height: 1.28
+  p
+    font-family: $light
+    font-size: 18px
+    font-weight: 300
+    line-height: 1.7
+    color: $dark
+    @include media(mobile)
+      font-size: 16px
+  .t-a-center
+    margin-bottom: 26px
+    margin-top: 50px
+    font-family: $regular
+  .cr-button-email
+.cr-two-columns__header
+  font-family: $bold
+  font-size: 20.3px
+  line-height: 1.17
+  letter-spacing: 2px
+  text-transform: uppercase
+.about-course-our-works .cr-black-board
+  @include media(wide)
+    margin-top: 50px
+    padding-bottom: 90px
+.m-top-25
+  margin-top: 20px
+.no-margin-tablet
+  @include media(to_tablet)
+    margin: 0
+    padding: 0
+    width: 100%
+.cr-simple-list
+  line-height: 2
+  // font-family: "Proxima Regular"
+  font-size: 18px
+  font-weight: 100
+  color: #000
+  @include media(mobile)
+    margin-left: -20px
+    font-size: 16px
+.display-flex-on-small
+  @include media(to_tablet)
+    display: flex
+    flex-wrap: wrap
+  @include media(mobile)
+    display: flex
+    flex-wrap: wrap
+.cr-button-registration
+  float: left
+  bottom: 40px
+  left: -70px
+  @include media(to_tablet)
+    float: right
+    bottom: 40px
+    left: 239px
+  @include media(mobile)
+    float: none
+    bottom: 0
+    left: 0
+.mod-left
+  left: -475px
+  &:after
+    display: none
+  &:before
+    display: none
+  @include media(mobile)
+    width: 218px
+    margin: 0 auto
+    margin-bottom: 38px
+    display: block
+    padding: 10px
+.cr-reviews-slider
+  img
+    display: inline-block
+  .cr-respond-item__content
+    display: inline-block
+  .slick-arrow
+    bottom: 25px
+    right: 100px
+  .slick-prev
+    right: 150px
+    z-index: 999
+.all-courses-link
+  width: 188px
+  margin: 0 auto
+.row.cr-course-block__footer
+  @include media(to_tablet)
+    .register-link
+      width: 250px
+      margin: 20px auto
+      display: block
+.cr-courses-slider
+  .mode-gray
+    background: $black
+    border: 2px solid $black
+    color: $black
+    // min-height: 300px
+    height: initial
+  .cr-courses__item
+    .cr-courses__title
+      margin: 15px 0 35px
+    .cr-courses__title, .course-price, .course-start, .discount
+      color: $white
+    &:hover
+      .cr-courses__title
+        margin: 15px 0 35px
+      .discount
+        margin-bottom: 25px
+    strong
+      background: $black
+      color: $white
+    .discount
+      margin-bottom: 25px
+  .cr-button
+    opacity: 1
+.cr-courses-slider
+  @include media(mobile)
+    .cr-courses__item.mode-gray
+      background: $black
+      border: none
+      padding: 10px 10px 20px
+      color: $white
+    .cr-courses__title
+      margin: 25px 0 35px
+    .cr-courses__item.mode-gray:hover
+      .cr-courses__top
+        border: 2px solid $white
+        color: $white
+      .cr-courses__title
+        margin: 15px 0 35px
+          color: $white
+        .mode-yellow
+          color: $white
+        .mode-violet
+          color: $white
+        .course-price
+          color: $white
+      .course-start
+        margin-bottom: 10px
+      .discount
+        margin-bottom: 25px
+    .cr-button
+      opacity: 1
+      width: 80%
+      margin: 0 auto

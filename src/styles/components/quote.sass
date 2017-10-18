@@ -1,0 +1,50 @@
+.cr-quote
+  display: inline-block
+  position: relative
+  @extend h1
+  text-transform: uppercase
+  margin: 0
+  letter-spacing: 13px
+  max-width: 745px
+  line-height: 1.2
+  @include media(to_tablet)
+    max-width: 582px
+  @include media(mobile)
+    max-width: 290px
+    letter-spacing: 6px
+    width: 100%
+  .mod-accent
+    position: relative
+    &:after
+      content: ''
+      background-color: $mint
+      position: absolute
+      z-index: -1
+      width: 1000%
+      height: 62px
+      right: 9px
+      top: 8px
+      @include media(mobile)
+        max-width: 730px
+  &:before
+    content: ''
+    width: 288px
+    height: 293px
+    background-color: $light_gray
+    position: absolute
+    top: -70px
+    left: -50px
+    z-index: -1
+    opacity: .05
+    @include media(mobile)
+      left: -125px
+.cr-quote__author
+  @extend h2
+  position: relative
+  text-align: right
+  right: -20%
+  margin-top: 30px
+  letter-spacing: 2px
+  font-family: $bold
+  @include media(mobile)
+    right: 0

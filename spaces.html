@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/styles/vendors/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="src/styles/vendors/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="src/styles/vendors/slick-theme.css"/>
+</head>
+<body>
+
+
+  <div class="modal-view">
+    <div class="cr-section mod-black cr-spaces">
+
+      <div class="container modal-navbar">
+        <ul class="cr-horizontal-list pull-left">
+          <img class="cr-logo-mobile modal-navbar-logo" src="src/images/assets/logo-dh-w.svg" alt="logo">
+          <li class="cr-horizontal-list__item"><a href="./home-page.html" class="cr-header__link">Навчання</a></li>
+          <li class="cr-horizontal-list__item"><a href="./home-page.html" class="cr-header__link">Послуги</a></li>
+        </ul>
+      </div>
+
+      <section>
+        <div id="pogulanka" class="cr-spaces-slider visible-slider">
+          <div class="cr-spaces-slider-img" style="background-image: url('~/../src/images/slides/spaces/one-3.jpg')"></div>
+          <div class="cr-spaces-slider-img" style="background-image: url('~/../src/images/slides/spaces/one-4.jpg')"></div>
+        </div>
+
+        <div id="vakhnianyna" class="cr-spaces-slider">
+          <div class="cr-spaces-slider-img" style="background-image: url('~/../src/images/slides/spaces/one-1.jpg')"></div>
+          <div class="cr-spaces-slider-img" style="background-image: url('~/../src/images/slides/spaces/one-2.jpg')"></div>
+        </div>
+
+        <div id="dudaeva" class="cr-spaces-slider">
+          <div class="cr-spaces-slider-img" style="background-image: url('~/../src/images/slides/spaces/one-4.jpg')"></div>
+          <div class="cr-spaces-slider-img" style="background-image: url('~/../src/images/slides/spaces/one-2.jpg')"></div>
+        </div>
+      </section>
+
+      <div class="cr-spaces-container">
+        <div class="row space-desc-wrapper">
+          <div class="col-md-5 col-xs-6 space-selector">
+            <h3><a href="#" class="pogulanka active-link space-selector-item" data-space-name="pogulanka">ПОГУЛЯНКА</a></h3>
+            <h3><a href="#" class="vakhnianyna space-selector-item" data-space-name="vakhnianyna">ВАХНЯНИНА</a></h3>
+            <h3><a href="#" class="dudaeva space-selector-item" data-space-name="dudaeva">ДУДАЄВА</a></h3>
+          </div>
+          <div class="col-md-7 col-xs-6">
+            <div class="space-desc-body">
+              <ul id="pogulanka-text" class="active-text">
+                <li>- wi-fi</li>
+                <li>- 250 м<sup>2</sup></li>
+                <li>- Конференц зал</li>
+                <li>- 30 місць</li>
+                <li>- Design shop pogulanka</li>
+                <li>- Виставкова зала</li>
+                <li>- оренда</li>
+              </ul>
+              <ul id="vakhnianyna-text">
+                <li>- wi-fi</li>
+                <li>- 120 м<sup>2</sup></li>
+                <li>- Конференц зал</li>
+                <li>- 20 місць</li>
+                <li>- Design shop vakhnianyna</li>
+                <li>- Виставкова зала</li>
+                <li>- оренда</li>
+              </ul>
+              <ul id="dudaeva-text">
+                <li>- wi-fi</li>
+                <li>- 190 м<sup>2</sup></li>
+                <li>- Конференц зал</li>
+                <li>- 25 місць</li>
+                <li>- Design shop dudaeva</li>
+                <li>- Виставкова зала</li>
+                <li>- оренда</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="map-container js-cr-map">
+<!--           <div id="pogulanka-map" class="map-item active-map">pogulanka here</div>
+          <div id="vakhnianyna-map" class="map-item">vakhnianyna here</div>
+          <div id="dudaeva-map" class="map-item">dudaeva here</div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    var pogulanka = document.getElementsByClassName('pogulanka')[0];
+    var vakhnianyna = document.getElementsByClassName('vakhnianyna')[0];
+    var dudaeva = document.getElementsByClassName('dudaeva')[0];
+    var map;
+    var markers = [];
+    pogulanka.addEventListener("click", function(){
+      showMarker('pogulanka');
+    });
+    vakhnianyna.addEventListener("click", function(){
+      showMarker('vakhnianyna');
+    });
+    dudaeva.addEventListener("click", function(){
+      showMarker('dudaeva');
+    });
+    function showMarker(markerName) {
+      for (var i = 0; i < markers.length; i++) {
+        // console.log(markers[i]); 
+        markers[i].setMap(null);
+        if(markers[i].title == markerName) {
+          console.log(markers[i].title);
+          markers[i].setMap(map);
+        }
+      }
+    }
+
+    function initMap() {
+      var bounds  = new google.maps.LatLngBounds();
+      var locations = [
+        ['pogulanka', 49.825870, 23.971553],
+        ['vakhnianyna', 49.811748, 24.038954],
+        ['dudaeva', 49.833025, 24.024031],
+      ];
+      map = new google.maps.Map(document.getElementsByClassName('js-cr-map')[0], {
+        disableDefaultUI: true,
+        center: {lat: 0, lng: 0},
+        zoom: 15
+      });
+      for (var i in locations) {
+        var position = new google.maps.LatLng(locations[i][1], locations[i][2]);
+        bounds.extend(position);
+        var marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: locations[i][0]
+        });
+        markers.push(marker)
+      }
+      map.panToBounds(bounds);
+      map.fitBounds(bounds);
+      showMarker('pogulanka');
+    }
+
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVTcBwJMTXFz3mOnx21ghxp7TqzO2Mm9U&callback=initMap"></script>
+  <script src="./dist/index.bundle.js"></script>
+</body>
+</html>

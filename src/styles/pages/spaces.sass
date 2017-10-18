@@ -1,0 +1,254 @@
+$top-arrows-wide: 579px
+$top-arrows-xwide: 700px
+$top-container-wide: 80px
+$top-container-xwide: 200px
+$bottom-container-xwide: 150px
+
+.hidden
+	display: none
+.modal-view .mod-black.cr-spaces
+	padding-top: 35px
+	position: relative
+	height: 100vh
+	// overflow: hidden
+	padding-bottom: 0
+	@include media(mobile)
+		padding-top: 10px
+		// overflow: visible
+	.modal-navbar
+		position: relative
+		z-index: 999
+		img
+			width: 70px
+			margin-left: 10px
+			@include media(wide)
+				margin-right: 40px
+			@include media(mobile)
+				margin-right: 10px
+	.cr-header__link
+		color: $white
+		font-family: $regular
+		font-size: 14px
+		margin-right: 40px
+		&:hover
+			font-size: 14px
+			font-family: $regular
+			border-bottom: none
+			color: $white
+			font-weight: normal
+		@include media(mobile)
+			font-size: 12px
+			margin-right: 0
+	.close-icon
+		position: absolute
+		z-index: 999
+		right: 100px !important
+		top: 50px
+		@include media(mobile)
+			right: 20px !important
+	.cr-horizontal-list
+		position: fixed
+		margin: 0
+		li
+			a
+				@include media(mobile)
+					margin-left: 0px
+	.arrow-right
+		margin-left: 7px
+	a
+		color: $dark
+		font-weight: normal
+		font-family: $regular
+		padding-left: 15px
+		cursor: pointer
+		margin: 10px 0 20px
+		&:hover
+			text-decoration: none
+			font-family: $bold
+			&:after
+				content: ''
+			    position: absolute
+			    right: 15px
+			    top: 16px
+			    width: 8px
+			    height: 8px
+			    font-size: 48px
+			    border-top: 1px solid $dark
+			    border-right: 1px solid $dark
+			    transform: rotate(45deg)
+		@include media(mobile)
+			font-size: 14px
+			letter-spacing: 0.7px
+			margin-bottom: 45px
+	ul
+		margin: 30px 0 40px
+		list-style-type: none
+		@include media(mobile)
+			margin: 20px 0 20px
+		li
+			font-weight: normal
+			font-family: $regular
+			margin: 0
+	.cr-spaces-map
+		width: 100%
+		height: 220px
+		border: none
+		iframe
+			width: 100
+			height: 220px
+.cr-spaces-container
+	width: 450px
+	background-color: $white
+	position: absolute
+	right: 100px
+	@include media(wide)
+		margin-top: $top-container-wide
+	@include media(xwide)
+		margin-top: 0
+		bottom: $bottom-container-xwide
+	@include media (to_tablet)
+	    width: 450px
+	    background-color: #fbf7f6
+	    position: absolute
+	    right: 50px
+	    top: 25%
+	@include media(to_mobile)
+		margin: 300px 0 0
+		position: relative
+		right: 0px
+		width: 90%
+		margin-left: 5%
+	@include media(mobile)
+		margin-top: 300px
+	.space-desc-wrapper
+		margin-left: 10px
+		.space-selector
+			padding-top: 20px
+			h3
+				position: relative
+				display: inline-block
+				margin: 16px 0 0
+				.active-link
+					font-family: "Proxima Bold"
+				.active-link:after
+					content: ""
+					border-bottom: 2px solid black
+					border-right: 2px solid black
+					width: 8px
+					height: 8px
+					position: absolute
+					transform: rotateZ(-45deg)
+					top: 7px
+					right: -14px
+		.space-desc-body
+			font-size: 16px
+			ul
+				padding-left: 10px
+				display: none
+				&.active-text
+					display: block
+				li
+					margin-top: 10px
+					font-size: 16px
+					@include media(mobile)
+						margin-top: 10px
+	.map-container
+		height: 220px
+		background-color: #c3c3c3
+		.map-item
+			display: none
+			&.active-map
+				display: block
+	.row
+		@include media(mobile)
+			margin: 0
+		.col-md-4
+			background-color: #fff
+			padding: 0
+			@include media(mobile)
+				padding: 0
+.cr-spaces-slider
+	display: none
+	position: fixed
+	width: 100%
+	height: 100vh
+	top: 0
+	left: 0
+	right: 0
+	margin-bottom: 0 !important
+	&.visible-slider
+		display: block
+	.slick-list
+		padding-bottom: 0
+	.cr-spaces-slider-img
+		height: 100vh
+		background-size: cover !important
+		background-repeat: no-repeat !important
+	.slick-prev
+		right: 610px
+		z-index: 1
+		width: 40px
+		height: 40px
+		border: 1px solid #fff
+		@include media(wide)
+			top: $top-arrows-wide
+		@include media(xwide)
+			top: initial
+			bottom: $bottom-container-xwide
+		@include media(to_tablet)
+			top: 710px
+			right: 600px
+		&:before
+			border-top: 1px solid #fff
+			left: 8px
+			top: 18px
+			opacity: 1
+		&:after
+			border-top: 1px solid #fff
+			border-right: 1px solid #fff
+			left: 8px
+			top: 14px
+			opacity: 1
+		&:hover
+			background-color: $dark
+	.slick-next
+		right: 560px
+		z-index: 1
+		width: 40px
+		height: 40px
+		border: 1px solid #fff
+		@include media(wide)
+			top: $top-arrows-wide
+		@include media(xwide)
+			top: initial
+			bottom: $bottom-container-xwide
+		@include media(to_tablet)
+			top: 710px
+			right: 530px
+		&:before
+			border-top: 1px solid #fff
+			top: 18px
+			right: 8px
+		&:after
+			border-top: 1px solid #fff
+			border-right: 1px solid #fff
+			top: 14px
+			right: 7px
+		&:hover
+			background-color: $dark
+	.slick-dots
+		@include media(to_tablet)
+			bottom: 200px
+			right: 55px
+			text-align: right
+		@include media(mobile)
+			top: 400px
+		li
+			button
+				&:before
+					font-size: 10px
+					color: #fff
+.cr-spaces-map
+	iframe
+		border: none
+		width: 100%
