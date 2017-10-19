@@ -561,6 +561,25 @@ function create_post_type() {
 			'query_var'             => true,
 			'menu_icon'             => 'dashicons-portfolio',
 		));
+	register_post_type( 'events',
+		array(
+			'labels' => array(
+				'name' => 'Events',
+				'singular_name' => 'Event',
+				'menu_name' => 'Events'
+			),
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'supports'              => array( 'title', 'editor', 'thumbnail' ),
+			'rewrite'               => array( 'slug' => 'events' ),
+			'has_archive'           => true,
+			'hierarchical'          => true,
+			'show_in_nav_menus'     => true,
+			'capability_type'       => 'page',
+			'query_var'             => true,
+			'menu_icon'             => 'dashicons-calendar-alt',
+		));
 }
 
 function soc(){ ?>

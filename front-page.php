@@ -1,453 +1,94 @@
 <?php get_header(); ?>
 
     <div class="cr-hero cr-home-hero">
-        <div class="cr-hero-slider hidden-xs hidden-sm">
-            <div class="cr-hero-slide">
-                <video id="myVideo" class="cr-hero-video" poster="<?php echo theme() ?>/src/images/hero-poster.png" autoplay nocontrols loop muted>
-                    <source src="<?php echo theme() ?>/src/videos/hero.mp4" type="video/mp4">
-                </video>
+	    <?php if ($slider = get_field('slider' )) { ?>
+            <div class="cr-hero-slider hidden-xs hidden-sm">
+	            <?php foreach ($slider as $sl) { ?>
+                    <div class="cr-hero-slide">
+                        <video id="myVideo" class="cr-hero-video" poster="<?php echo $sl['video_poster'] ?>" autoplay nocontrols loop muted>
+                            <source src="<?php echo $sl['video_url'] ?>" type="video/mp4">
+                        </video>
+                    </div>
+	            <?php } ?>
             </div>
-            <div class="cr-hero-slide">
-                <video id="myVideo"  class="cr-hero-video" poster="<?php echo theme() ?>/src/images/hero-poster.png" playsinline autoplay muted loop>
-                    <source src="<?php echo theme() ?>/src/videos/hero2.mp4" type="video/mp4">
-                </video>
+            <div class="cr-mobile-home-hero hidden-lg hidden-md">
+                <div class="cr-mobile-hero-slider">
+	                <?php foreach ($slider as $sl) { ?>
+                        <div class="cr-mobile-img" style="background: url('<?php echo $sl["video_poster"] ?>')"></div>
+	                <?php } ?>
+                </div>
             </div>
-            <div class="cr-hero-slide">
-                <video id="myVideo"  class="cr-hero-video" poster="<?php echo theme() ?>/src/images/hero-poster.png" playsinline autoplay muted loop>
-                    <source src="<?php echo theme() ?>/src/videos/hero.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <div class="cr-mobile-home-hero hidden-lg hidden-md">
-            <div class="cr-mobile-hero-slider">
-                <div class="cr-mobile-img" style="background: url('<?php echo theme() ?>/src/images/slides/mobile-1.jpg')"></div>
-                <div class="cr-mobile-img" style="background: url('<?php echo theme() ?>/src/images/slides/mobile-2.jpg')"></div>
-            </div>
-        </div>
+	    <?php } ?>
+
         <div class="social-container">
             <ul>
                 <li>
-                    <a href="">fb</a>
-                    <a href="">insta</a>
-                    <a href="">office@creative.eu</a>
+                    <a href="<?php the_field('facebook','option') ?>">fb</a>
+                    <a href="<?php the_field('instagram','option') ?>">insta</a>
+                    <a href="mailto:office@creative.eu">office@creative.eu</a>
                 </li>
             </ul>
         </div>
-
+    </div>
         <a href="./about-course-page.html" class="cr-button cr-courses-list-btn tc-white hidden-md hidden-lg transparent" >список курсів</a>
-        <div class="cr-main-menu-wrapper hidden-xs hidden-sm">
-            <div class="cr-panel" id="js-main-menu">
-                <div class="cr-section__header-top">навчання —  </div><br>
-                <div class="cr-panel__item">
-                    <div class="cr-panel__item-title mod-active">Design</div>
-                    <ul class="cr-panel__item-content mod-open">
-                        <li class="cr-hover-menu">
-                            <div class="cr-hover-menu__title">Середовище</div>
-                            <ul class="cr-hover-menu__content">
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">дизайн інтер`єру</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item">
-                                                <a href="./about-course-page.html">
-                                                    базус
-                                                </a>
-                                                <div class="cr-course-info">
-                                                    <strong>18-19 вересня </strong> Попередня реєстрація: +380919293945
-                                                    <div class="cr-course--price">
-                                                        ціна:
-                                                        <div>
-                                                            <strong>15 000/28000 грн.</strong>
+        <?php if ($mega_menu = get_field('mega_menu' )) { ?>
+            <div class="cr-main-menu-wrapper hidden-xs hidden-sm">
+                <div class="cr-panel" id="js-main-menu">
+                    <div class="cr-section__header-top">навчання —  </div><br>
+	                <?php foreach ($mega_menu as $cl1) { ?>
+                        <div class="cr-panel__item">
+                            <div class="cr-panel__item-title"><?php echo $cl1['text'] ?></div>
+		                    <?php if ($cl1['subcategory']) { ?>
+                            <ul class="cr-panel__item-content mod-open">
+			                    <?php foreach ($cl1['subcategory'] as $cl2) { ?>
+                                <li class="cr-hover-menu">
+                                    <div class="cr-hover-menu__title"><?php echo $cl2['category_level_2'] ?></div>
+				                    <?php if ($cl2['subcategory']) { ?>
+                                    <ul class="cr-hover-menu__content">
+					                    <?php foreach ($cl2['subcategory'] as $cl3) { ?>
+                                        <li class="cr-accordeon">
+                                            <div class="cr-accordeon__title"><?php echo $cl3['category_level_3'] ?></div>
+						                    <?php if ($cl3['subcategory']) { ?>
+                                            <div class="cr-accordeon__content">
+                                                <ul class="cr-menu-list">
+							                        <?php foreach ($cl3['subcategory'] as $cl4) { ?>
+                                                    <li class="cr-menu-list__item">
+                                                        <a href="<?php echo $cl4['link'] ?>">
+                                                            <?php echo $cl4['category_level_4'] ?>
+                                                        </a>
+                                                        <div class="cr-course-info">
+                                                            <strong><?php echo $cl4['dates'] ?> </strong>&nbsp;<?php echo $cl4['info'] ?>
+								                            <?php if ($cl4['price']) { ?>
+                                                            <div class="cr-course--price">
+                                                                ціна:
+                                                                <div>
+                                                                    <strong><?php echo $cl4['price'] ?></strong>
+                                                                </div>
+                                                            </div>
+                                                            <?php } ?>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="cr-menu-list__item">
-                                                <a href="./about-course-page.html">
-                                                    базус
-                                                </a>
-                                                <div class="cr-course-info">
-                                                    <strong>18-19 вересня </strong> Попередня реєстрація: +380919293945
-                                                    <div class="cr-course--price">
-                                                        ціна:
-                                                        <div>
-                                                            <strong>15 000/28000 грн.</strong>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="cr-menu-list__item">
-                                                <a href="./about-course-page.html">
-                                                    базус
-                                                </a>
-                                                <div class="cr-course-info">
-                                                    <strong>18-19 вересня </strong> Попередня реєстрація: +380919293945
-                                                    <div class="cr-course--price">
-                                                        ціна:
-                                                        <div>
-                                                            <strong>15 000/28000 грн.</strong>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="cr-menu-list__item">
-                                                <a href="./about-course-page.html">
-                                                    базус
-                                                </a>
-                                                <div class="cr-course-info">
-                                                    <strong>18-19 вересня </strong> Попередня реєстрація: +380919293945
-                                                    <div class="cr-course--price">
-                                                        ціна:
-                                                        <div>
-                                                            <strong>15 000/28000 грн.</strong>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                                    </li>
+                                                    <?php } ?>
+                                                </ul>
+                                            </div>
+						                    <?php } ?>
+                                        </li>
+					                    <?php } ?>
+                                    </ul>
+				                    <?php } ?>
                                 </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">дизайн власного житла</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="./about-course-page.html">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="./about-course-page.html">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="./about-course-page.html">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="./about-course-page.html">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">декорування</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">дизайн меблів</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">ландшафтний дизайн</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">догляд за садом</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
+			                    <?php } ?>
                             </ul>
-                        </li>
-                        <li class="cr-hover-menu">
-                            <div class="cr-hover-menu__title">Графіка</div>
-                            <ul class="cr-hover-menu__content">
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="cr-hover-menu">
-                            <div class="cr-hover-menu__title">Костюм</div>
-                            <ul class="cr-hover-menu__content">
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="cr-hover-menu">
-                            <div class="cr-hover-menu__title">Рисунок</div>
-                            <ul class="cr-hover-menu__content">
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+		                    <?php } ?>
+                        </div>
+	                <?php } ?>
                 </div>
-                <div class="cr-panel__item">
-                    <div class="cr-panel__item-title">modern</div>
-                    <ul class="cr-panel__item-content">
-                        <li class="cr-hover-menu">
-                            <div class="cr-hover-menu__title">Середовище</div>
-                            <ul class="cr-hover-menu__content">
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="cr-hover-menu">
-                            <div class="cr-hover-menu__title">Середовище</div>
-                            <ul class="cr-hover-menu__content">
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
+                <div class="all-courses-link-container">
+                    <a href="<?php echo theme() ?>/shop" class="cr-button pull-right">всі курси</a>
+                </div>
+            </div>
+        <?php } ?>
 
-                    </ul>
-                </div>
-                <div class="cr-panel__item">
-                    <div class="cr-panel__item-title">Lorem</div>
-                    <ul class="cr-panel__item-content">
-                        <li class="cr-hover-menu">
-                            <div class="cr-hover-menu__title">Середовище</div>
-                            <ul class="cr-hover-menu__content">
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="cr-hover-menu">
-                            <div class="cr-hover-menu__title">Середовище</div>
-                            <ul class="cr-hover-menu__content">
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="cr-accordeon">
-                                    <div class="cr-accordeon__title">design</div>
-                                    <div class="cr-accordeon__content">
-                                        <ul class="cr-menu-list">
-                                            <li class="cr-menu-list__item"><a href="">базус</a></li>
-                                            <li class="cr-menu-list__item"><a href="">базус+профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">профі</a></li>
-                                            <li class="cr-menu-list__item"><a href="">інтенсив</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="all-courses-link-container">
-                <a href="./courses-list.html" class="cr-button pull-right">всі курси</a>
-            </div>
-        </div>
         <!-- <button class="cr-button--vertical mod-white hidden-xs">
 		</button> -->
         <!-- <a href="" style="color: black;" class="cr-button__label tc-mint"><img src="./src/images/icons/mouse.svg" alt="">події</a> -->
@@ -463,7 +104,9 @@
                 </div>
             </div>
         </div>
-
+	    <?php
+	    $events = get_field('events');
+	    if( $events ): ?>
         <div class="container cr-events-container cursor-pointer">
             <div class="row">
                 <div class="col-md-4 col-sm-6 hidden-xs">
@@ -479,94 +122,42 @@
                 </div>
             </div>
             <hr class="hidden-sm hidden-xs">
-            <a class="courses-link" href="./event-page.html">
-                <div class="row">
-                    <div class="cr-table__row-caption col-md-4 col-sm-5">
-                        <div class="about-course-title">ДИЗАЙН-WEEKEND</div>
-                        <div class="about-course-title">Сольмаз Фуляді</div>
-                    </div>
-                    <div class="col-md-2 col-sm-3">
-                        <div class="t-bold"><span class="cr-cell-label hidden-sm hidden-md hidden-lg">Де:</span>Design House</div>
-                        <div>вул. Погулянка, 5.</div>
-                    </div>
-                    <div class="col-md-2 col-sm-3">
-                        <div class="t-bold"><span class="cr-cell-label  hidden-sm hidden-md hidden-lg">Коли:</span>вересень</div>
-                        <div>(дата узгоджується)</div>
-                    </div>
-                    <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-5">
-                        <div class="t-bold"><span class="cr-cell-label hidden-md hidden-lg">Вартість:</span>1000 грн,</div>
-                        <div>(при повній оплаті до 20 липня - 800 грн.)</div>
-                    </div>
-                </div>
-            </a>
-            <a class="courses-link" href="./event-page.html">
-                <div class="row">
-                    <div class="cr-table__row-caption col-md-4 col-sm-5">
-                        <div class="about-course-title">Арт п'ятниця</div>
-                        <div class="about-course-title">Ольга Іванів</div>
-                    </div>
-                    <div class="col-md-2 col-sm-3">
-                        <div class="t-bold"><span class="cr-cell-label">Де:</span>Design House</div>
-                    </div>
-                    <div class="col-md-2 col-sm-3">
-                        <div class="t-bold"><span class="cr-cell-label">Коли:</span>22 жовтня</div>
-                    </div>
-                    <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-5">
-                        <div class="t-bold"><span class="cr-cell-label hidden-md hidden-lg">Вартість:</span>безкоштовно</div>
-                    </div>
-                </div>
-            </a>
-            <a class="courses-link special" href="./event-page.html">
-                <div class="row">
-                    <div class="cr-table__row-caption col-md-4 col-sm-5">
-                        <div class="about-course-title">ДИЗАЙН-WEEKEND</div>
-                        <div class="about-course-title">Сольмаз Фуляді</div>
-                    </div>
-                    <div class="col-md-2 col-sm-3">
-                        <div class="t-bold"><span class="cr-cell-label">Де:</span>Design House</div>
-                        <div>вул. Погулянка, 5.</div>
-                    </div>
-                    <div class="col-md-2 col-sm-3">
-                        <div class="t-bold"><span class="cr-cell-label">Коли:</span>вересень</div>
-                        <div>(дата узгоджується)</div>
-                    </div>
-                    <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-5">
-                        <div class="t-bold"><span class="cr-cell-label hidden-md hidden-lg">Вартість:</span>1000 грн,</div>
-                        <div>(при повній оплаті до 20 липня - 800 грн.)</div>
-                    </div>
-                </div>
-            </a>
-            <a class="courses-link" href="./event-page.html">
-                <div class="row">
-                    <div class="cr-table__row-caption col-md-4 col-sm-5">
-                        <div class="about-course-title">Арт п'ятниця</div>
-                        <div class="about-course-title">Ольга Іванів</div>
-                    </div>
-                    <div class="col-md-2 col-sm-3">
-                        <div class="t-bold"><span class="cr-cell-label">Де:</span>Design House</div>
-                    </div>
-                    <div class="col-md-2 col-sm-3">
-                        <div class="t-bold">Коли:<span class="cr-cell-label"></span>22 жовтня</div>
-                    </div>
-                    <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-5">
-                        <div class="t-bold"><span class="cr-cell-label hidden-md hidden-lg">Вартість:</span>безкоштовно</div>
-                    </div>
-                </div>
-            </a>
-
+                <?php foreach( $events as $ev ): // variable must NOT be called $post (IMPORTANT) ?>
+                    <a class="courses-link <?php the_field('mark_events', $ev->ID) ?>" href="<?php echo get_the_permalink($ev->ID); ?>">
+                        <div class="row">
+                            <div class="cr-table__row-caption col-md-4 col-sm-5">
+                                <div class="about-course-title"><?php echo get_the_title($ev->ID) ?></div>
+                                <div class="about-course-title"><?php the_field( 'author', $ev->ID); ?></div>
+                            </div>
+                            <div class="col-md-2 col-sm-3">
+                                <div class="t-bold"><span class="cr-cell-label hidden-sm hidden-md hidden-lg">Де:</span><?php the_field( 'place_name', $ev->ID ); ?></div>
+                                <div><?php the_field( 'place_address', $ev->ID ); ?></div>
+                            </div>
+                            <div class="col-md-2 col-sm-3">
+                                <div class="t-bold"><span class="cr-cell-label  hidden-sm hidden-md hidden-lg">Коли:</span><?php the_field( 'date_time', $ev->ID ); ?></div>
+                                <div><?php the_field( 'date_text', $ev->ID ); ?></div>
+                            </div>
+                            <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-5">
+                                <div class="t-bold"><span class="cr-cell-label hidden-md hidden-lg">Вартість:</span><?php the_field( 'price', $ev->ID ); ?></div>
+                                <div><?php the_field( 'price_text', $ev->ID ); ?></div>
+                            </div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             <div class="row">
                 <div class="col-sm-9 col-xs-7 col-xs-offset-2">
-                    <a href="./event-list.html" class="cr-button pull-right center-block">всі події</a>
+                    <a href="<?php echo theme() ?>/events/" class="cr-button pull-right center-block">всі події</a>
                 </div>
             </div>
         </div>
+	    <?php endif; ?>
     </div>
 
     <div class="cr-section extra-margin">
         <div class="container">
-            <div class="cr-quote"><span class="mod-accent">Sim</span>plicity is the ultimate sophistica&shy;tion.
+            <div class="cr-quote"><?php the_field( 'text' ); ?>
                 <div class="cr-quote__author">
-                    - Leonardo da Vinci
+                    - <?php the_field( 'author' ); ?>
                 </div>
             </div>
 
