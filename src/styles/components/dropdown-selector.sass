@@ -40,6 +40,7 @@
   left: -42px
   margin: 13px 0 0 40px
   padding: 0
+  z-index: 999
   &:last-child
     border-bottom: 2px solid black
   @include media(mobile)
@@ -49,19 +50,20 @@
     left: 0
     padding-left: 0
   li
-    list-style-type: none
-    min-width: 230px
-    background-color: #e6e5e7
-    padding: 14px 0 8px 45px
-    border-left: 2px solid black
-    border-right: 2px solid black
-    &:hover
-      cursor: pointer
-      background: $white
-    @include media(mobile)
-      background-color: #e1e3e4
     a
       color: $black
+      display: block
+      list-style-type: none
+      min-width: 230px
+      background-color: #e6e5e7
+      padding: 14px 0 8px 45px
+      border-left: 2px solid black
+      border-right: 2px solid black
+      &:hover
+        cursor: pointer
+        background: $white
+      @include media(mobile)
+        background-color: #e1e3e4
 .show-on-click
   // display: none
 .cr-type-select-value.show-level-list

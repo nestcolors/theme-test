@@ -21,6 +21,9 @@ if (!!window.location.pathname.match(/product/) && !window.location.pathname.mat
 } else if (!!window.location.pathname.match(/product-category/)) {
   console.log('i`m coursesList file: ', !!window.location.pathname.match(/coursesList/));
   coursesList();
+} else if (!!window.location.pathname.match(/pro-nas/)) {
+    console.log('i`m proNas file: ', !!window.location.pathname.match(/pro-nas/));
+    aboutUsPage();
 } else {
   console.log('i`m homepage file: ', !!window.location.pathname.match(/creative/));
   homePage();

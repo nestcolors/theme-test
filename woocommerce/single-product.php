@@ -248,26 +248,35 @@ get_header(); ?>
 				the best works
 			</div>
 		</div>
-		<div class="cr-our-works hidden-xs">
-			<div>
-				<img src="<?php echo theme() ?>/src/images/slides/process-paint-girl-16-10.jpg" alt="" class="img img-responsive">
-				<div>
-					<a href="/album.html">
-						<strong>Дизайн квартири для молодої сім’ї <br></strong>
-						Наталія МИХАЙЛИШИН
-					</a>
-				</div>
-			</div>
-			<div>
-				<img src="<?php echo theme() ?>/src/images/slides/process-paint.jpg" alt="" class="img img-responsive">
-				<div>
-					<a href="/album.html">
-						<strong>Дизайн квартири для молодої сім’ї <br></strong>
-						Наталія МИХАЙЛИШИН
-					</a>
-				</div>
-			</div>
-		</div>
+		<?php
+		$posts = get_field('works');
+		if( $posts ) { ?>
+            <div class="cr-our-works hidden-xs">
+	            <?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
+                    <div>
+                        <img src="<?php the_field('img',$p->ID) ?>" alt="" class="img img-responsive">
+                        <div>
+                            <a href="<?php echo get_permalink( $p->ID ); ?>">
+                                <strong><?php echo get_the_title( $p->ID ); ?> <br></strong>
+	                            <?php the_field('author',$p->ID) ?>
+                            </a>
+                        </div>
+                    </div>
+	            <?php endforeach; ?>
+		<?php } else { ?>
+            <div class="cr-our-works hidden-xs">
+				<?php
+
+				$images = get_field('work_gallery');
+				if( $images ): ?>
+                    <?php foreach( $images as $image ): ?>
+                        <div>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img img-responsive"/>
+                        </div>
+                    <?php endforeach; ?>
+				<?php endif; ?>
+            </div>
+		<?php } ?>
 		<div class="cr-slider__text-block small-on-tablet">
 			<div class="cr-black-board">
 				<h3 class="tc-white">РЕЗУЛЬТАТ —</h3>
@@ -276,6 +285,7 @@ get_header(); ?>
 				<a class="cr-button-registration mod-small mod-white t-c-white hidden">зареєструватися</a>
 			</div>
 		</div>
+
 	</div>
 	<div class="cr-section sm-margin">
 		<div class="container">
@@ -349,15 +359,15 @@ get_header(); ?>
 		</div>
 	</div>
 	<?php endif; ?>
+    <?php
+    $testimonials = get_field('testimonials');
+    if( $testimonials ): ?>
 	<div class="cr-section hidden-xs">
 		<div class="container">
 			<div class="cr-section__header">
 				<div class="cr-section__header-top">відгуки —  </div>
 				testimonials
 			</div>
-			<?php
-			$testimonials = get_field('testimonials');
-			if( $testimonials ): ?>
 			<div class="cr-respond-item cr-reviews-slider">
 				<?php foreach( $testimonials as $p ): // variable must NOT be called $post (IMPORTANT) ?>
 					<div class="row">
@@ -372,9 +382,9 @@ get_header(); ?>
 					</div>
 				<?php endforeach; ?>
 			</div>
-			<?php endif; ?>
 		</div>
 	</div>
+    <?php endif; ?>
     <?php include 'dehouse.php' ?>
 <!--	<div class="cr-section sm-margin">-->
 <!--		<div class="cr-map">-->

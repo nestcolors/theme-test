@@ -101,6 +101,7 @@ ob_start('ob_html_compress');
                                     </div>
                                 </li>
                             </ul>
+                            <div class="cr-black-curtain"></div>
 	                    <?php } ?>
 <!--                        <a class="cr-close-btn"></a>-->
                     </div>
