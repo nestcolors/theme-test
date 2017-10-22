@@ -27,7 +27,9 @@ ob_start('ob_html_compress');
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>  data-hash="<?php wpa_fontbase64(true); ?>" data-a="<?php echo admin_url('admin-ajax.php'); ?>">
-  <div class="loading-curtain"></div>
+  <div class="loading-curtain">
+    <div style="font-size: 30px; color: black; margin-top: 40vh; text-align: center;">page is loading...</div>
+  </div>
   <div class="website-container" style="display: none">
     <div class="home-page page-wrapper" id="home-page">
         <div class="cr-header" id="js-header">
