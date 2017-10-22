@@ -145,7 +145,7 @@ function category_has_children( $term_id ){
 
                                     ?>
 
-                                    <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="<?php echo $cat->slug; ?>">
+                                    <div class="seredovysche box col-lg-3 col-md-4 col-sm-4 col-xs-12" data-category="<?php echo $cat->slug; ?>">
                                         <div class="cr-courses__item mode-gray <?php the_field('collection_group', $post->ID) ?> <?php the_field('status', $post->ID) ?>">
                                             <?php
                                             $cat_name_inner = '';

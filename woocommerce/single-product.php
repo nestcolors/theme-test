@@ -234,9 +234,13 @@ get_header(); ?>
 			</div>
 			<hr>
 			<div class="hidden-xs">
+				<p class="t-a-center">
+          Бажаєте отримати повну програму курсу? <br>
+          Залиште Вашу електронну адресу і ми вишлемо Вам!
+        </p>
 				<div class="t-a-center">
 					<input type="email" name="email" class="cr-type-email" placeholder="office.creativeschool@gmail.com">
-					<a class="cr-button-write mod-small mod-white t-c-white">відправити</a>
+					<a class="cr-button-write mod-small mod-white t-c-white">Отримати</a>
 				</div>
 			</div>
 		</div>
