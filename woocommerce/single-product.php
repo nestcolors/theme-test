@@ -74,6 +74,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="col-xs-10 col-sm-5">
+							<span class="product-level-selector">*вибір рівня</span>
 							<div class="cr-type-select">
 								Рівень: <strong>
 									<?php
@@ -168,7 +169,7 @@ get_header(); ?>
 						</div>
 						<div class="col-xs-12 col-sm-8">
 							<div class="m-top-25">
-								<p class="t-a-right t-bold">При розрахунку можна скористатися послугою Оплата частинами від Приватбанку, <a href="">деталі тут.</a></p>
+								<p class="t-a-right t-bold">При розрахунку можна скористатися послугою Оплата частинами від Приватбанку, <a href="" class="">деталі тут.</a></p>
 							</div>
 						</div>
 					</div>
@@ -233,7 +234,6 @@ get_header(); ?>
 			</div>
 			<hr>
 			<div class="hidden-xs">
-				<?php the_field('for_whom') ?>
 				<div class="t-a-center">
 					<input type="email" name="email" class="cr-type-email" placeholder="office.creativeschool@gmail.com">
 					<a class="cr-button-write mod-small mod-white t-c-white">відправити</a>
@@ -244,7 +244,7 @@ get_header(); ?>
 	<div class="cr-section about-course-our-works">
 		<div class="container hidden-xs">
 			<div class="cr-section__header">
-				<div class="cr-section__header-top">найкращі роботи(2) —  </div>
+				<div class="cr-section__header-top">найкращі роботи(<?php echo count(get_field('works')) ?>) —  </div>
 				the best works
 			</div>
 		</div>
@@ -292,7 +292,7 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-xs-12 col-md-3">
 					<div class="cr-people-slider__header">
-						лектори(4) —
+						лектори(<?php echo count(get_field('teachers')) ?>) —
 						<div class="cr-arrow-wrapper arrows-slider-1"></div>
 					</div>
 				</div>
@@ -323,7 +323,7 @@ get_header(); ?>
 	<div class="cr-section sm-margin">
 		<div class="container">
 			<div class="cr-people-slider__header recommended-courses">
-				рекомендовані курси(5) —
+				рекомендовані курси(<?php echo count(get_field('related_courses')) ?>) —
 				<div class="cr-arrow-wrapper arrows-slider-1"></div>
 			</div>
 			<div class="row">

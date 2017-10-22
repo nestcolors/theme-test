@@ -7,12 +7,12 @@
   overflow: hidden
   position: relative
   // margin: 110px auto 0
-  @include media(wide)
-    height: 600px
-  @include media(swide)
-    height: 680px
-  @include media(xwide)
-    height: 820px
+  // @include media(wide)
+  //   height: 600px
+  // @include media(swide)
+  //   height: 680px
+  // @include media(xwide)
+  height: 100vh
   @include media(to_tablet)
     margin-top: 0px
   @include media(mobile)
@@ -21,21 +21,28 @@
     img
       width: 100%
   .cr-hero-slider
-    position: absolute
-    right: 0
-    top: 30px
+    // position: absolute
+    // right: 0
+    // top: 30px
     .slick-list
-      @include media(wide)
-        height: 480px
-        width: 1000px
-      @include media(swide)
-        height: 600px
-        width: 1000px
-      @include media(xwide)
-        height: 750px
-        width: 1500px
+      // @include media(wide)
+      //   height: 480px
+      //   width: 1000px
+      // @include media(swide)
+      //   height: 600px
+      //   width: 1000px
+      // @include media(xwide)
+      //   height: 750px
+      //   width: 1500px
     .slick-dots
-      bottom: -35px
+      bottom: 35px
+      position: fixed
+      li button:before
+        font-size: 13px
+        color: $white
+        opacity: 0.3
+      li.slick-active button:before
+        opacity: 0.9
     .slick-arrow
       bottom: -35px
       z-index: 4
@@ -130,6 +137,7 @@
   margin-left: 0
   margin-right: 0
   padding: 20px 0
+  transition: 0.1s
   @include media(mobile)
     margin-bottom: 20px
     border-bottom: 1px solid #e6e6e6

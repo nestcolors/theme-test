@@ -2,6 +2,8 @@ import $ from "jquery";
 // import gm123 from "./google-maps.js";
 
 const homePage = () => {
+  document.getElementsByClassName('cr-panel__item-title')[0].classList.add('mod-active');
+  document.getElementsByClassName('cr-panel__item-content')[0].classList.add('mod-open');
   var main_menu = $("#js-main-menu");
 
   main_menu.find('.cr-panel__item-title').click(function(event) {
@@ -52,6 +54,12 @@ const homePage = () => {
       }
       else {
         header_fixed_part.removeClass('mod-fixed');
+      }
+
+      if (scroll > 300) {
+        $('.slick-dots').fadeOut();
+      } else {
+        $('.slick-dots').fadeIn();
       }
   });
 

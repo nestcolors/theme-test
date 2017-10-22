@@ -69,7 +69,6 @@ const aboutCoursePage = () => {
       slidesToScroll: 1,
       arrows: true,
       dots: false,
-      infinite: true,
       slidesToShow: 3,
       responsive: [
         {

@@ -20,19 +20,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 add_filter( 'body_class', 'filter_function_name_9314', 10, 2 );
-function filter_function_name_9314( $classes, $class ){    
+function filter_function_name_9314( $classes, $class ){
     $classes[] = 'courses-list-body';
     return $classes;
 }
 get_header( 'shop' );
 
-$curent_category = get_queried_object(); 
+$curent_category = get_queried_object();
 function get_top_cat ($parent = ''){
     $taxonomy     = 'product_cat';
     $orderby      = 'name';
     $show_count   = 0;      // 1 for yes, 0 for no
     $pad_counts   = 0;      // 1 for yes, 0 for no
-    $hierarchical = 1;      // 1 for yes, 0 for no 
+    $hierarchical = 1;      // 1 for yes, 0 for no
     $title        = '';
     $empty        = 0;
     $args = array(
@@ -58,7 +58,7 @@ function category_has_children( $term_id ){
     }
 }
 ?>
-<div id="courses-list"> 
+<div id="courses-list">
     <div class="modal-view">
         <div class="cr-section mod-black">
             <div class="container">
@@ -85,10 +85,11 @@ function category_has_children( $term_id ){
                                                 $category_id = $cat->term_id;
                                                 echo '<li><a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a></li>';
                                             }
-                                        }  
+                                        }
                                         ?>
                                     </ul>
                                 </div>
+																<span class="level-selector">*вибір напрямку</span>
                             </div>
                         </div>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -104,27 +105,27 @@ function category_has_children( $term_id ){
                         <?php
                         $all_categories = get_top_cat($curent_category->term_id);
                         foreach ($all_categories as $cat) {
-                            $category_id = $cat->term_id;                          
-                            echo '<a href="#" class="'. $cat->slug .'" data-filter="'. $cat->slug .'" role="button">'. $cat->name .'</a>';                       
+                            $category_id = $cat->term_id;
+                            echo '<a href="#" class="'. $cat->slug .'" data-filter="'. $cat->slug .'" role="button">'. $cat->name .'</a>';
                         }
                         ?>
                     </div>
 
                     <div class="col-xs-12 boxes">
                         <?php
-                        $all_categories = get_top_cat($curent_category->term_id);                        
+                        $all_categories = get_top_cat($curent_category->term_id);
                         foreach ($all_categories as $cat) : ?>
                             <?php $category_id = $cat->term_id; ?>
-                            
-                            <div class="color-container row" data-category="<?php echo $cat->slug; ?>-container">
+
+                            <div class="color-container row <?php echo $cat->slug; ?>-container" data-category="<?php echo $cat->slug; ?>-container">
                                 <h3 id="design"><?php echo $cat->name; ?> —</h3>
-                                        
+
                                 <?php
-                                
+
 
                                 $args = array(
                                     'post_type'    => 'product',
-                                    'posts_per_page'  => -1,                                                                      
+                                    'posts_per_page'  => -1,
                                     'tax_query' => array(
                                         array(
                                             'taxonomy' => 'product_cat',
@@ -136,14 +137,14 @@ function category_has_children( $term_id ){
 
                                 $query = new WP_Query;
                                 $products_list = $query->query($args);
-                         
-                                foreach($products_list as $post): ?>                                 
+
+                                foreach($products_list as $post): ?>
                                     <?php $_product = wc_get_product( $post->ID );
-                                   
-                                   
-                                    
+
+
+
                                     ?>
-                                    
+
                                     <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="<?php echo $cat->slug; ?>">
                                         <div class="cr-courses__item mode-gray <?php the_field('collection_group', $post->ID) ?> <?php the_field('status', $post->ID) ?>">
                                             <?php
@@ -184,7 +185,7 @@ function category_has_children( $term_id ){
                         <?php endforeach; ?>
                     </div>
                 </div>
-            </div>	 
+            </div>
         </div>
     </div>
 </div>

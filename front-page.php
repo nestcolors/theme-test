@@ -39,7 +39,7 @@
                         <div class="cr-panel__item">
                             <div class="cr-panel__item-title"><?php echo $cl1['text'] ?></div>
 		                    <?php if ($cl1['subcategory']) { ?>
-                            <ul class="cr-panel__item-content mod-open">
+                            <ul class="cr-panel__item-content">
 			                    <?php foreach ($cl1['subcategory'] as $cl2) { ?>
                                 <li class="cr-hover-menu">
                                     <div class="cr-hover-menu__title"><?php echo $cl2['category_level_2'] ?></div>

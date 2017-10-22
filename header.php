@@ -27,6 +27,8 @@ ob_start('ob_html_compress');
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>  data-hash="<?php wpa_fontbase64(true); ?>" data-a="<?php echo admin_url('admin-ajax.php'); ?>">
+  <div class="loading-curtain"></div>
+  <div class="website-container" style="display: none">
     <div class="home-page page-wrapper" id="home-page">
         <div class="cr-header" id="js-header">
             <div class="cr-header__motto">SIMPLICITY IS THE ULTIMATE SOPHISTICA­TION.</div>
@@ -106,8 +108,7 @@ ob_start('ob_html_compress');
 <!--                        <a class="cr-close-btn"></a>-->
                     </div>
                 </div>
-            </div>
-            <div class="cr-mobile-menu-wrapper hidden-md hidden-lg">
+                <div class="cr-mobile-menu-wrapper hidden-md hidden-lg">
                 <div class="container">
                     <ul class="cr-vertical-list">
                         <li class="cr-vertical-list__item"><a href="./home-page.html">ГОЛОВНА</a></li>
@@ -144,5 +145,6 @@ ob_start('ob_html_compress');
                     </div>
                 </div>
             </div>
-            <a class="cr-burger-btn hidden-md hidden-lg"></a>
+            </div>
+            <span class="cr-burger-btn hidden-md hidden-lg"></span>
         </div>

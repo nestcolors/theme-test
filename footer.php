@@ -2,7 +2,7 @@
         <div class="container">
             <div class="cr-map__small-heder">головний офіс  —
             </div>
-            <div class="cr-map__big-header">lviv,<br>Gorodotska, 5
+            <div class="cr-map__big-header">lviv,<br>Pogulanka, 5
             </div>
         </div>
         <div class="cr-map js-cr-map" >
@@ -64,5 +64,6 @@
 <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVTcBwJMTXFz3mOnx21ghxp7TqzO2Mm9U&callback=initMap"></script>-->
 <!--<script src="./dist/index.bundle.js"></script>-->
 <?php wp_footer(); ?>
+</div>
 </body>
 </html>
