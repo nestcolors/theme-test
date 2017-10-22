@@ -112,13 +112,14 @@ ob_start('ob_html_compress');
                 <div class="container">
                     <ul class="cr-vertical-list">
                         <li class="cr-vertical-list__item"><a href="./home-page.html">ГОЛОВНА</a></li>
-                        <li class="cr-vertical-list__item"><a href="./about-us-page.html">ПРО НАС</a></li>
+                        <li class="cr-vertical-list__item"><a href="./about-us-page.html">ВСІ КУРСИ</a></li>
+                        <li class="cr-vertical-list__item"><a href="./about-us-page.html">ВСІ ПОДІЇ</a></li>
                         <li class="cr-vertical-list__item"><a href="">ПОСЛУГИ</a></li>
                     </ul>
                     <ul class="cr-vertical-list">
                         <li class="cr-vertical-list__item"><a href="./spaces.html">ПРОСТОРИ</a></li>
-                        <li class="cr-vertical-list__item"><a href="./faq-page.html">FAQ</a></li>
                         <li class="cr-vertical-list__item"><a href="./about-us-page.html">ПРО НАС</a></li>
+                        <li class="cr-vertical-list__item"><a href="./faq-page.html">FAQ</a></li>
                     </ul>
                     <div class="cr-contacts">
                         <hr>
