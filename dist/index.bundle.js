@@ -10762,13 +10762,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_courses_list_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_home_page_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_about_us_page_js__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_about_course_page_js__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_spaces_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_general_js__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__scripts_faq_page_js__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_courses_list_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_home_page_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_about_us_page_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_about_course_page_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_spaces_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__scripts_general_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__scripts_faq_page_js__ = __webpack_require__(9);
+
 
 
 
@@ -10778,30 +10781,49 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__(10);
 
-Object(__WEBPACK_IMPORTED_MODULE_5__scripts_general_js__["a" /* default */])();
+// Polling for the sake of checking if all data loaded
+var interval = setInterval(function () {
+  if (document.readyState === 'complete') {
+    clearInterval(interval);
+    console.log('done!');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.website-container').fadeIn();
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.loading-curtain').fadeOut(500);
+    loadAllSources();
+  } else {
+    console.log('not done!');
+  }
+}, 500);
+
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()('a').click(function () {
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.website-container').fadeOut();
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.loading-curtain').fadeIn();
+});
+
 // homePage();
 // coursesList();
 // aboutUsPage();
 // faqPage();
 // spaces();
 
-// console.log('i`m js file: ', !!window.location.pathname.match(/creative/));
-if (!!window.location.pathname.match(/product/) && !window.location.pathname.match(/product-category/)) {
-  console.log('i`m product file: ', !!window.location.pathname.match(/product/));
-  Object(__WEBPACK_IMPORTED_MODULE_3__scripts_about_course_page_js__["a" /* default */])();
-} else if (!!window.location.pathname.match(/product-category/)) {
-  console.log('i`m coursesList file: ', !!window.location.pathname.match(/coursesList/));
-  Object(__WEBPACK_IMPORTED_MODULE_0__scripts_courses_list_js__["a" /* default */])();
-} else if (!!window.location.pathname.match(/pro-nas/)) {
-  console.log('i`m proNas file: ', !!window.location.pathname.match(/pro-nas/));
-  Object(__WEBPACK_IMPORTED_MODULE_2__scripts_about_us_page_js__["a" /* default */])();
-} else if (!!window.location.pathname.match(/prostori/)) {
-  console.log('i`m prostori file: ', !!window.location.pathname.match(/prostori/));
-  Object(__WEBPACK_IMPORTED_MODULE_4__scripts_spaces_js__["a" /* default */])();
-} else {
-  console.log('i`m homepage file: ', !!window.location.pathname.match(/creative/));
-  Object(__WEBPACK_IMPORTED_MODULE_1__scripts_home_page_js__["a" /* default */])();
-}
+var loadAllSources = function loadAllSources() {
+  Object(__WEBPACK_IMPORTED_MODULE_6__scripts_general_js__["a" /* default */])();
+  if (!!window.location.pathname.match(/product/) && !window.location.pathname.match(/product-category/)) {
+    console.log('i`m product file: ', !!window.location.pathname.match(/product/));
+    Object(__WEBPACK_IMPORTED_MODULE_4__scripts_about_course_page_js__["a" /* default */])();
+  } else if (!!window.location.pathname.match(/product-category/)) {
+    console.log('i`m coursesList file: ', !!window.location.pathname.match(/coursesList/));
+    Object(__WEBPACK_IMPORTED_MODULE_1__scripts_courses_list_js__["a" /* default */])();
+  } else if (!!window.location.pathname.match(/pro-nas/)) {
+    console.log('i`m proNas file: ', !!window.location.pathname.match(/pro-nas/));
+    Object(__WEBPACK_IMPORTED_MODULE_3__scripts_about_us_page_js__["a" /* default */])();
+  } else if (!!window.location.pathname.match(/prostori/)) {
+    console.log('i`m prostori file: ', !!window.location.pathname.match(/prostori/));
+    Object(__WEBPACK_IMPORTED_MODULE_5__scripts_spaces_js__["a" /* default */])();
+  } else if (!!window.location.pathname.match(/\//) && !window.location.pathname.match(/events/)) {
+    console.log('i`m homepage file: ', !!window.location.pathname.match(/creative/));
+    Object(__WEBPACK_IMPORTED_MODULE_2__scripts_home_page_js__["a" /* default */])();
+  }
+};
 
 /***/ }),
 /* 3 */
