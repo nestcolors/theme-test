@@ -19,16 +19,6 @@
                 </div>
             </div>
 	    <?php } ?>
-
-        <div class="social-container">
-            <ul>
-                <li>
-                    <a href="<?php the_field('facebook','option') ?>">fb</a>
-                    <a href="<?php the_field('instagram','option') ?>">insta</a>
-                    <a href="mailto:office@creative.eu">office@creative.eu</a>
-                </li>
-            </ul>
-        </div>
     </div>
         <a href="./about-course-page.html" class="cr-button cr-courses-list-btn tc-white hidden-md hidden-lg transparent" >список курсів</a>
         <?php if ($mega_menu = get_field('mega_menu' )) { ?>
@@ -39,7 +29,7 @@
                         <div class="cr-panel__item">
                             <div class="cr-panel__item-title"><?php echo $cl1['text'] ?></div>
 		                    <?php if ($cl1['subcategory']) { ?>
-                            <ul class="cr-panel__item-content mod-open">
+                            <ul class="cr-panel__item-content">
 			                    <?php foreach ($cl1['subcategory'] as $cl2) { ?>
                                 <li class="cr-hover-menu">
                                     <div class="cr-hover-menu__title"><?php echo $cl2['category_level_2'] ?></div>
