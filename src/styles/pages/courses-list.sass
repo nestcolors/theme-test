@@ -18,10 +18,14 @@
 			margin: 50px -16px 0 0
 			font-family: 'Proxima Regular'
 			border: 2px solid $white
+			@include media(mobile)
+				margin: 20px 0 20px
 	.courses-list-page
 		background-color: $white
 		padding: 10px 15px 40px
 		min-height: 100vh
+		@include media(mobile)
+			margin: 0 0px
 	.cta.filter
 		padding-bottom: 20px
 		border-bottom: 1px solid $silver
@@ -59,6 +63,11 @@
 			margin-bottom: 10px
 		.cr-button
 			top: 0
+		&.intensivi
+			.course-level-normal
+				background-color: yellow
+				color: $black
+				border: 0px solid white
 	.cr-collection
 		border-bottom: 5px solid $mint
 		.course-level-normal
@@ -112,10 +121,23 @@
 		display: block
 		@include media(mobile)
 			margin: 40px 0 0
+h3.boxes-title
+	background-color: #eaeaea
+	padding: 8px 10px
+	@include media(mobile)
+		margin: 10px 0 0px
+h3#intensivi
+	background-color: $yellow
 #courses-list-container
+	.color-container
+		@include media(mobile)
+			margin-bottom: 30px
 	.box
 		min-height: 320px
 		margin-bottom: 20px
+		@include media(mobile)
+			min-height: initial
+			margin-bottom: 0
 		.cr-courses__item
 			@include media(tablet)
 				width: 100%
@@ -129,5 +151,12 @@
 					letter-spacing: 0
 			@include media(mobile)
 				margin-left: 0
+				height: initial
 				width: 100%
 				padding: 20px 10px
+				margin: 0
+				.cr-button
+					opacity: 1
+					display: block
+					width: 200px
+					margin: 0 auto

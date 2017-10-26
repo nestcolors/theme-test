@@ -44,7 +44,10 @@ const loadAllSources = () => {
   } else if (!!window.location.pathname.match(/pro-nas/)) {
       console.log('i`m proNas file: ', !!window.location.pathname.match(/pro-nas/));
       aboutUsPage();
-  } else if (!!window.location.pathname.match(/creative/) && !window.location.pathname.match(/events/)){
+  } else if (!!window.location.pathname.match(/prostori/)) {
+      console.log('i`m prostori file: ', !!window.location.pathname.match(/prostori/));
+      spaces();
+  } else if (!!window.location.pathname.match(/\//) && !window.location.pathname.match(/events/)){
     console.log('i`m homepage file: ', !!window.location.pathname.match(/creative/));
     homePage();
   }
