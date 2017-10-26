@@ -1,39 +1,4 @@
-// @import "variables"
-// nav
-//   a
-//     position: absolute
-//     top: 40px
-//     right: 40px
-//     background-color: white
-//     height: 40px
-//     width: 40px
-// a
-//   font-size: 20px
-//   color: tomato !important
-//   text-decoration: none
-//   color: $primary-color !important
-//   background-color: grey
-// .color-container
-//   margin: 100px 0
-// .box
-//   height: 140px
-//   width: 140px
-//   display: inline-block
-//   margin: 2px
-//   transition: 0.2s
-//   box-shadow: 3px 3px 10px rgba(0,0,0,0.1)
-//   &:hover
-//     box-shadow: 3px 3px 10px rgba(0,0,0,0.4)
-//     opacity: 0.9
-//     transform: translateY(-2px)
-
-
-// .red
-//   background-color: red
-// .green
-//   background-color: green
-// .blue
-//   background-color: blue
+@import "variables"
 
 #courses-list
 	position: relative
@@ -50,15 +15,23 @@
 	.cr-modal-header-row
 		.cr-type-select
 			color: $white
-			margin: 80px -16px 0 0
+			margin: 50px -16px 0 0
 			font-family: 'Proxima Regular'
 			border: 2px solid $white
+			@include media(mobile)
+				margin: 20px 0 20px
 	.courses-list-page
 		background-color: $white
 		padding: 10px 15px 40px
 		min-height: 100vh
-	.cta
+		@include media(mobile)
+			margin: 0 0px
+	.cta.filter
+		padding-bottom: 20px
+		border-bottom: 1px solid $silver
+		margin-bottom: 10px
 		margin-top: 12px
+	.cta
 		a
 			padding: 8px 14px
 			color: $light_gray
@@ -90,6 +63,11 @@
 			margin-bottom: 10px
 		.cr-button
 			top: 0
+		&.intensivi
+			.course-level-normal
+				background-color: yellow
+				color: $black
+				border: 0px solid white
 	.cr-collection
 		border-bottom: 5px solid $mint
 		.course-level-normal
@@ -143,8 +121,42 @@
 		display: block
 		@include media(mobile)
 			margin: 40px 0 0
-.cr-courses__item
+h3.boxes-title
+	background-color: #eaeaea
+	padding: 8px 10px
 	@include media(mobile)
-		margin-left: 0
-		width: 100%
-		padding: 20px 10px
+		margin: 10px 0 0px
+h3#intensivi
+	background-color: $yellow
+#courses-list-container
+	.color-container
+		@include media(mobile)
+			margin-bottom: 30px
+	.box
+		min-height: 320px
+		margin-bottom: 20px
+		@include media(mobile)
+			min-height: initial
+			margin-bottom: 0
+		.cr-courses__item
+			@include media(tablet)
+				width: 100%
+				height: inherit
+				margin-bottom: 10px
+				.cr-courses__title
+					margin: 20px 0 20px
+					letter-spacing: 0px
+				.cr-button
+					opacity: 1
+					letter-spacing: 0
+			@include media(mobile)
+				margin-left: 0
+				height: initial
+				width: 100%
+				padding: 20px 10px
+				margin: 0
+				.cr-button
+					opacity: 1
+					display: block
+					width: 200px
+					margin: 0 auto

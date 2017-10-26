@@ -18,12 +18,10 @@
 if ( ! defined('ABSPATH')) {
 	exit; // Exit if accessed directly
 }
-add_filter('body_class', 'filter_function_name_9314', 10, 2);
-function filter_function_name_9314($classes, $class)
-{
-	$classes[] = 'courses-list-body';
-
-	return $classes;
+add_filter( 'body_class', 'filter_function_name_9314', 10, 2 );
+function filter_function_name_9314( $classes, $class ){
+    $classes[] = 'courses-list-body';
+    return $classes;
 }
 
 get_header('shop');
@@ -95,6 +93,7 @@ function category_has_children($term_id)
 										?>
                                     </ul>
                                 </div>
+																<span class="level-selector">*вибір напрямку</span>
                             </div>
                         </div>
                         <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -123,10 +122,8 @@ function category_has_children($term_id)
 							<?php
 							$catslug = $cat->slug;
 							$category_id = $cat->term_id; ?>
-
-                            <div class="color-container row" data-category="<?php echo $cat->slug; ?>-container">
-                                <h3 id="design"><?php echo $cat->name; ?> —</h3>
-
+                            <div class="color-container row <?php echo $catslug; ?>" data-category="<?php echo $cat->slug; ?>-container">
+                                <h3 class="boxes-title" id="<?php echo $catslug; ?>"><?php echo $cat->name; ?> —</h3>
 								<?php
 								$args = array(
 									'post_type'      => 'product',
@@ -142,12 +139,9 @@ function category_has_children($term_id)
 								$query         = new WP_Query;
 								$products_list = $query->query($args);
 								foreach ($products_list as $post): ?>
-									<?php $_product = wc_get_product($post->ID);
-
-									?>
-
-                                    <div class="seredovysche box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="<?php echo $catslug; ?>">
-                                        <div class="cr-courses__item mode-gray <?php the_field('collection_group', $post->ID) ?> <?php the_field('status', $post->ID) ?>">
+									<?php $_product = wc_get_product($post->ID);?>
+                                    <div class="box col-lg-3 col-md-4 col-sm-6 col-xs-12 <?php echo $cat->slug ?>" data-category="<?php echo $catslug; ?>">
+                            			<div class="cr-courses__item mode-gray <?php the_field('collection_group', $post->ID) ?> <?php the_field('status', $post->ID) ?>">
 											<?php
 											$cat_name_inner = '';
 											$args           = array(

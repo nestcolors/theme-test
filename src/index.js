@@ -20,7 +20,7 @@ const interval = setInterval(function() {
     } else {
       console.log('not done!');
     }
-}, 500);
+}, 100);
 
 $('a').click( () => {
   $('.website-container').fadeOut();
