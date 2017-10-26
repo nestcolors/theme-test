@@ -93,7 +93,7 @@ function category_has_children($term_id)
 										?>
                                     </ul>
                                 </div>
-																<span class="level-selector">*вибір напрямку</span>
+                                <span class="level-selector">*вибір напрямку</span>
                             </div>
                         </div>
                         <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -169,7 +169,7 @@ function category_has_children($term_id)
                                             <p class="discount">
 												<?php the_field('discount_text', $post->ID); ?>
                                             </p>
-                                            <a class="cr-button center-block" href="<?php the_permalink(); ?>">переглянути</a>
+                                            <a class="cr-button center-block" href="<?php the_permalink($post->ID); ?>">переглянути</a>
                                         </div>
                                     </div>
 									<?php
