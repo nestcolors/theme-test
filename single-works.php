@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<a href="" class="cr-header__logo">
+						<a href="<?php echo home_url() ?>" class="cr-header__logo">
 							<img src="<?php echo theme() ?>/src/images/assets/logo-creative-w.svg" alt="logo" class="">
 						</a>
 						<div class="cr-section__header" style="padding: 90px 0 30px">

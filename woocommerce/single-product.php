@@ -249,8 +249,8 @@ get_header(); ?>
 	<div class="cr-section about-course-our-works">
 		<div class="container hidden-xs">
 			<div class="cr-section__header">
-				<div class="cr-section__header-top">найкращі роботи(<?php echo count(get_field('works')) ?>) —  </div>
-				the best works
+				<div class="cr-section__header-top"><?php the_field( 'works_caption' ); ?>(<?php echo count(get_field('works')) ?>) —  </div>
+				<?php the_field( 'works_title' ); ?>
 			</div>
 		</div>
 		<?php
@@ -259,15 +259,16 @@ get_header(); ?>
             <div class="cr-our-works hidden-xs">
 	            <?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
                     <div>
-                        <img src="<?php the_field('img',$p->ID) ?>" alt="" class="img img-responsive">
+                        <img src="<?php echo get_the_post_thumbnail_url($p->ID) ?>" alt="" class="img img-responsive">
                         <div>
                             <a href="<?php echo get_permalink( $p->ID ); ?>">
-                                <strong><?php echo get_the_title( $p->ID ); ?> <br></strong>
+                                <strong><?php the_field('caption', $p->ID ); ?> <br></strong>
 	                            <?php the_field('author',$p->ID) ?>
                             </a>
                         </div>
                     </div>
 	            <?php endforeach; ?>
+            </div>
 		<?php } else { ?>
             <div class="cr-our-works hidden-xs">
 				<?php

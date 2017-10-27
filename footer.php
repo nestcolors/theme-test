@@ -21,7 +21,7 @@
                         <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="18" width="19" alt="">
                     </a></li>
             </ul>
-            <a href="./spaces.html" class="cr-button mod-white pull-right tc-white">всі офіси</a>
+            <a href="<?php echo home_url() ?>/prostori" class="cr-button mod-white pull-right tc-white">всі офіси</a>
 	        <?php if ($footer_menu = get_field('footer_menu','option' )) { ?>
                 <ul class="cr-horizontal-list">
 	                <?php foreach ($footer_menu as $fm) { ?>
