@@ -69,7 +69,7 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-xs-12 col-sm-7">
 							<div class="cr-section__header">
-								<h1 class="cr-section__header-top"><?php the_field('ukrainian_title_version') ?> —  </h1>
+								<h1 class="cr-section__header-top"><span id="course-title"><?php the_field('ukrainian_title_version') ?></span> —  </h1>
 								<?php the_field('english_title_version') ?>
 							</div>
 						</div>
@@ -180,8 +180,8 @@ get_header(); ?>
 						</div>
 						<div class="col-xs-12 col-sm-9">
 							<div class="pull-right">
-								<a class="cr-button-accent register-link hidden-sm hidden-md hidden-xs">часті питання</a>
-								<a class="cr-button register-link">зареєструватися</a>
+								<a href="<?php echo home_url() ?>/faq" class="cr-button-accent register-link hidden-sm hidden-md hidden-xs">часті питання</a>
+								<a href="<?php the_field('google_form_link') ?>" class="cr-button register-link">зареєструватися</a>
 								<a href="<?php the_field('google_form_link') ?>" class="google-registration hidden-sm hidden-md hidden-lg">реєстрація через google form</a>
 							</div>
 						</div>
@@ -200,7 +200,7 @@ get_header(); ?>
 				</div>
 				<div class="col-xs-8 col-xs-offset-0 col-sm-9 col-sm-offset-0 ">
 					<div class="pull-right">
-						<a class="cr-button-accent hidden-sm hidden-md hidden-xs">часті питання</a>
+						<a href="<?php echo home_url() ?>/faq" class="cr-button-accent hidden-sm hidden-md hidden-xs">часті питання</a>
 						&nbsp;
 						<a href="<?php the_field('google_form_link') ?>" class="cr-button">зареєструватися</a>
 					</div>
@@ -239,8 +239,9 @@ get_header(); ?>
           Залиште Вашу електронну адресу і ми вишлемо Вам!
         </p>
 				<div class="t-a-center">
-					<input type="email" name="email" class="cr-type-email" placeholder="office.creativeschool@gmail.com">
-					<a class="cr-button-write mod-small mod-white t-c-white">Отримати</a>
+					<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form"]') ?>
+<!--					<input type="email" name="email" class="cr-type-email" placeholder="office.creativeschool@gmail.com">-->
+<!--					<a class="cr-button-write mod-small mod-white t-c-white">Отримати</a>-->
 				</div>
 			</div>
 		</div>
@@ -248,8 +249,8 @@ get_header(); ?>
 	<div class="cr-section about-course-our-works">
 		<div class="container hidden-xs">
 			<div class="cr-section__header">
-				<div class="cr-section__header-top">найкращі роботи(<?php echo count(get_field('works')) ?>) —  </div>
-				the best works
+				<div class="cr-section__header-top"><?php the_field( 'works_caption' ); ?>(<?php echo count(get_field('works')) ?>) —  </div>
+				<?php the_field( 'works_title' ); ?>
 			</div>
 		</div>
 		<?php
@@ -258,15 +259,16 @@ get_header(); ?>
             <div class="cr-our-works hidden-xs">
 	            <?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
                     <div>
-                        <img src="<?php the_field('img',$p->ID) ?>" alt="" class="img img-responsive">
+                        <img src="<?php echo get_the_post_thumbnail_url($p->ID) ?>" alt="" class="img img-responsive">
                         <div>
                             <a href="<?php echo get_permalink( $p->ID ); ?>">
-                                <strong><?php echo get_the_title( $p->ID ); ?> <br></strong>
+                                <strong><?php the_field('caption', $p->ID ); ?> <br></strong>
 	                            <?php the_field('author',$p->ID) ?>
                             </a>
                         </div>
                     </div>
 	            <?php endforeach; ?>
+            </div>
 		<?php } else { ?>
             <div class="cr-our-works hidden-xs">
 				<?php
@@ -285,8 +287,8 @@ get_header(); ?>
 			<div class="cr-black-board">
 				<h3 class="tc-white">РЕЗУЛЬТАТ —</h3>
 				<?php the_field('works_text') ?>
-				<a class="cr-button mod-small mod-white t-c-white mod-left hidden">часті питання</a>
-				<a class="cr-button-registration mod-small mod-white t-c-white hidden">зареєструватися</a>
+				<a href="<?php echo home_url() ?>/faq" class="cr-button mod-small mod-white t-c-white mod-left hidden">часті питання</a>
+				<a href="<?php the_field('google_form_link') ?>" target="_blank" class="cr-button-registration mod-small mod-white t-c-white hidden">зареєструватися</a>
 			</div>
 		</div>
 

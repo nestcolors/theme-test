@@ -113,6 +113,9 @@ const aboutCoursePage = () => {
 
   });
 
+  var course_title = document.getElementById('course-title').innerHTML;
+  document.getElementById('course-name').value = course_title;
+
   // detect scrolling direction
   var lastScrollTop = 0;
   var currentHeight = function() {

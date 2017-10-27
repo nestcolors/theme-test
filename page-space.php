@@ -11,7 +11,7 @@ $place = 'place';
             <ul class="cr-horizontal-list pull-left">
                 <img class="cr-logo-mobile modal-navbar-logo" src="<?php echo theme() ?>/src/images/assets/logo-dh-w.svg" alt="logo">
                 <li class="cr-horizontal-list__item"><a href="<?php echo home_url() ?>" class="cr-header__link">Навчання</a></li>
-                <li class="cr-horizontal-list__item"><a href="./home-page.html" class="cr-header__link">Послуги</a></li>
+                <li class="cr-horizontal-list__item"><a href="#" class="cr-header__link">Послуги</a></li>
             </ul>
         </div>
 

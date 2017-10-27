@@ -112,38 +112,40 @@ ob_start('ob_html_compress');
                 </div>
                 <div class="cr-mobile-menu-wrapper hidden-md hidden-lg">
                 <div class="container">
-                    <ul class="cr-vertical-list">
-                        <li class="cr-vertical-list__item"><a href="./home-page.html">ГОЛОВНА</a></li>
-                        <li class="cr-vertical-list__item"><a href="./about-us-page.html">ВСІ КУРСИ</a></li>
-                        <li class="cr-vertical-list__item"><a href="./about-us-page.html">ВСІ ПОДІЇ</a></li>
-                        <li class="cr-vertical-list__item"><a href="">ПОСЛУГИ</a></li>
-                    </ul>
-                    <ul class="cr-vertical-list">
-                        <li class="cr-vertical-list__item"><a href="./spaces.html">ПРОСТОРИ</a></li>
-                        <li class="cr-vertical-list__item"><a href="./about-us-page.html">ПРО НАС</a></li>
-                        <li class="cr-vertical-list__item"><a href="./faq-page.html">FAQ</a></li>
-                    </ul>
+	                <?php if ($left_menu = get_field('left_menu','option' )) { ?>
+                        <ul class="cr-vertical-list">
+			                <?php foreach ($left_menu as $lm) { ?>
+                                <li class="cr-vertical-list__item"><a href="<?php echo $lm['link'] ?>"><?php echo $lm['text'] ?></a></li>
+			                <?php } ?>
+                        </ul>
+	                <?php } ?>
+	                <?php if ($right_menu = get_field('right_menu','option' )) { ?>
+                        <ul class="cr-vertical-list">
+			                <?php foreach ($right_menu as $rm) { ?>
+                                <li class="cr-vertical-list__item"><a href="<?php echo $rm['link'] ?>"><?php echo $rm['text'] ?></a></li>
+			                <?php } ?>
+                        </ul>
+                        <div class="cr-black-curtain"></div>
+	                <?php } ?>
                     <div class="cr-contacts">
                         <hr>
                         <div class="cr-contacts--location">
 	                        <?php the_field( 'office','option' ); ?>
                         </div>
                         <ul class="cr-social-list">
-                            <li class="cr-social-list__item"><a href="instagram.com">
+                            <li class="cr-social-list__item"><a href="<?php the_field('facebook','option') ?>">
                                     <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="30" width="30" alt="">
                                 </a></li>
-                            <li class="cr-social-list__item"><a href="instagram.com">
+                            <li class="cr-social-list__item"><a href="<?php the_field('instagram','option') ?>">
                                     <img src="<?php echo theme() ?>/src/images/icons/insta_white.svg" height="30" width="30" alt="">
                                 </a></li>
                         </ul>
-                        <a class="cr-link cr-contacts--email" href="mailto:office@creativeschool.com">office@creativeschool.com</a>
+	                    <?php the_field( 'email','option' ); ?>
                         <div class="cr-contacts--phone">
-                            063 55 012 41
-                            <div class="cr-contacts--phone-separator"></div>
-                            063 55 012 41
+	                        <?php the_field( 'phone','option' ); ?>
                         </div>
                         <div class="cr-contacts--address">
-                            м.Львів вул. Погулянки 12
+	                        <?php the_field( 'address','option' ); ?>
                         </div>
                     </div>
                 </div>

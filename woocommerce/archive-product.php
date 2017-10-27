@@ -93,7 +93,7 @@ function category_has_children($term_id)
 										?>
                                     </ul>
                                 </div>
-																<span class="level-selector">*вибір напрямку</span>
+                                <span class="level-selector">*вибір напрямку</span>
                             </div>
                         </div>
                         <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -122,10 +122,8 @@ function category_has_children($term_id)
 							<?php
 							$catslug = $cat->slug;
 							$category_id = $cat->term_id; ?>
-
                             <div class="color-container row <?php echo $catslug; ?>" data-category="<?php echo $cat->slug; ?>-container">
                                 <h3 class="boxes-title" id="<?php echo $catslug; ?>"><?php echo $cat->name; ?> —</h3>
-
 								<?php
 								$args = array(
 									'post_type'      => 'product',
@@ -141,12 +139,9 @@ function category_has_children($term_id)
 								$query         = new WP_Query;
 								$products_list = $query->query($args);
 								foreach ($products_list as $post): ?>
-									<?php $_product = wc_get_product($post->ID);
-
-                                    ?>
-
-                        <div class="box col-lg-3 col-md-4 col-sm-6 col-xs-12 <?php echo $cat->slug ?>" data-category="<?php echo $catslug; ?>">
-                            <div class="cr-courses__item mode-gray <?php the_field('collection_group', $post->ID) ?> <?php the_field('status', $post->ID) ?>">
+									<?php $_product = wc_get_product($post->ID);?>
+                                    <div class="box col-lg-3 col-md-4 col-sm-6 col-xs-12 <?php echo $cat->slug ?>" data-category="<?php echo $catslug; ?>">
+                            			<div class="cr-courses__item mode-gray <?php the_field('collection_group', $post->ID) ?> <?php the_field('status', $post->ID) ?>">
 											<?php
 											$cat_name_inner = '';
 											$args           = array(
@@ -163,26 +158,26 @@ function category_has_children($term_id)
 											?>
                                             <span class="course-level course-level-normal"><?php echo $cat_name_inner ?></span>
                                             <p class="cr-courses__title">
-                                                <?php echo $post->post_title; ?>
+												<?php echo $post->post_title; ?>
                                             </p>
                                             <p class="course-start">
                                                 Початок: <?php the_field('start_mounse', $post->ID); ?>
                                             </p>
                                             <p class="course-price">
-                                                Вартість: <strong><?php echo $_product->get_regular_price(); ?> грн</strong>
+                                                Вартість: <strong><?php echo $_product->get_regular_price(); ?></strong>
                                             </p>
                                             <p class="discount">
-                                                <?php the_field('discount_text', $post->ID); ?>
+												<?php the_field('discount_text', $post->ID); ?>
                                             </p>
                                             <a class="cr-button center-block" href="<?php the_permalink($post->ID); ?>">переглянути</a>
                                         </div>
                                     </div>
-                                    <?php
-                                endforeach;
-                                wp_reset_postdata();
-                                ?>
+									<?php
+								endforeach;
+								wp_reset_postdata();
+								?>
                             </div>
-                        <?php endforeach; ?>
+						<?php endforeach; ?>
                     </div>
                 </div>
             </div>
