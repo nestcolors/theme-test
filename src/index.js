@@ -8,21 +8,30 @@ import general from './scripts/general.js';
 import faqPage from './scripts/faq-page.js';
 require('./styles/style.sass');
 
-
 // Polling for the sake of checking if all data loaded
 const interval = setInterval(function() {
     if(document.readyState === 'complete') {
-        clearInterval(interval);
-        console.log('done!');
-        $('.website-container').fadeIn();
-        $('.loading-curtain').fadeOut(500);
-        loadAllSources();
+      clearTimeout(loadingTimeOut);
+      loadData();
     } else {
       console.log('not done!');
     }
 }, 100);
 
-$('a').click( () => {
+const loadingTimeOut = setTimeout(() => {
+  console.warn('force loading data!');
+  loadData();
+}, 10000);
+
+const loadData = () => {
+  clearInterval(interval);
+  console.log('done!');
+  $('.website-container').fadeIn();
+  $('.loading-curtain').fadeOut(500);
+  loadAllSources();
+}
+
+$('a:not(.outher-link)').click( () => {
   $('.website-container').fadeOut();
   $('.loading-curtain').fadeIn();
 })

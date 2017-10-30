@@ -94,10 +94,10 @@ ob_start('ob_html_compress');
 	                                        <?php the_field( 'email','option' ); ?>
                                             <hr>
                                             <ul class="cr-social-list">
-                                                <li class="cr-social-list__item"><a href="<?php the_field('facebook','option') ?>">
+                                                <li class="cr-social-list__item"><a href="<?php the_field('facebook','option') ?>" class="outher-link" target="_blank" >
                                                         <img src="<?php echo theme() ?>/src/images/icons/fb-black.svg" height="23" width="24" alt="">
                                                     </a></li>
-                                                <li class="cr-social-list__item"><a href="<?php the_field('instagram','option') ?>">
+                                                <li class="cr-social-list__item"><a href="<?php the_field('instagram','option') ?>" class="outher-link" target="_blank" >
                                                         <img src="<?php echo theme() ?>/src/images/icons/insta-black.svg" height="23" width="24" alt="">
                                                     </a></li>
                                             </ul>
@@ -133,10 +133,10 @@ ob_start('ob_html_compress');
 	                        <?php the_field( 'office','option' ); ?>
                         </div>
                         <ul class="cr-social-list">
-                            <li class="cr-social-list__item"><a href="<?php the_field('facebook','option') ?>">
+                            <li class="cr-social-list__item"><a class="outher-link" target="_blank" href="<?php the_field('facebook','option') ?>">
                                     <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="30" width="30" alt="">
                                 </a></li>
-                            <li class="cr-social-list__item"><a href="<?php the_field('instagram','option') ?>">
+                            <li class="cr-social-list__item"><a class="outher-link" target="_blank" href="<?php the_field('instagram','option') ?>">
                                     <img src="<?php echo theme() ?>/src/images/icons/insta_white.svg" height="30" width="30" alt="">
                                 </a></li>
                         </ul>

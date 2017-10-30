@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
     <div class="cr-hero cr-home-hero">
+        <div id="school-title" class="cr-section__header">
+            <div class="cr-section__header-top">школа дизайну —  </div>
+            Design school
+        </div>
 	    <?php if ($slider = get_field('slider' )) { ?>
             <div class="cr-hero-slider hidden-xs hidden-sm">
 	            <?php foreach ($slider as $sl) { ?>
@@ -19,6 +23,16 @@
                 </div>
             </div>
 	    <?php } ?>
+      <div class="social-container">
+        <ul>
+          <li class=""><a target="_blank" class="outher-link" href="<?php the_field('facebook','option') ?>">
+                  <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="20" width="20" alt="">
+              </a></li>
+          <li class=""><a target="_blank" class="outher-link" href="<?php the_field('instagram','option') ?>">
+                  <img src="<?php echo theme() ?>/src/images/icons/insta_white.svg" height="20" width="20" alt="">
+              </a></li>
+        </ul>
+      </div>
     </div>
         <a href="./about-course-page.html" class="cr-button cr-courses-list-btn tc-white hidden-md hidden-lg transparent" >список курсів</a>
         <?php if ($mega_menu = get_field('mega_menu' )) { ?>

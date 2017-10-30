@@ -57,11 +57,23 @@ const homePage = () => {
       }
 
       if (scroll > 300) {
-        $('.slick-dots').fadeOut();
+        $('.slick-dots, .social-container, #school-title').fadeOut();
       } else {
-        $('.slick-dots').fadeIn();
+        $('.slick-dots, .social-container, #school-title').fadeIn();
       }
   });
+
+  $( '.cr-main-menu-wrapper')
+    .mouseenter(() => {
+      $( '#school-title' ).fadeOut( 300 );
+    })
+    .mouseleave(() => {
+      $( '.mod-active' ).removeClass('mod-active');
+      $( '.mod-open' ).removeClass('mod-open');
+      document.getElementsByClassName('cr-panel__item-title')[0].classList.add('mod-active');
+      document.getElementsByClassName('cr-panel__item-content')[0].classList.add('mod-open');
+      $( '#school-title' ).fadeIn( 300 );
+    });
 
   // var close_mobile_menu = header.find(".cr-close-btn");
   // close_mobile_menu.click(function(event) {
