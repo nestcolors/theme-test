@@ -11,6 +11,9 @@
   right: 0
   font-style: italic
   opacity: 0.4
+  @include media(mobile)
+    top: -6px
+    right: 20px
 .cr-type-select
   font-size: 16px
   float: right
@@ -52,6 +55,9 @@
   margin: 13px 0 0 40px
   padding: 0
   z-index: 999
+  list-style-type: none
+  @include media(mobile)
+    margin: 13px 0 0 0px
   &:last-child
     border-bottom: 2px solid black
   @include media(mobile)

@@ -30,6 +30,16 @@
     margin-left: -260px
     left: 50%
     color: $white
+    @include media(mobile)
+      top: 55vh
+      letter-spacing: 0
+      width: 290px
+      margin-left: -145px
+      left: 50%
+      .cr-button
+        border-color: $black
+        color: $black
+        background-color: rgba(251, 246, 247, 0.8)
     .cr-section__header-top
       color: $black
   .cr-hero-slider
@@ -125,6 +135,7 @@
   height: 140px
   width: 100%
   @include media(mobile)
+    width: 40%
     padding-top: 0
 
 .cr-events-container

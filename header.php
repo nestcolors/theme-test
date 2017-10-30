@@ -35,7 +35,7 @@ ob_start('ob_html_compress');
         <div class="cr-header" id="js-header">
             <div class="cr-header__motto">SIMPLICITY IS THE ULTIMATE SOPHISTICA­TION.</div>
             <div class="cr-header__mobile hidden-md hidden-lg">
-                <a href="" class="cr-header__logo">
+                <a href="<?php echo home_url() ?>" class="cr-header__logo">
                     <img class="cr-logo-mobile" src="<?php echo theme() ?>/src/images/assets/logo-creative.svg" alt="logo">
                 </a>
                 <div class="cr-burger-btn"></div>

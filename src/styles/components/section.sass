@@ -38,7 +38,7 @@
   letter-spacing: 0px
   margin-bottom: 30px
   @include media(to_tablet)
-    letter-spacing: -2px
+    letter-spacing: -1px
     margin-bottom: 28px
   @include media(mobile)
     margin: 10px 0
@@ -52,8 +52,11 @@
   @include media(to_tablet)
     width: 450px
   @include media(mobile)
-    line-height: 0
+    // line-height: ini
+    letter-spacing: 0px
     margin-bottom: 10px
+    line-height: initial
+    width: 100%
 .cr-section__header-desrc
   font-family: $regular
   font-size: 16px

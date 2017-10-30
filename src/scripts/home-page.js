@@ -55,11 +55,18 @@ const homePage = () => {
       else {
         header_fixed_part.removeClass('mod-fixed');
       }
-
-      if (scroll > 300) {
-        $('.slick-dots, .social-container, #school-title').fadeOut();
+      if (window.innerWidth > 400) {
+          if (scroll > 300) {
+            $('.slick-dots, .social-container, #school-title').fadeOut();
+          } else {
+            $('.slick-dots, .social-container, #school-title').fadeIn();
+          }
       } else {
-        $('.slick-dots, .social-container, #school-title').fadeIn();
+          if (scroll > 50) {
+            $('.slick-dots, .social-container, #school-title').fadeOut();
+          } else {
+            $('.slick-dots, .social-container, #school-title').fadeIn();
+          }
       }
   });
 

@@ -4,6 +4,9 @@
         <div id="school-title" class="cr-section__header">
             <div class="cr-section__header-top">школа дизайну —  </div>
             Design school
+            <div class="courses-list hidden-lg hidden-md">
+              <a href="<?php echo theme() ?>/shop" class="cr-button pull-right">всі курси</a>
+            </div>
         </div>
 	    <?php if ($slider = get_field('slider' )) { ?>
             <div class="cr-hero-slider hidden-xs hidden-sm">
@@ -23,7 +26,7 @@
                 </div>
             </div>
 	    <?php } ?>
-      <div class="social-container">
+      <div class="social-container hidden-xs hidden-sm">
         <ul>
           <li class=""><a target="_blank" class="outher-link" href="<?php the_field('facebook','option') ?>">
                   <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="20" width="20" alt="">
@@ -34,7 +37,6 @@
         </ul>
       </div>
     </div>
-        <a href="./about-course-page.html" class="cr-button cr-courses-list-btn tc-white hidden-md hidden-lg transparent" >список курсів</a>
         <?php if ($mega_menu = get_field('mega_menu' )) { ?>
             <div class="cr-main-menu-wrapper hidden-xs hidden-sm">
                 <div class="cr-panel" id="js-main-menu">

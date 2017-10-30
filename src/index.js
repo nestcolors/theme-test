@@ -36,12 +36,6 @@ $('a:not(.outher-link)').click( () => {
   $('.loading-curtain').fadeIn();
 })
 
-// homePage();
-// coursesList();
-// aboutUsPage();
-// faqPage();
-// spaces();
-
 const loadAllSources = () => {
   general();
   if (!!window.location.pathname.match(/product/) && !window.location.pathname.match(/product-category/)) {
