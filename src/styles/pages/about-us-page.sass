@@ -1,14 +1,20 @@
+.slick-prev, .slick-next
+  z-index: 8 !important
 .cr-about-us-hero
   margin-top: 190px
   .cr-portfolio-slider
     .slick-prev
       bottom: -16px
-      right: 40px
+      right: 150px
+      @include media(xwide)
+        right: 40px
     .slick-next
       bottom: -16px
-      right: 3px
+      right: 113px
+      @include media(xwide)
+        right: 3px
     .slick-dots
-      padding-right: 5px
+      padding-right: 75px
 .cr-text-block__small-title
   @extend h2
   text-transform: uppercase
@@ -36,11 +42,11 @@
   @include media(xwide)
     &.cooperation
       padding: 30px 50px 110px 70px !important
-      margin-top: 50px !important
+      // margin-top: 50px !important
   @include media(wide)
     &.cooperation
       padding: 30px 50px 70px 70px
-      margin-top: 0px
+      // margin-top: 0px
   @include media(tablet)
     background-color: transparent
   @include media(mobile)

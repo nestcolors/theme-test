@@ -62,7 +62,7 @@ const homePage = () => {
             $('.slick-dots, .social-container, #school-title').fadeIn();
           }
       } else {
-          if (scroll > 50) {
+          if (scroll > 30) {
             $('.slick-dots, .social-container, #school-title').fadeOut();
           } else {
             $('.slick-dots, .social-container, #school-title').fadeIn();

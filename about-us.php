@@ -13,12 +13,12 @@
 			<?php endforeach; ?>
 		</div>
 		<?php endif; ?>
-		<div class="cr-slider__text-block">
+		<div class="cr-slider__text-block js-paralax-effect1 mobile-no-parallax">
 			<div class="margin-left-md">
 				<div class="cr-text-block__small-title">як це починалося —  </div>
 				<div class="cr-text-block__big-title">our story</div>
 			</div>
-			<div class="cr-black-board js-paralax-effect1">
+			<div class="cr-black-board animation up-from-below">
 				<?php the_field( 'begin_text' ); ?>
 				<!-- <a class="cr-button mod-small mod-white t-c-white">наша команда</a> -->
 			</div>
@@ -125,8 +125,8 @@
 		<div class="cr-block-with-img">
 			<div><img src="<?php the_field('join_image') ?>" alt="" class="img img-responsive"></div>
 		</div>
-		<div class="cr-slider__text-block">
-			<div class="cr-black-board cooperation js-paralax-effect2">
+		<div class="cr-slider__text-block js-paralax-effect2-container">
+			<div class="cr-black-board cooperation js-paralax-effect2 mobile-no-parallax">
 				<h3 class="tc-white">СПІВПРАЦЯ —</h3>
 				<?php the_field( 'join_text' ); ?>
 			</div>

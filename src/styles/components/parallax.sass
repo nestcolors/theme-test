@@ -1,0 +1,36 @@
+.cr-black-board.cooperation
+  @include media(wide)
+    margin-top: 640px
+.cr-black-board.cooperation
+  @include media(swide)
+    margin-top: 600px
+  @include media(mobile)
+    transform: translateY(0)
+
+.js-paralax-effect2-container
+  position: absolute
+.js-paralax-effect1
+  margin-top: 60px
+  @include media(wide)
+    margin-top: 20px
+.mobile-no-parallax
+  @include media(to_tablet)
+    transform: translateY(0) !important
+
+
+.animation
+  animation-fill-mode: forwards
+
+.up-from-below
+  animation-name: up-from-below
+  animation-duration: 0.5s
+  animation-delay: 0.5s
+  opacity: 0
+
+@keyframes up-from-below
+  from
+    transform: translateX(-50px)
+    opacity: 0
+  to
+    transform: translateX(0px)
+    opacity: 1
