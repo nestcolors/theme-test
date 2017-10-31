@@ -176,7 +176,7 @@ get_header(); ?>
 					<hr>
 					<div class="row cr-course-block__footer">
 						<div class="col-xs-10 col-xs-offset-2 col-sm-3 col-sm-offset-0 back-to  margin-top-sm">
-							<a href="<?php echo theme() ?>/product-category/dizajn/" class="cr-back-link">назад до списку</a>
+							<a href="<?php echo home_url() ?>/product-category/dizajn/" class="cr-back-link">назад до списку</a>
 						</div>
 						<div class="col-xs-12 col-sm-9">
 							<div class="pull-right">
@@ -196,7 +196,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row cr-course-block__footer">
 				<div class="col-xs-4 col-xs-offset-0 col-sm-3 col-sm-offset-0 back-to">
-					<a href="<?php echo theme() ?>/product-category/dizajn/" class="cr-back-link">назад <span class="hidden-sm hidden-md hidden-xs">до списку</span></a>
+					<a href="<?php echo home_url() ?>/product-category/dizajn/" class="cr-back-link">назад <span class="hidden-sm hidden-md hidden-xs">до списку</span></a>
 				</div>
 				<div class="col-xs-8 col-xs-offset-0 col-sm-9 col-sm-offset-0 ">
 					<div class="pull-right">

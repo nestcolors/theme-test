@@ -164,7 +164,7 @@ function category_has_children($term_id)
                                                 Початок: <?php the_field('start_mounse', $post->ID); ?>
                                             </p>
                                             <p class="course-price">
-                                                Вартість: <strong><?php echo $_product->get_regular_price(); ?></strong>
+                                                Вартість: <strong><?php echo $_product->get_regular_price(); ?> грн.</strong>
                                             </p>
                                             <p class="discount">
 												<?php the_field('discount_text', $post->ID); ?>
