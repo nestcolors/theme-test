@@ -18,14 +18,17 @@
                     </div>
 	            <?php } ?>
             </div>
+	    <?php } ?>
+	    <?php if ($mob_slider = get_field('mobile_slider' )) { ?>
             <div class="cr-mobile-home-hero hidden-lg hidden-md">
                 <div class="cr-mobile-hero-slider">
-	                <?php foreach ($slider as $sl) { ?>
-                        <div class="cr-mobile-img" style="background: url('<?php echo $sl["video_poster"] ?>')"></div>
+	                <?php foreach ($mob_slider as $msl) { ?>
+                        <div class="cr-mobile-img" style="background: url('<?php echo $msl["picture"] ?>')"></div>
 	                <?php } ?>
                 </div>
             </div>
 	    <?php } ?>
+
       <div class="social-container hidden-xs hidden-sm">
         <ul>
           <li class=""><a target="_blank" class="outher-link" href="<?php the_field('facebook','option') ?>">

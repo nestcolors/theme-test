@@ -595,6 +595,13 @@ function create_post_type() {
 		));
 }
 
+// Update Google Map Key
+function my_acf_init()
+{
+	acf_update_setting('google_api_key', 'AIzaSyAOfuigGs3rWzZsdcWmQTeGU82RGccVqfc');
+}
+add_action('acf/init', 'my_acf_init');
+
 function soc(){ ?>
     <div class="soc">
         <?php if ($twit = get_field("twit","option")) { ?>
