@@ -28,7 +28,11 @@ ob_start('ob_html_compress');
 </head>
 <body <?php body_class(); ?>  data-hash="<?php wpa_fontbase64(true); ?>" data-a="<?php echo admin_url('admin-ajax.php'); ?>">
   <div class="loading-curtain">
-    <div style="font-size: 30px; color: black; margin-top: 40vh; text-align: center;">page is loading...</div>
+    <div style="margin-top: 45vh; text-align: center;">
+      <img width="190px" height="auto" class="cr-logo-mobile" src="<?php echo theme() ?>/src/images/assets/logo-creative.svg" alt="logo">
+      <br>
+      <p style="font-size: 20px; color: grey; margin-top: 10px; font-family: `sans-serif`; font-weight: 400 !important;">DESIGN SCHOOL</p>
+    </div>
   </div>
   <div class="website-container" style="display: none">
     <div class="home-page page-wrapper" id="home-page">

@@ -1,8 +1,13 @@
 import $ from "jquery";
 import slick from "./slick.min.js"
+import Rellax from "rellax";
 
 const aboutCoursePage = () => {
   console.log("aboutCoursePage");
+
+  var intro = new Rellax('.js-paralax-effect1', {
+    speed: 2,
+  });
 
   $(document).ready(function(){
 

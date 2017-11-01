@@ -211,7 +211,7 @@ get_header(); ?>
 
 	<div class="cr-section display-flex-on-small">
 		<div class="cr-slider__text-block mod-left-side">
-			<div class="cr-black-board">
+			<div class="about-course-black-board cr-black-board js-paralax-effect1 mobile-no-parallax">
 				<h3 class="tc-white">ПРО КУРС —</h3>
 				<?php the_field('about_text') ?>
 			</div>
@@ -260,7 +260,7 @@ get_header(); ?>
 	            <?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
                     <div>
                         <img src="<?php echo get_the_post_thumbnail_url($p->ID) ?>" alt="" class="img img-responsive">
-                        <div>
+                        <div class="album-link">
                             <a href="<?php echo get_permalink( $p->ID ); ?>">
                                 <strong><?php the_field('caption', $p->ID ); ?> <br></strong>
 	                            <?php the_field('author',$p->ID) ?>

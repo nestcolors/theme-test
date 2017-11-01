@@ -17,20 +17,43 @@
   @include media(to_tablet)
     transform: translateY(0) !important
 
+.about-course-black-board.js-paralax-effect1
+  @include media(wide)
+    margin-top: 210px
+  @include media(swide)
+    margin-top: 310px
 
 .animation
   animation-fill-mode: forwards
+  animation-duration: 0.5s
+  animation-delay: 0.5s
+
+.animation-1s-delay
+  animation-duration: 0.5s
+  animation-delay: 1s
+
+.up-from-left
+  animation-name: up-from-left
+  opacity: 0
+  animation-delay: 0.5s
 
 .up-from-below
   animation-name: up-from-below
-  animation-duration: 0.5s
-  animation-delay: 0.5s
   opacity: 0
 
-@keyframes up-from-below
+@keyframes up-from-left
   from
     transform: translateX(-50px)
     opacity: 0
   to
     transform: translateX(0px)
+    opacity: 1
+  opacity: 0
+
+@keyframes up-from-below
+  from
+    transform: translateY(50px)
+    opacity: 0
+  to
+    transform: translateY(0px)
     opacity: 1

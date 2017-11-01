@@ -18,7 +18,7 @@
 				<div class="cr-text-block__small-title">як це починалося —  </div>
 				<div class="cr-text-block__big-title">our story</div>
 			</div>
-			<div class="cr-black-board animation up-from-below">
+			<div class="cr-black-board animation up-from-left">
 				<?php the_field( 'begin_text' ); ?>
 				<!-- <a class="cr-button mod-small mod-white t-c-white">наша команда</a> -->
 			</div>
