@@ -44,7 +44,7 @@ $place = 'place';
 		<div class="cr-spaces-container">
 			<div class="row space-desc-wrapper">
 				<?php if ($space = get_field('space' )) { $count = -1; ?>
-                    <div class="col-md-5 col-xs-6 space-selector">                    
+                    <div class="col-md-5 col-xs-6 space-selector">
                         <?php foreach ($space as $s) { $count++; ?>
                             <h3><a href="#" class="<?php echo $place . $count; if($count == 0) { echo ' active-link'; } ?> space-selector-item" data-space-name="<?php echo $place . $count ?>"><?php echo $s['name']; ?></a></h3>
                         <?php } ?>
@@ -113,7 +113,7 @@ $place = 'place';
             <?php } ?>
         ];
         map = new google.maps.Map(document.getElementsByClassName('js-cr-map')[0], {
-            disableDefaultUI: true,
+            disableDefaultUI: false,
             center: {lat: 0, lng: 0},
             zoom: 15
         });
