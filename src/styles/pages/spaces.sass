@@ -184,6 +184,8 @@ $bottom-container-xwide: 150px
 		height: 100vh
 		background-size: cover !important
 		background-repeat: no-repeat !important
+	.slick-prev, .slick-next
+		display: none !important
 	.slick-prev
 		right: 610px
 		z-index: 1
@@ -244,9 +246,10 @@ $bottom-container-xwide: 150px
 		@include media(mobile)
 			top: 400px
 		li
+			margin: 0 5px !important
 			button
 				&:before
-					font-size: 10px
+					font-size: 13px
 					color: #fff
 .cr-spaces-map
 	iframe
