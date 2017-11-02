@@ -19,7 +19,7 @@ $place = 'place';
 		<?php if ($space = get_field('space' )) { $count = 0; ?>
             <section>
 			<?php foreach ($space as $s) { ?>
-                <div id="<?php echo $place . $count++; ?>" class="cr-spaces-slider visible-slider">
+                <div id="<?php echo $place . $count++; ?>" class="cr-spaces-slider ">
 				<?php foreach ($s['slides'] as $sl) { ?>
                     <div class="cr-spaces-slider-img" style="background-image: url('<?php echo $sl['image'] ?>')"></div>
 				<?php } ?>

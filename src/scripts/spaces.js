@@ -1,6 +1,7 @@
 import $ from "jquery";
 const spaces = () => {
   console.log('spaces');
+  $('.cr-spaces-slider').first().addClass('visible-slider');
 
   $('.space-selector-item').click(function(e) {
     e.preventDefault()
@@ -44,6 +45,7 @@ const spaces = () => {
         }
       ]
     });
+    $('#space0').addClass('visible-slider');
   }
 }
 
@@ -69,4 +71,3 @@ $(document).ready(function(){
       ]
   });
 });
-
