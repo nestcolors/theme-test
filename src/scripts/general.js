@@ -10,10 +10,10 @@ const general = () => {
   $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if (scroll >= motto_height) {
-      header_fixed_part.addClass('mod-fixed');
+      header.addClass('mod-fixed');
     }
     else {
-      header_fixed_part.removeClass('mod-fixed');
+      header.removeClass('mod-fixed');
     }
   });
 

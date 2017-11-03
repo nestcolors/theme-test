@@ -3,7 +3,7 @@
     <div class="cr-hero cr-home-hero">
         <div id="school-title" class="cr-section__header">
             <div class="cr-section__header-top">школа дизайну —  </div>
-            Design school
+            <span id="js-dynamic-title">Junior</span> school
             <div class="courses-list hidden-lg hidden-md">
               <a href="<?php echo theme() ?>/shop" class="cr-button pull-right">всі курси</a>
             </div>
@@ -173,6 +173,5 @@
         </div>
     </div>
 <?php include 'dehouse.php' ?>
-
 
 <?php get_footer(); ?>

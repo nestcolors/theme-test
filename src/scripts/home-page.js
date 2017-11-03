@@ -1,4 +1,5 @@
 import $ from "jquery";
+import Typed from 'typed.js';
 // import gm123 from "./google-maps.js";
 
 const homePage = () => {
@@ -49,12 +50,12 @@ const homePage = () => {
       } else {
         $('.cr-main-menu-wrapper').fadeIn();
       }
-      if (scroll >= motto_height) {
-        header_fixed_part.addClass('mod-fixed');
-      }
-      else {
-        header_fixed_part.removeClass('mod-fixed');
-      }
+      // if (scroll >= motto_height) {
+      //   header_fixed_part.addClass('mod-fixed');
+      // }
+      // else {
+      //   header_fixed_part.removeClass('mod-fixed');
+      // }
       if (window.innerWidth > 400) {
           if (scroll > 300) {
             $('.slick-dots, .social-container, #school-title').fadeOut();
@@ -122,6 +123,15 @@ const homePage = () => {
     $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
   });
 
+  var options = {
+    strings: ["Design", "Business", "Junior"],
+    typeSpeed: 50,
+    loop: true,
+    backDelay: 3000,
+    autoInsertCss: true
+  }
+
+  var typed = new Typed("#js-dynamic-title", options);
 
 }
 
