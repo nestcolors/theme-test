@@ -10,6 +10,10 @@ to {transform: translateY(0px); opacity: 1;}
   right: 0
   background: #fff
   z-index: 10
+  transition: all .5s
+  &.mod-fixed
+    @include media(wide)
+      transform: translate(0, -50px)
   @include media(to_tablet)
     height: 45px
     border-bottom: 4px solid $dark

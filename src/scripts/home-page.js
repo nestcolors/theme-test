@@ -1,4 +1,5 @@
 import $ from "jquery";
+import Typed from 'typed.js';
 
 const homePage = () => {
   document.getElementsByClassName('cr-panel__item-title')[0].classList.add('mod-active');
@@ -43,12 +44,17 @@ const homePage = () => {
 
   $(window).scroll(function (event) {
       var scroll = $(window).scrollTop();
-      if (scroll >= motto_height) {
-        header_fixed_part.addClass('mod-fixed');
+      if (scroll > menuWrapperHeightHandler) {
+        $('.cr-main-menu-wrapper').fadeOut();
+      } else {
+        $('.cr-main-menu-wrapper').fadeIn();
       }
-      else {
-        header_fixed_part.removeClass('mod-fixed');
-      }
+      // if (scroll >= motto_height) {
+      //   header_fixed_part.addClass('mod-fixed');
+      // }
+      // else {
+      //   header_fixed_part.removeClass('mod-fixed');
+      // }
       if (window.innerWidth > 400) {
           if (scroll > 200) {
             $('.slick-dots, .social-container, #school-title').fadeOut();
@@ -100,6 +106,15 @@ const homePage = () => {
     $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
   });
 
+  var options = {
+    strings: ["Design", "Business", "Junior"],
+    typeSpeed: 50,
+    loop: true,
+    backDelay: 4000,
+    autoInsertCss: true
+  }
+
+  var typed = new Typed("#js-dynamic-title", options);
 
 }
 
