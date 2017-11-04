@@ -21,12 +21,12 @@ const general = () => {
   on hover show submenu
   */
   $('.cr-sublist-container').hover((i) => {
-    $('.cr-black-curtain').fadeIn(100);
+    $('.cr-black-curtain').fadeIn(300);
     $('.cr-sublist-container > ul').fadeIn(0);
     $('.cr-sublist-container > ul').addClass('show-cr-list-sub-menu');
   }, (i) => {
     $('.cr-sublist-container > ul').fadeOut();
-    $('.cr-black-curtain').fadeOut(100);
+    $('.cr-black-curtain').fadeOut(300);
   });
 
   $('.js-popup-container').hover((i) => {

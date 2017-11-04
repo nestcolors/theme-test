@@ -1,5 +1,4 @@
 import $ from "jquery";
-// import gm123 from "./google-maps.js";
 
 const homePage = () => {
   document.getElementsByClassName('cr-panel__item-title')[0].classList.add('mod-active');
@@ -44,11 +43,6 @@ const homePage = () => {
 
   $(window).scroll(function (event) {
       var scroll = $(window).scrollTop();
-      if (scroll > menuWrapperHeightHandler) {
-        $('.cr-main-menu-wrapper').fadeOut();
-      } else {
-        $('.cr-main-menu-wrapper').fadeIn();
-      }
       if (scroll >= motto_height) {
         header_fixed_part.addClass('mod-fixed');
       }
@@ -56,7 +50,7 @@ const homePage = () => {
         header_fixed_part.removeClass('mod-fixed');
       }
       if (window.innerWidth > 400) {
-          if (scroll > 300) {
+          if (scroll > 200) {
             $('.slick-dots, .social-container, #school-title').fadeOut();
           } else {
             $('.slick-dots, .social-container, #school-title').fadeIn();
@@ -82,29 +76,13 @@ const homePage = () => {
       $( '#school-title' ).fadeIn( 300 );
     });
 
-  // var close_mobile_menu = header.find(".cr-close-btn");
-  // close_mobile_menu.click(function(event) {
-  //   header.find('.cr-header__fixed-part').fadeOut().toggleClass('mod-mobile-menu-closed');
-  //       header.toggleClass('mod-mobile-opened');
-  // });
-  // var open_mobile_menu = header.find(".cr-burger-btn");
-  // open_mobile_menu.click(function(event) {
-  //   header.find('.cr-header__fixed-part').fadeIn().toggleClass('mod-mobile-menu-closed');
-  //   header.toggleClass('mod-mobile-opened');
-  // });
-
-  // var mobile_burger_btn =  header.find(".cr-burger-btn");
-  // mobile_burger_btn.click(function(event) {
-  //   // header.find('.cr-header__fixed-part').toggleClass('mod-mobile-menu-closed');
-  //   header.toggleClass('mod-mobile-opened');
-  // });
-
   $('.cr-hero-slider').slick({
     dots: true,
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
     fade: true,
   });
 

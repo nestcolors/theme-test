@@ -140,7 +140,7 @@ function category_has_children($term_id)
 								$products_list = $query->query($args);
 								foreach ($products_list as $post): ?>
 									<?php $_product = wc_get_product($post->ID);?>
-                                    <div class="box col-lg-3 col-md-4 col-sm-6 col-xs-12 <?php echo $cat->slug ?>" data-category="<?php echo $catslug; ?>">
+                                    <div class="box col-lg-3 col-md-4 col-sm-4 col-xs-12 <?php echo $cat->slug ?>" data-category="<?php echo $catslug; ?>">
                             			<div class="cr-courses__item mode-gray <?php the_field('collection_group', $post->ID) ?> <?php the_field('status', $post->ID) ?>">
 											<?php
 											$cat_name_inner = '';
