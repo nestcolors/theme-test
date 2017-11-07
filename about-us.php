@@ -24,7 +24,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="cr-section">
+	<div class="cr-section extra-margin">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-5">
@@ -42,7 +42,8 @@
 					<div class="row">
 						<div class="col-xs-12 col-md-3">
 							<div class="cr-people-slider__header">
-								<?php echo $t['name_group'] ?>(4) —
+								<?php echo $t['name_group'] ?>(<?php echo count($t['team']) ?>) —
+
 								<div class="cr-arrow-wrapper arrows-slider-1"></div>
 							</div>
 						</div>
@@ -91,7 +92,7 @@
 	<?php
 	$recomendation = get_field('recomendation');
 	if( $recomendation ): ?>
-		<div class="cr-section hidden-xs hidden-sm">
+		<div class="cr-section extra-margin hidden-xs hidden-sm">
 			<div class="container">
 				<div class="cr-section__header">
 					<div class="cr-section__header-top">рекомендації(3) —  </div>
@@ -115,7 +116,7 @@
 		</div>
 	<?php endif; ?>
 
-	<div class="cr-section">
+	<div class="cr-section extra-margin">
 		<div class="container">
 			<div class="cr-section__header">
 				<div class="cr-section__header-top">долучайся —  </div>

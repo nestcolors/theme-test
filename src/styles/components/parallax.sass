@@ -9,10 +9,14 @@
 
 .js-paralax-effect2-container
   position: absolute
+  @include media(to_tablet)
+    position: relative
 .js-paralax-effect1
   margin-top: 60px
   @include media(wide)
     margin-top: 20px
+  @include media(tablet)
+    margin-top: -100px
 .mobile-no-parallax
   @include media(to_tablet)
     transform: translateY(0) !important
