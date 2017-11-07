@@ -4,8 +4,10 @@ body
   font-family: $light
   transition: 0.2s
   overflow-x: hidden
-  @include media(to_tablet)
-    // padding-top: 45px
+  &.post-type-archive-events,
+  &.single-events
+    @include media(to_tablet)
+      padding-top: 45px
 
 p
   font-size: 16px

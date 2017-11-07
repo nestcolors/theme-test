@@ -38,19 +38,6 @@
     .cr-section__header-top
       color: $black
   .cr-hero-slider
-    // position: absolute
-    // right: 0
-    // top: 30px
-    .slick-list
-      // @include media(wide)
-      //   height: 480px
-      //   width: 1000px
-      // @include media(swide)
-      //   height: 600px
-      //   width: 1000px
-      // @include media(xwide)
-      //   height: 750px
-      //   width: 1500px
     .slick-dots
       bottom: 35px
       position: fixed
@@ -73,21 +60,23 @@
     @include media(mobile)
       height: 330px
     .slick-dots
-      bottom: 20px
-      right: 20px
       text-align: right
-    // li.slick-active button:before
-      // font-size: 13px
-      // color: $white
-      // opacity: 1
+      @include media(tablet)
+        bottom: 60px
+        right: 0px
+        padding-right: 35px
+      @include media(mobile)
+        bottom: 20px
+        right: 20px
     .cr-mobile-img
       background-size: cover !important
       background-position: center !important
       background-repeat: no-repeat !important
       height: 300px
-      width: 100vw
       @include media(to_tablet)
         min-height: calc(100vh - 45px)
+      @include media(mobile)
+        min-height: 100vh
   // width: 100%
   .cr-button--vertical
     position: absolute
