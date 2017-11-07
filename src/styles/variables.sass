@@ -31,6 +31,9 @@ $bold: "Proxima Bold"
   @if $media == mobile
     @media only screen and (max-width: 500px)
       @content
+  @else if $media == xs_mobile
+    @media only screen and (max-width: 321px)
+      @content
   @else if $media == to_mobile
     @media only screen and (max-width: 767px)
       @content

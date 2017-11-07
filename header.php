@@ -119,7 +119,15 @@ ob_start('ob_html_compress');
 	                <?php if ($left_menu = get_field('left_menu','option' )) { ?>
                         <ul class="cr-vertical-list">
 			                <?php foreach ($left_menu as $lm) { ?>
-                                <li class="cr-vertical-list__item"><a href="<?php echo $lm['link'] ?>"><?php echo $lm['text'] ?></a></li>
+                                <li class="cr-vertical-list__item"><a href="<?php echo $lm['link'] ?>"><?php echo $lm['text'] ?></a>
+                                  <?php if ($lm['submenu'] == true) { ?>
+                                      <ul class="cr-horizontal-list-sub-menu mobile-submenu-list">
+                                      <?php foreach ($lm['submenu'] as $r) { ?>
+                                          <li class="cr-vertical-list__item mobile-submenu"><a href="<?php echo $r['link'] ?>" class=""><?php echo $r['text'] ?></a></li>
+                                      <?php } ?>
+                                      </ul>
+                                  <?php } ?>
+                                </li>
 			                <?php } ?>
                         </ul>
 	                <?php } ?>

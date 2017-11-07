@@ -4,10 +4,14 @@
     margin-top: 80px
   &.less-margin
     margin-top: 70px
+    @include media(to_tablet)
+      margin-top: 40px
   &.sm-margin
     margin-top: 50px
   &.extra-margin
     margin-top: 150px
+    @include media(to_tablet)
+      margin-top: 80px
   &.mod-no-margin-tablets
     @include media(to_tablet)
       margin-top: 0

@@ -128,9 +128,14 @@ to {transform: translateY(0px); opacity: 1;}
       animation: appear-list
       animation-duration: 0.15s
 
-// &.mod-mobile-menu-closed
-//   @include media(to_tablet)
-//     display: none
+.mobile-submenu-list
+  list-style-type: none
+  padding: 0
+  margin-top: 10px
+  li.mobile-submenu:first-child
+    display: none
+  li.mobile-submenu:last-child
+    padding-bottom: 0
 
 .cr-header__logo
   position: absolute
@@ -259,7 +264,7 @@ body
   .cr-social-list
     margin-top: 0
     left: auto
-    margin-bottom: 40px
+    margin-bottom: 0px
   .cr-vertical-list
     display: block
     text-align: center
@@ -267,11 +272,21 @@ body
     color: $white
     font-family: $bold
     font-size: 16px
-    margin: 45px 0
+    margin: 10px 0 0
     list-style: none
     padding: 0
+    margin: 50px 0 0
+    @include media(mobile)
+      margin: 20px 0 0
+    @include media(xs_mobile)
+      margin: 10px 0 0
     &:first-child
-      margin-bottom: 40px
+      margin: 80px 0 0
+      @include media(mobile)
+        margin: 50px 0 0
+        margin-bottom: 20px
+      @include media(xs_mobile)
+        margin-bottom: 0px
   .cr-vertical-list__item
     padding: 10px 0
     text-transform: uppercase

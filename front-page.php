@@ -2,7 +2,7 @@
 
     <div class="cr-hero cr-home-hero">
         <div id="school-title" class="cr-section__header">
-            <div class="cr-section__header-top">школа дизайну —  </div>
+            <div class="cr-section__header-top">школа <span id="js-dynamic-title-small">дизайну</span> —  </div>
             <span id="js-dynamic-title">Design</span> school
             <div class="courses-list hidden-lg hidden-md">
               <a href="<?php echo theme() ?>/shop" class="cr-button pull-right">всі курси</a>
@@ -162,7 +162,7 @@
 	    <?php endif; ?>
     </div>
 
-    <div class="cr-section extra-margin">
+    <div class="cr-section extra-margin cr-quote-container">
         <div class="container">
             <div class="cr-quote"><?php the_field( 'text' ); ?>
                 <div class="cr-quote__author">
