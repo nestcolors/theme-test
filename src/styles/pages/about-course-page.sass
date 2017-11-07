@@ -110,7 +110,9 @@
   z-index: 9
   left: 0
   margin: 0
-  padding: 10px 50px
+  padding: 10px
+  @include media(mobile)
+    padding: 10px 50px
   .cr-button
     display: inline-block
   .back-to

@@ -86,8 +86,8 @@
 	.mode-button
 		&:before
 			position: absolute
-			top: -37px
-			font-size: 18px
+			top: -32px
+			font-size: 14px
 			background-color: $white
 			color: $black
 			font-family: $semibold
@@ -136,6 +136,8 @@ h3#intensivi
 	.box
 		min-height: 320px
 		margin-bottom: 20px
+		@include media(to_tablet)
+			min-height: 350px
 		@include media(mobile)
 			min-height: initial
 			margin-bottom: 0
