@@ -4,10 +4,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<a href="" class="cr-header__logo">
+					<a href="<?php echo home_url() ?>" class="cr-header__logo">
 						<img src="<?php echo theme() ?>/src/images/assets/logo-creative-w.svg" alt="logo" class="">
 					</a>
-					<div class="cr-section__header" style="padding: 90px 0 30px">
+					<div class="cr-section__header" style="padding: 90px 0 15px">
 						<div class="cr-section__header-top">наша команда —  </div>
 						our team
 					</div>
@@ -27,22 +27,25 @@
 				</div>
 				<div class="col-md-5 col-sm-5 cr-our-team-photo">
 					<?php if ( has_post_thumbnail() ) { ?>
-						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+						<img class="profile-photo" src="<?php the_post_thumbnail_url(); ?>" alt="">
 					<?php } ?>
 					<ul class="cr-social-list">
 						<?php if(get_field('instagram')) { ?>
 						<li class="cr-social-list__item">
-							<a href="<?php the_field('instagram') ?>"><img src="#">instagram-icon</a>
+							<a href="<?php the_field('instagram') ?>" target="_blank">
+								<img src="<?php echo theme() ?>/src/images/icons/insta-black.svg" height="23" width="24" alt=""></a>
 						</li>
 						<?php } ?>
 						<?php if(get_field('facebook')) { ?>
 						<li class="cr-social-list__item">
-							<a href="<?php the_field('facebook') ?>"><img src="#">facebook-icon</a>
+							<a href="<?php the_field('facebook') ?>" target="_blank">
+								<img src="<?php echo theme() ?>/src/images/icons/fb-black.svg" height="23" width="24" alt=""></a>
 						</li>
 						<?php } ?>
 						<?php if(get_field('behance')) { ?>
 						<li class="cr-social-list__item">
-							<a href="<?php the_field('behance') ?>"><img src="#">behance-icon</a>
+							<a href="<?php the_field('behance') ?>" target="_blank">
+								<img src="<?php echo theme() ?>/src/images/icons/behance-black.svg" height="23" width="24" alt=""></a>
 						</li>
 						<?php } ?>
 					</ul>
@@ -61,7 +64,7 @@
 
 		<div class="container members-switcher">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-sm-6 members-switcher-left">
 					<?php if (get_previous_post_link()) { ?>
 						<?php $prevPost = get_previous_post(true);
 						$prev_post = get_adjacent_post(false, '', true);
@@ -72,14 +75,14 @@
 						</a>
 					<?php } ?>
 				</div>
-				<div class="col-md-6">
+				<div class="col-sm-6 members-switcher-right">
 					<?php if (get_next_post_link()) { ?>
 						<?php $nextPost = get_next_post(true);
 						$next_post = get_adjacent_post(false, '', false);
 						?>
 						<?php  ?>
 						<a href="<?php echo $next_post_url = get_permalink( get_adjacent_post(false,'',false)->ID ); ?>" class="next-ivent">
-							<div class="about-course-title hidden-xs"><?php echo $next_post->post_title ?></div><br>
+							<div class="about-course-title hidden-xs"><?php echo $next_post->post_title ?></div>
 							<div class="hidden-xs"><?php echo get_field('position', $next_post->ID) ?></div>
 						</a>
 					<?php } ?>

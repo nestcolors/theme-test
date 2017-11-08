@@ -50,7 +50,7 @@ const loadAllSources = () => {
   } else if (!!window.location.pathname.match(/prostori/)) {
       console.log('i`m prostori file: ', !!window.location.pathname.match(/prostori/));
       spaces();
-  } else if (!!window.location.pathname.match(/\//) && !window.location.pathname.match(/events/)){
+  } else if (!!window.location.pathname.match(/\//) && !window.location.pathname.match(/events|teachers|faq/)){
     console.log('i`m homepage file: ', !!window.location.pathname.match(/creative/));
     homePage();
   }

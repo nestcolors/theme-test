@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		<?php if ($faq = get_field('faq' )) { ?>
-			<div class="container cr-events-list modal-body cr-faq-modal">
+			<div class="row cr-events-list modal-body cr-faq-modal">
 				<!--         <div class="cr-faq-modal__header">
 						  <div class="cr-faq-modal__header-top">поширені питання та відповіді  —  </div>
 						  <div class="cr-faq-modal__header-bottom">faq</div>

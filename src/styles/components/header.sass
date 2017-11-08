@@ -150,7 +150,7 @@ to {transform: translateY(0px); opacity: 1;}
     img
       height: 16px
   @include media(mobile)
-    top: 15px !important
+    top: 12px !important
 
 body
   position: relative
@@ -186,7 +186,7 @@ body
   width: 40px
   height: 40px
   right: 10px
-  top: 0
+  top: -1px
   cursor: pointer
   &:after,  &:before
     content: ''
@@ -203,11 +203,11 @@ body
   .cr-header.mod-mobile-opened &
     &:after
       // transition: transform .3s
-      top: 25px
+      top: 21px
       transform: rotate(-45deg)
     &:before
       // transition: transform .3s
-      top: 25px
+      top: 21px
       transform: rotate(45deg)
 
 .cr-header-popup

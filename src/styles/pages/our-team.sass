@@ -1,11 +1,13 @@
 .cr-our-team
   background: $white
-  padding: 40px 30px 20px 130px
+  padding: 40px 30px 20px 30px
   position: relative
+  margin-top: 50px
   @include media(to_tablet)
-    padding: 35px 60px 80px 60px
+    padding: 35px 60px 60px 20px
+    margin: 0 0px
   @include media(mobile)
-    padding: 15px 30px
+    padding: 25px 0px
   .close-icon
     bottom: 100px
   .t-bold
@@ -26,7 +28,7 @@
     height: 0
     @include media(to_tablet)
       height: auto
-  img
+  img.profile-photo
     width: 100%
     position: relative
     margin-top: -115px
@@ -69,3 +71,13 @@
 .members-switcher
   position: relative
   z-index: 9999
+  margin-top: 10px
+  a
+    div
+      opacity: 0.8
+      color: $white
+    &:hover
+      div
+        opacity: 1
+  .members-switcher-right
+    text-align: right
