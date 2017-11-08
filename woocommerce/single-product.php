@@ -61,7 +61,7 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="cr-section mod-margin-to-hero">
+	<div class="cr-section mod-margin-to-hero info-table-container">
 		<div class="container no-margin-tablet">
 			<div class="col-xs-12 no-margin-tablet">
 				<div class="cr-course-block">
