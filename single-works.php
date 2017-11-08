@@ -27,10 +27,10 @@
 							<?php foreach( $images as $image ): ?>
 								<div>
 									<img src="<?php echo $image['url']; ?>">
-									<h2 class="tc-white"><?php the_field( 'caption' ); ?></h2>
 								</div>
 							<?php endforeach; ?>
 						</div>
+						<h2 class="tc-white"><?php the_field( 'caption' ); ?></h2>
 					</div>
 				</div>
 			</div>

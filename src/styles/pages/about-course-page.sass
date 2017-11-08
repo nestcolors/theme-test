@@ -16,7 +16,7 @@
   @include media(to_tablet)
     padding: 30px 60px
   @include media(mobile)
-    padding: 20px 10px
+    padding: 20px 20px
   .cr-section__header
     margin-bottom: 50px
     @include media(mobile)
@@ -38,6 +38,11 @@
     float: right
     color: rgba(8, 8, 8, 0.5)
     margin-top: 20px
+    @include media(to_mobile)
+      opacity: 1
+      text-align: center
+      float: none
+      display: block
   .no-border-xs
     @include media(to_mobile)
       padding: 10px 20px 10px 20px
@@ -59,7 +64,7 @@
   @include media(to_tablet)
     height: 575px
   @include media(mobile)
-    height: 200px
+    height: 500px
     margin-bottom: 0px
   .cr-hero
     height: 920px
@@ -81,10 +86,10 @@
       background-size: 100%
       background-position: top
     @include media(mobile)
-      background-attachment: fixed
-      height: 310px
-      background-size: 100%
-      background-position: top
+      background-attachment: initial
+      height: 500px
+      background-size: cover
+      background-position: center
 .cr-section
   @include media(mobile)
     margin-top: 40px
@@ -118,7 +123,7 @@
   .back-to
     margin-top: 10px
   @include media(mobile)
-    padding: 10px 0
+    padding: 0 0 10px 0
     .cr-course-block__footer
       margin-top: 10px
     .cr-button
@@ -260,7 +265,7 @@
     .cr-courses__item.mode-gray
       background: $black
       border: none
-      padding: 10px 10px 20px
+      padding: 10px 20px 20px
       color: $white
     .cr-courses__title
       margin: 25px 0 35px
@@ -285,3 +290,13 @@
       opacity: 1
       width: 80%
       margin: 0 auto
+.cr-section.cr-two-columns
+  .container
+    @include media(tablet)
+      padding: 0 50px
+    @include media(mobile)
+      padding: 0 20px
+  .course-program-container
+  .course-whom-container
+    @include media(to_tablet)
+      margin-top: 50px

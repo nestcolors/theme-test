@@ -92,30 +92,7 @@ get_header(); ?>
 											}
 										endforeach;
 									endif;
-
-									/////////
-
-//									global $post;
-//									$terms = get_the_terms( $post->ID, 'product_cat' );
-//									foreach ($terms as $term) {
-//										echo $term->name .' ';
-//										$thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true );
-//
-//										$image = wp_get_attachment_url( $thumbnail_id );
-//
-//										echo "'{$image}'";
-//									}
-//									the_widget('WC_Widget_Product_Categories');
-//									$term =  get_the_terms( $post->ID, 'product_cat' );
-//									foreach ($term as $t) {
-//										$parentId = $t->parent;
-//										if($parentId == 0){
-//											echo $t->slug;
-//										}else{
-//											$term = get_terms( 'product_cat', array('include' => array($parentId)) );
-//										}
-//									}
-//									?>
+									?>
 								</strong>
 								<?php if ($next_posts = get_field('next_posts' )) { ?>
 									<ul class="cr-type-select-value show-on-click">
@@ -163,13 +140,13 @@ get_header(); ?>
 						</div>
 					</div><!-- schedule table -->
 
-					<div class="row">
+					<div class="row privat-payment-info">
 						<div class="col-xs-12 col-sm-4 hidden-xs">
-							<img src="<?php echo theme() ?>/src/images/pb-logo.jpg" height="67" width="200" alt="">
+							<img src="<?php echo theme() ?>/src/images/logo-opcha.png" style="margin: 0 auto; display: block;" height="auto" width="100" alt="">
 						</div>
 						<div class="col-xs-12 col-sm-8">
 							<div class="m-top-25">
-								<p class="t-a-right t-bold">При розрахунку можна скористатися послугою Оплата частинами від Приватбанку, <a href="" class="">деталі тут.</a></p>
+								<p class="t-a-right t-bold mobile-t-center">При розрахунку можна скористатися послугою Оплата частинами від Приватбанку, <a href="https://chast.privatbank.ua/" target="_blank" class="">деталі тут.</a></p>
 							</div>
 						</div>
 					</div>
@@ -196,7 +173,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row cr-course-block__footer">
 				<div class="col-xs-4 col-xs-offset-0 col-sm-3 col-sm-offset-0 back-to">
-					<a href="<?php echo home_url() ?>/product-category/dizajn/" class="cr-back-link">назад <span class="hidden-sm hidden-md hidden-xs">до списку</span></a>
+					<a href="<?php echo home_url() ?>/product-category/dizajn/" class="cr-back-link">назад <span class="hidden-xs">до списку</span></a>
 				</div>
 				<div class="col-xs-8 col-xs-offset-0 col-sm-9 col-sm-offset-0 ">
 					<div class="pull-right">
@@ -223,11 +200,11 @@ get_header(); ?>
 	<div class="cr-section cr-two-columns">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-6">
+				<div class="col-xs-12 col-md-6 course-program-container">
 					<div class="cr-two-columns__header">програма —   </div>
 					<?php the_field('programm') ?>
 				</div>
-				<div class="col-xs-12 col-md-6">
+				<div class="col-xs-12 col-md-6 course-whom-container">
 					<div class="cr-two-columns__header">для кого —   </div>
 					<?php the_field( 'for_whom' ); ?>
 				</div>

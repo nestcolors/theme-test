@@ -42,3 +42,24 @@
         height: 20px
         width: 20px
         background-size: 100%
+.mod-black .container
+  opacity: 0
+  animation-name: appear-modal-view
+  animation-delay: 0.2s
+  animation-duration: 0.2s
+  animation-fill-mode: forwards
+#courses-list-container,
+.modal-body
+  opacity: 0
+  animation-name: appear-modal
+  animation-delay: 0.4s
+  animation-duration: 0.4s
+  animation-fill-mode: forwards
+
+@keyframes appear-modal-view
+  from {opacity: 0;}
+  to {opacity: 1;}
+
+@keyframes appear-modal
+  from {transform: translateY(20px); opacity: 0;}
+  to {transform: translateY(0px); opacity: 1;}
