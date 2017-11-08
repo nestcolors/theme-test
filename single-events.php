@@ -22,7 +22,8 @@
 			</div>
 		</div>
 		<div class="container cr-event modal-body">
-			<div class="row">
+			<div class="events-body">
+				<div class="row">
 				<div class="col-md-8 col-sm-12 col-xs-12">
 					<?php if ( has_post_thumbnail() ) { ?>
 						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
@@ -74,6 +75,7 @@
 					</div>
 				</div>
 
+			</div>
 			</div>
 		</div>
 
