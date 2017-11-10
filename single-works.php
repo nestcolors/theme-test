@@ -1,7 +1,7 @@
 <?php get_header('shop') ?>
 	<div class="modal-view">
 		<div class="cr-section mod-black">
-			<div class="container">
+			<div class="container" style="opacity: 0;">
 				<div class="row">
 					<div class="col-xs-12">
 						<a href="<?php echo home_url() ?>" class="cr-header__logo">
@@ -20,7 +20,7 @@
 			<?php
 			$images = get_field('gallery');
 			if( $images ): ?>
-			<div class="container cr-album modal-body">
+			<div class="container cr-album modal-body" style="opacity: 0;">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="cr-album-slider">

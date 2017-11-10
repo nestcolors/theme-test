@@ -104,7 +104,7 @@ $place = 'place';
 
 
     function initMap() {
-        var bounds  = new google.maps.LatLngBounds();
+        // var bounds  = new google.maps.LatLngBounds();
         var locations = [
 	        <?php if ($space = get_field('space' )) { $count = -1; ?>
                 <?php foreach ($space as $s) { $count++ ?>
@@ -115,11 +115,11 @@ $place = 'place';
         map = new google.maps.Map(document.getElementsByClassName('js-cr-map')[0], {
             disableDefaultUI: false,
             center: {lat: 0, lng: 0},
-            zoom: 15
+            zoom: 12
         });
         for (var i in locations) {
             var position = new google.maps.LatLng(locations[i][1], locations[i][2]);
-            bounds.extend(position);
+            // bounds.extend(position);
             var marker = new google.maps.Marker({
                 position: position,
                 map: map,
@@ -127,8 +127,10 @@ $place = 'place';
             });
             markers.push(marker)
         }
-        map.panToBounds(bounds);
-        map.fitBounds(bounds);
+        // map.panToBounds(bounds);
+        // map.fitBounds(bounds);
+				map.setZoom(15);
+				map.setCenter(new google.maps.LatLng(locations[i][1], locations[i][2]));
         showMarker('place0');
     }
 

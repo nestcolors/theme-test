@@ -1,7 +1,7 @@
 <?php get_header('shop'); ?>
 	<div class="modal-view">
 		<div class="cr-section mod-black">
-			<div class="container">
+			<div class="container" style="opacity: 0;">
 				<div class="row cr-modal-header-row">
 					<div class="col-xs-12">
 						<a href="<?php echo home_url() ?>" class="cr-header__logo">
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 
-			<div class="container cr-events-list modal-body">
+			<div class="container cr-events-list modal-body" style="opacity: 0;">
 				<div class="events-body">
 					<div class="row">
 						<div class="col-md-4 col-sm-6 hidden-xs">

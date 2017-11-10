@@ -63,7 +63,7 @@
   height: 100vh
   position: relative
   @include media(to_tablet)
-    height: 575px
+    // height: 575px
   @include media(mobile)
     height: 100vh
     margin-bottom: 0px
@@ -83,9 +83,9 @@
     @include media(xwide)
       // max-height: 820px
     @include media(to_tablet)
-      height: 575px
-      background-size: 100%
-      background-position: top
+      // height: 575px
+      // background-size: 100%
+      // background-position: top
     @include media(mobile)
       background-attachment: initial
       height: 100vh
@@ -297,10 +297,15 @@
       padding: 0 50px
     @include media(mobile)
       padding: 0 20px
-  .course-program-container
+  .course-program-container,
   .course-whom-container
     @include media(to_tablet)
       margin-top: 50px
+    ul
+      list-style-type: circle
+      li
+        margin-top: 8px
+
 
 .info-table-container
   opacity: 0

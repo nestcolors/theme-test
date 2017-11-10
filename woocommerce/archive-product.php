@@ -65,7 +65,7 @@ function category_has_children($term_id)
 <div id="courses-list">
     <div class="modal-view">
         <div class="cr-section mod-black">
-            <div class="container">
+            <div class="container" style="opacity: 0; z-index: 99999; position: relative;">
                 <div class="row cr-modal-header-row">
                     <div class="col-xs-12">
                         <a href="<?php echo esc_url(home_url('/')); ?>" class="cr-header__logo">
@@ -102,7 +102,7 @@ function category_has_children($term_id)
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container" style="opacity: 0;">
                 <div id="courses-list-container" class="courses-list-page row">
                     <div class="cta filter">
                         <a class="all active" data-filter="all" href="#" role="button">Показати всі</a>
