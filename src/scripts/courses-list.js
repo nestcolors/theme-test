@@ -1,7 +1,25 @@
 import $ from "jquery";
 
 const coursesList = () => {
-  console.log('coursesList');
+  console.log('coursesList', window.location.pathname);
+
+  let uaTitle, engTitle;
+  if (!!window.location.pathname.match(/dizajn/)) {
+    uaTitle = 'Дизайн';
+    engTitle = 'Design';
+    $('.dizajn-selector a').addClass('active');
+  } else if (!!window.location.pathname.match(/biznes/)) {
+    uaTitle = 'Бізнес';
+    engTitle = 'Business';
+    $('.biznes-selector a').addClass('active');
+  } else if (!!window.location.pathname.match(/junior/)) {
+    uaTitle = 'Джуніор';
+    engTitle = 'Junior';
+    $('.junior-selector a').addClass('active');
+  }
+
+  $('#eng-course-title').html(engTitle);
+  $('#eng-course-ua-title').html(uaTitle);
 
   var $filters = $('.filter [data-filter]'),
     $boxes = $('.boxes [data-category]'),

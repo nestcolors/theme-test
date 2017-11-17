@@ -11,7 +11,7 @@
 						<div class="cr-section__header-top">наша команда —  </div>
 						our team
 					</div>
-					<a href="#" onclick="history.go(-1)">
+					<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
 						<div class="close-icon"></div>
 					</a>
 				</div>

@@ -72,25 +72,36 @@ function category_has_children($term_id)
                             <img src="<?php echo get_template_directory_uri(); ?>/src/images/assets/logo-creative-w.svg" alt="logo" class="">
                         </a>
                         <div class="row cr-modal-header">
-                            <div class="col-xs-12 col-sm-8">
+                            <div class="col-xs-12 col-sm-10 no-paddings">
                                 <div class="cr-section__header">
-                                    <div class="cr-section__header-top">всі курси та напрямки —</div>
-                                    All courses
+                                    <div class="cr-section__header-top">всі <span id='eng-course-ua-title'></span> курси та напрямки —</div>
+                                    <span id='eng-course-title'></span> courses
                                 </div>
+																<div class="level-list-container">
+																	<ul class="level-list-ul">
+																		<?php
+																		foreach (array_reverse($all_categories) as $cat1) {
+																			if ($cat1->category_parent == 0) {
+																				$category_id = $cat1->term_id;
+																				echo '<li class="cat-selector ' . $cat1->slug . '-selector"><a href="' . get_term_link($cat1->slug, 'product_cat') . '">' . $cat1->name . '</a></li>';
+																			}
+																		}
+																		?>
+																	</ul>
+																</div>
                             </div>
-                            <div class="col-xs-12 col-sm-4">
+                            <div class="col-xs-12 col-sm-4 hidden">
                                 <div class="cr-type-select">
-									<?php echo $curent_category->name; ?>
+																		<?php echo $curent_category->name; ?>
                                     <ul class="cr-type-select-value show-on-click">
-										<?php
-										foreach ($all_categories as $cat) {
-											//print_r($cat);
-											if ($cat->category_parent == 0) {
-												$category_id = $cat->term_id;
-												echo '<li><a href="' . get_term_link($cat->slug, 'product_cat') . '">' . $cat->name . '</a></li>';
-											}
-										}
-										?>
+																			<?php
+																			foreach ($all_categories as $cat) {
+																				if ($cat->category_parent == 0) {
+																					$category_id = $cat->term_id;
+																					echo '<li><a href="' . get_term_link($cat->slug, 'product_cat') . '">' . $cat->name . '</a></li>';
+																				}
+																			}
+																			?>
                                     </ul>
                                 </div>
                                 <span class="level-selector">*вибір напрямку</span>

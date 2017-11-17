@@ -13,6 +13,10 @@
 			width: 100%
 			letter-spacing: 1.8px
 	.cr-modal-header-row
+		.cr-modal-header
+			.no-paddings
+				@include media(to_tablet)
+					padding: 0 15px
 		.cr-type-select
 			color: $white
 			margin: 50px -16px 0 0
@@ -33,6 +37,7 @@
 		margin-top: 12px
 	.cta
 		a
+			transition: 0.1s
 			padding: 8px 14px
 			color: $light_gray
 			border: 2px solid $light_gray
@@ -40,8 +45,10 @@
 			letter-spacing: 1.6px
 			display: inline-block
 			font-family: $bold
+			@include media(to_tablet)
+				margin-right: 10px
+				margin-bottom: 10px
 			@include media(mobile)
-				margin-bottom: 20px
 				&:first-child
 					position: relative
 					top: 0
@@ -125,6 +132,8 @@
 h3.boxes-title
 	background-color: #eaeaea
 	padding: 8px 10px
+  text-transform: uppercase
+  letter-spacing: 1px
 	@include media(mobile)
 		margin: 10px 0 0px
 h3#intensivi
@@ -163,3 +172,35 @@ h3#intensivi
 					display: block
 					width: 200px
 					margin: 0 auto
+.level-list-container
+	.level-list-ul
+		list-style-type: none
+		margin-left: 0
+		padding-left: 0
+		li.cat-selector
+			float: left
+			margin: 10px 20px 20px 0
+			font-size: 20px
+			@include media(mobile)
+				float: none
+				margin: 0px 0px 15px 0
+			a
+				color: grey
+				padding: 10px 0px
+				transition: 0.1s
+				@include media(mobile)
+					padding: 0
+				&.active
+					font-family: 'Proxima Bold'
+					border-bottom: 2px solid $white
+					@include media(mobile)
+						display: block
+						border-bottom: 0px solid $white
+						border-right: 8px solid $white
+				&.active,
+				&:hover
+					color: white
+
+@keyframes appear-view
+  from {opacity: 0;}
+  to {opacity: 1;}

@@ -5,8 +5,28 @@ import Rellax from "rellax";
 const aboutCoursePage = () => {
   console.log("aboutCoursePage");
 
+
   var intro = new Rellax('.js-paralax-effect1', {
     speed: 2,
+  });
+
+  $('.open-full-program-popup').click((e) => {
+    e.preventDefault();
+    $('body').addClass('no-scroll');
+    $('.cr-full-program-popup-body').fadeIn(200);
+  })
+
+  $('.close-full-program-popup, .cr-full-program-popup-body').click((e) => {
+    e.preventDefault();
+    $('body').removeClass('no-scroll');
+    $('.cr-full-program-popup-body').fadeOut(200);
+  })
+
+  $(document).keyup(function(e) {
+    if (e.keyCode == 27) {
+      $('body').removeClass('no-scroll');
+      $('.cr-full-program-popup-body').fadeOut(200);
+    }
   });
 
   $(document).ready(function(){

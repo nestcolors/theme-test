@@ -21,7 +21,7 @@ const interval = setInterval(function() {
 const loadingTimeOut = setTimeout(() => {
   console.warn('force loading data!');
   loadData();
-}, 10000);
+}, 7000);
 
 const loadData = () => {
   clearInterval(interval);
@@ -42,7 +42,7 @@ const loadAllSources = () => {
     console.log('i`m product file: ', !!window.location.pathname.match(/product/));
     aboutCoursePage();
   } else if (!!window.location.pathname.match(/product-category/)) {
-    console.log('i`m coursesList file: ', !!window.location.pathname.match(/coursesList/));
+    console.log('i`m coursesList file: ', !!window.location.pathname.match(/product-category/));
     coursesList();
   } else if (!!window.location.pathname.match(/pro-nas/)) {
       console.log('i`m proNas file: ', !!window.location.pathname.match(/pro-nas/));

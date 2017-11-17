@@ -23,8 +23,12 @@
       margin-bottom: 5px
   .cr-type-select
     padding-left: 0
-    padding-right: 32px
+    padding-right: 45px
     text-align: center
+    width: 284px
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
     @include media(mobile)
       margin-bottom: 20px
       ul
@@ -306,6 +310,57 @@
       li
         margin-top: 8px
 
+.cr-full-program-container
+  color: $black
+  .open-full-program-popup
+    margin: 15px auto 0
+    display: block
+    width: 182px
+    padding: 0 20px
+  .cr-full-program-popup-body
+    display: none
+    position: fixed
+    height: 100vh
+    width: 100vw
+    left: 0
+    top: 0
+    background-color: rgba(0,0,0,0.8)
+    z-index: 99999
+    font-family: "Proxima Regular"
+    .cr-full-program-popup
+      background: $white
+      background-color: $white
+      overflow-y: auto
+      height: 95vh
+      top: 5vh
+      padding: 80px 40px
+      left: 50%
+      margin-left: -30vw !important
+      width: 60vw !important
+      @include media(wide)
+        margin-left: -40vw
+        width: 80vw
+      @include media(to_tablet)
+        width: 90vw
+        padding: 20px 25px
+        margin: 0
+        left: 5vw
+        transform: translateX(0)
+      @include media(mobile)
+        padding: 20px 15px
+      .close-icon
+        display: block
+        background: url(/creative/wp-content/themes/creative/src/images/icons/close-icon-black.png)
+        background-size: 40px
+        right: 20px
+        @include media(tablet)
+          background-size: 40px
+        @include media(mobile)
+          background-size: 20px
+      strong
+        background-color: initial
+        color: $black
+        font-family: "Proxima Bold"
 
 .info-table-container
   opacity: 0
