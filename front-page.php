@@ -39,11 +39,15 @@
               </a></li>
         </ul>
       </div>
+      <div class="scoll-down">
+        <div class="scroll-icon"></div>
+        <p>події — </p>
+      </div>
     </div>
         <?php if ($mega_menu = get_field('mega_menu' )) { ?>
             <div class="cr-main-menu-wrapper hidden-xs hidden-sm">
                 <div class="cr-panel" id="js-main-menu">
-                    <div class="cr-section__header-top">навчання —  </div><br>
+                    <div class="cr-section__header-top">вибір курсів —  </div><br>
 	                <?php foreach ($mega_menu as $cl1) { ?>
                         <div class="cr-panel__item">
                             <div class="cr-panel__item-title"><?php echo $cl1['text'] ?></div>

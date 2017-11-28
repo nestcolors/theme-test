@@ -133,8 +133,8 @@ function category_has_children($term_id)
 							<?php
 							$catslug = $cat->slug;
 							$category_id = $cat->term_id; ?>
-                            <div class="color-container row <?php echo $catslug; ?>" data-category="<?php echo $cat->slug; ?>-container">
-                                <h3 class="boxes-title" id="<?php echo $catslug; ?>"><?php echo $cat->name; ?> —</h3>
+                  <div class="color-container row <?php echo $catslug; ?>" data-category="<?php echo $cat->slug; ?>-container">
+                    <a href="#<?php echo $catslug; ?>"><h3 class="boxes-title" id="<?php echo $catslug; ?>"><?php echo $cat->name; ?> —</h3></a>
 								<?php
 								$args = array(
 									'post_type'      => 'product',

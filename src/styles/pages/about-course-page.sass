@@ -341,10 +341,10 @@
         margin-left: -40vw
         width: 80vw
       @include media(to_tablet)
-        width: 90vw
+        width: 90vw !important
         padding: 20px 25px
-        margin: 0
-        left: 5vw
+        margin: 0 !important
+        left: 5vw !important
         transform: translateX(0)
       @include media(mobile)
         padding: 20px 15px
@@ -370,7 +370,13 @@
   animation-timing-function: linear
   animation-direction: alternate
   animation-fill-mode: forwards
-
+.single-product
+  .cr-two-columns
+    ul
+      list-style-type: circle
+    li
+      font-size: 16px
+      margin-top: 7px
 #js-header
   opacity: 0
   animation-name: show-from-top

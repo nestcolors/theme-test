@@ -104,6 +104,43 @@
       li
         float: left
         margin-right: 20px
+  .scoll-down
+    bottom: 30px
+    position: absolute
+    width: 40px
+    left: 50%
+    margin-left: -20px
+    .scroll-icon
+      background-image: url("/creative-2/wp-content/themes/creative/src/images/icons/scroll-icon.png")
+      height: 33px
+      background-size: 20px
+      width: 20px
+      background-repeat: no-repeat
+      margin: 0 auto
+      animation-delay: 2s
+      animation: jump 2.7s infinite
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    p
+      display: none
+      margin-top: 0
+      color: white
+      text-align: center
+      font-size: 20px
+      font-family: $light
+
+@keyframes jump
+  0%
+    transform: translateY(0px)
+  40%
+    transform: translateY(0px)
+  50%
+    transform: translateY(-3px)
+  60%
+    transform: translateY(0px)
+  100%
+    transform: translateY(0px)
+
 .cr-mobile-hero--info
   position: absolute
   top: 40%
@@ -147,6 +184,7 @@
     padding-left: 0
     padding-top: 12px
     margin-top: -2px
+    font-family: $regular
     @include media(mobile)
       margin-top: -10px !important
       margin-bottom: 20px
@@ -184,8 +222,8 @@
 
 
 .typed-cursor
-  opacity: 1;
-  animation: blink .7s infinite;
+  opacity: 1
+  animation: blink .7s infinite
 
 
 @keyframes blink

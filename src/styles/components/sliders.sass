@@ -128,17 +128,21 @@
       right: -70px
       // margin-top: 42px
       width: 591px
+      height: 530px
+      overflow-y: auto
       @include media(to_tablet)
         margin-top: 0
         right: 0
         padding: 0
+        height: 390px
       @include media(mobile)
+        height: 610px
         width: 100%
   @include media(to_tablet)
     width: 93%
     background: $dark
     position: relative
-    margin-top: -95px
+    margin-top: -5px
     padding: 36px 35px 32px 67px
     order: 2
     z-index: 2
@@ -327,12 +331,13 @@
     overflow: hidden
     img
       width: 100%
+      height: auto
   @include media(mobile)
     width: 100%
     padding: 0
     img
       width: 100%
-
+      height: auto
 
       //Courses slider
 .cr-courses-slider

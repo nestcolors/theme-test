@@ -76,7 +76,7 @@ get_header(); ?>
 						<div class="col-xs-10 col-sm-5">
 							<span class="product-level-selector">*вибір рівня</span>
 							<div class="cr-type-select">
-								Рівень: <strong>
+								<strong>
 									<?php
 									// get all product cats for the current post
 									$categories = get_the_terms( get_the_ID(), 'product_cat' );
