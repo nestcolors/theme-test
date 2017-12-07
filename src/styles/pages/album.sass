@@ -1,14 +1,16 @@
 .cr-album-slider
 	margin-bottom: 60px
 	.slick-list
-		height: 600px
+		// height: 600px
 		@include media(wide)
-			height: 550px
+			// height: 550px
 	.cr-section__header-top
 		width: 100%
 	img
-		width: 100%
-		height: auto
+		margin: 0 auto 0
+		@include media(smwide)
+			height: 550px
+			width: auto
 		@include media(mobile)
 			height: 300px
 	h2
@@ -16,6 +18,7 @@
 		letter-spacing: 2px
 		margin-top: 25px
 	.slick-arrow
-		bottom: -50px
+		bottom: -20px
 	.slick-dots
-		bottom: 20px
+		bottom: -20px
+		right: inherit

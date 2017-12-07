@@ -117,14 +117,20 @@ function category_has_children($term_id)
                 <div id="courses-list-container" class="courses-list-page row">
                     <div class="cta filter">
                         <a class="all active" data-filter="all" href="#" role="button">Показати всі</a>
-						<?php
-						$all_categories = get_top_cat($curent_category->term_id);
-						foreach ($all_categories as $cat) {
-							$category_id = $cat->term_id;
-							echo '<a href="#" class="' . $cat->slug . '" data-filter="' . $cat->slug . '" role="button">' . $cat->name . '</a>';
-						}
-						?>
+													<?php
+													$all_categories = get_top_cat($curent_category->term_id);
+													foreach ($all_categories as $cat) {
+														$category_id = $cat->term_id;
+														echo '<a href="#" class="' . $cat->slug . '" data-filter="' . $cat->slug . '" role="button">' . $cat->name . '</a>';
+													}
+													?>
                     </div>
+
+
+                    <div class="signature-container">
+											<p><span class="course-level course-level-normal-signature">курс</span> &nbsp;- набір проводиться</p>
+											<p><span class="course-level course-level-normal">курс</span> &nbsp;- набір завершився</p>
+										</div>
 
                     <div class="col-xs-12 boxes">
 						<?php
@@ -172,7 +178,7 @@ function category_has_children($term_id)
 												<?php echo $post->post_title; ?>
                                             </p>
                                             <p class="course-start">
-                                                Початок: <?php the_field('start_mounse', $post->ID); ?>
+                                                Початок: <strong><?php the_field('start_mounse', $post->ID); ?></strong>
                                             </p>
                                             <p class="course-price">
                                                 Вартість: <strong><?php echo $_product->get_regular_price(); ?> грн.</strong>

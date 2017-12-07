@@ -13,7 +13,10 @@ to {transform: translateY(0px); opacity: 1;}
   transition: all .5s
   &.mod-fixed
     @include media(wide)
-      transform: translate(0, -50px)
+      transform: translate(0, -35px)
+  &.mod-hidden
+    @include media(wide)
+      transform: translate(0, -98px)
   @include media(to_tablet)
     height: 45px
     border-bottom: 4px solid $dark
@@ -21,6 +24,10 @@ to {transform: translateY(0px); opacity: 1;}
     width: 100vw
   .cr-horizontal-list
     margin-top: 25px
+  .cr-horizontal-list__item:first-child
+    // padding: 1px 10px
+    .cr-header__link
+      padding-right: 15px
   .cr-horizontal-list__item
     & + .cr-horizontal-list__item
       margin-left: 40px
@@ -44,7 +51,7 @@ to {transform: translateY(0px); opacity: 1;}
   text-align: center
   color: $light_gray
   padding-top: 10px
-  padding-bottom: 15px
+  // padding-bottom: 15px
   font-size: 14px
   line-height: 27px
   letter-spacing: .4px
@@ -104,7 +111,7 @@ to {transform: translateY(0px); opacity: 1;}
           border-right: 1px solid black
           border-bottom: 1px solid black
           content: ''
-          right: -10px
+          right: 10px
           top: 6px
           transform: rotateZ(45deg)
     .cr-horizontal-list-sub-menu
@@ -112,7 +119,7 @@ to {transform: translateY(0px); opacity: 1;}
       position: absolute
       list-style-type: none
       background-color: white
-      padding: 10px 70px 30px 30px
+      padding: 10px 40px 30px 30px
       top: 36px
       border-top: 4px solid black
       width: 200px

@@ -79,7 +79,10 @@
 		border-bottom: 5px solid $mint
 		.course-level-normal
 			background-color: $mint
-			color: $black
+			color: $white
+	.course-level-normal-signature
+		background-color: $mint
+		color: $white
 	.course-level-normal
 		background-color: $white
 		border: 1px solid $mint
@@ -90,6 +93,15 @@
 		border: 0px solid white
 	.course-level
 		padding: 2px 6px
+	.signature-container
+		font-family: $regular
+		font-size: 16px
+		margin-bottom: 20px
+		p
+			display: inline
+			margin-right: 20px
+			@include media(mobile)
+				display: block
 	.mode-button
 		&:before
 			position: absolute

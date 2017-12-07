@@ -16,16 +16,17 @@ const general = () => {
       header.removeClass('mod-fixed');
     }
   });
+  console.log($('.cr-header__link')[0]);
 
   /*
   on hover show submenu
   */
   $('.cr-sublist-container').hover((i) => {
-    $('.cr-black-curtain').fadeIn(300);
+    $('.cr-black-curtain').fadeIn(100);
     $('.cr-sublist-container > ul').fadeIn(0);
     $('.cr-sublist-container > ul').addClass('show-cr-list-sub-menu');
   }, (i) => {
-    $('.cr-sublist-container > ul').fadeOut();
+    $('.cr-sublist-container > ul').fadeOut(100);
     $('.cr-black-curtain').fadeOut(300);
   });
 
@@ -65,6 +66,19 @@ const general = () => {
   mobile_burger_btn.click(function(event) {
     // header.find('.cr-header__fixed-part').toggleClass('mod-mobile-menu-closed');
     header.toggleClass('mod-mobile-opened');
+  });
+
+  // detect scrolling direction
+  var lastScrollTop = 0;
+  var navbar = $('#js-header');
+  $(window).scroll(function(event){
+     var st = $(this).scrollTop();
+     if (st > lastScrollTop && window.pageYOffset > 300){
+       navbar.addClass('mod-hidden');
+     } else {
+       navbar.removeClass('mod-hidden');
+     }
+     lastScrollTop = st;
   });
 
 }

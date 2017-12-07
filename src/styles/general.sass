@@ -96,3 +96,18 @@ a
 
 .no-scroll
   overflow: hidden
+body
+  overflow-y: scroll
+*::-webkit-scrollbar
+  width: 6px
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+  background-color: $white
+*::-webkit-scrollbar-thumb
+  background-color: $mint
+  border-radius: 30px
+.cr-black-board::-webkit-scrollbar,
+.page-faq::-webkit-scrollbar,
+.archive::-webkit-scrollbar,
+.single-teachers::-webkit-scrollbar,
+.single-events::-webkit-scrollbar
+  background-color: black

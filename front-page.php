@@ -2,8 +2,8 @@
 
     <div class="cr-hero cr-home-hero">
         <div id="school-title" class="cr-section__header">
-            <div class="cr-section__header-top">школа <span id="js-dynamic-title-small">дизайну</span> —  </div>
-            <span id="js-dynamic-title">Design</span> school
+            <div class="cr-section__header-top">школа <span id="js-dynamic-title-small"></span> —  </div>
+            <span id="js-dynamic-title"></span> school
             <div class="courses-list hidden-lg hidden-md">
               <a href="<?php echo theme() ?>/shop" class="cr-button pull-right">всі курси</a>
             </div>
@@ -45,7 +45,7 @@
       </div>
     </div>
         <?php if ($mega_menu = get_field('mega_menu' )) { ?>
-            <div class="cr-main-menu-wrapper hidden-xs hidden-sm">
+            <div class="cr-main-menu-wrapper hidden-xs hidden-sm hidden">
                 <div class="cr-panel" id="js-main-menu">
                     <div class="cr-section__header-top">вибір курсів —  </div><br>
 	                <?php foreach ($mega_menu as $cl1) { ?>

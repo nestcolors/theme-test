@@ -54,8 +54,12 @@
   text-align: right
   width: 54%
   display: inline-block
-  vertical-align:
+  // vertical-align:
   overflow: hidden
+  .cr-img-div
+    background-size: cover;
+    width: auto;
+    height: 680px;
   img
     width: 100%
     height: auto
@@ -278,6 +282,8 @@
     font-family: $light
     padding: 14px 13px
     text-align: right
+    @include media(smwide)
+      margin-right: 90px
     @include media(to_tablet)
       text-align: right
     @include media(mobile)
@@ -369,7 +375,7 @@
   img
     transition-duration: 0.2s
     &:hover
-      transform: scale(1.02, 1.02)
+      // transform: scale(1.02, 1.02)
 
 .cr-album-slider
   .slick-arrow
