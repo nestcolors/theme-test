@@ -17,6 +17,20 @@ const aboutUsPage = () => {
         speed: 2,
       });
     }
+    var scroll = $(window).scrollTop();
+    // lectors hello
+    if (scroll > window.innerHeight - (window.innerHeight / 2) ) {
+      $('.lectors-animations').addClass('cr-animation-from-below');
+    }
+    scroll < 100 && $('.lectors-animations').removeClass('cr-animation-from-below');
+
+
+    // deHouse hello
+    if (scroll > window.innerHeight + 2900) {
+
+      $('.dehouse-hello').addClass('cr-dehouse-appear');
+    }
+    scroll < 100 && $('.dehouse-hello').removeClass('cr-dehouse-appear');
   });
 
   $(document).ready(function(){
@@ -34,6 +48,16 @@ const aboutUsPage = () => {
           }
         }
       ]
+    });
+    $('.cr-prostir-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      fade: true,
+      autoplay: true,
+      infinite: true,
+      autoplaySpeed: 4000,
     });
     $('.cr-people-slider.about-us-people').slick({
       slidesToShow: 3,

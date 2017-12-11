@@ -31,13 +31,13 @@ ob_start('ob_html_compress');
     <div style="margin-top: 45vh; text-align: center;">
       <img width="190px" height="auto" class="cr-logo-mobile" src="<?php echo theme() ?>/src/images/assets/logo-creative.svg" alt="logo">
       <br>
-      <p style="font-size: 20px; color: grey; margin-top: 10px; font-family: `sans-serif`; font-weight: 400 !important;">DESIGN SCHOOL</p>
+      <!-- <p style="font-size: 20px; color: grey; margin-top: 10px; font-family: `sans-serif`; font-weight: 400 !important;">DESIGN SCHOOL</p> -->
     </div>
   </div>
   <div class="website-container" style="display: none">
     <div class="home-page page-wrapper" id="home-page">
         <div class="cr-header" id="js-header">
-            <div class="cr-header__motto">SIMPLICITY IS THE ULTIMATE SOPHISTICA­TION.</div>
+            <div class="cr-header__motto">design in you, design for you</div>
             <div class="cr-header__mobile hidden-md hidden-lg">
                 <a href="<?php echo home_url() ?>" class="cr-header__logo">
                     <img class="cr-logo-mobile" src="<?php echo theme() ?>/src/images/assets/logo-creative.svg" alt="logo">
@@ -93,7 +93,8 @@ ob_start('ob_html_compress');
 	                                            <?php the_field( 'hours','option' ); ?>
                                             </div>
                                             <div class="cr-contacts--phone">
-	                                            <?php the_field( 'phone','option' ); ?>
+                    	                        <a class="outher-link" href="tel:<?php the_field( 'phone','option' ); ?>"><?php the_field( 'phone','option' ); ?></a> |
+                                              <a class="outher-link" href="tel:<?php the_field( 'phone_2','option' ); ?>"><?php the_field( 'phone_2','option' ); ?></a>
                                             </div>
 	                                        <?php the_field( 'email','option' ); ?>
                                             <hr>
@@ -154,7 +155,8 @@ ob_start('ob_html_compress');
                         </ul>
 	                    <?php the_field( 'email','option' ); ?>
                         <div class="cr-contacts--phone">
-	                        <?php the_field( 'phone','option' ); ?>
+                          <a class="outher-link" href="tel:<?php the_field( 'phone','option' ); ?>"><?php the_field( 'phone','option' ); ?></a> |
+                          <a class="outher-link" href="tel:<?php the_field( 'phone_2','option' ); ?>"><?php the_field( 'phone_2','option' ); ?></a>
                         </div>
                         <div class="cr-contacts--address">
 	                        <?php the_field( 'address','option' ); ?>

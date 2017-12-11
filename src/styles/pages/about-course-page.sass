@@ -100,6 +100,7 @@
     margin-top: 40px
     .cr-slider__text-block
       margin-top: -20px
+      padding: 50px 25px 37px
 .cr-schedule-table
   @include media(mobile)
     margin-bottom: 20px
@@ -303,12 +304,14 @@
       padding: 0 20px
   .course-program-container,
   .course-whom-container
+    font-family: "Proxima Regular"
     @include media(to_tablet)
       margin-top: 50px
     ul
       list-style-type: circle
       li
         margin-top: 8px
+        line-height: 22px
 
 .cr-full-program-container
   color: $black
@@ -353,6 +356,7 @@
         background: url(/creative/wp-content/themes/creative/src/images/icons/close-icon-black.png)
         background-size: 40px
         right: 20px
+        z-index: 9999
         @include media(tablet)
           background-size: 40px
         @include media(mobile)

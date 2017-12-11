@@ -79,6 +79,7 @@ const general = () => {
        navbar.removeClass('mod-hidden');
      }
      lastScrollTop = st;
+
   });
 
 }

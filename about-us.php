@@ -24,8 +24,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="cr-section extra-margin">
-		<div class="container">
+	<div class="cr-section extra-margin ">
+		<div class="container lectors-animations animation-section">
 			<div class="row">
 				<div class="col-xs-12 col-md-5">
 					<div class="cr-section__header">
@@ -69,30 +69,45 @@
 			<?php } ?>
 		</div>
 	</div>
-	<?php
-	$partners = get_field('partners');
-	if( $partners ): ?>
-		<div class="cr-section mod-black">
-			<div class="container">
-				<div class="cr-section__header">
-					<div class="cr-section__header-top">наші партнери —  </div>
-					partners
-				</div>
-				<div class="row">
-					<?php foreach( $partners as $image ): ?>
-						<div>
-							<div class="col-xs-6 col-md-4"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="cr-partners__logo"/></div>
-						</div>
-					<?php endforeach; ?>
-				</div>
+
+	<div class="cr-section" id="cr-prostir-slider">
+		<div class="cr-section__header">
+			<div class="cr-section__header-top">наш простір —  </div>
+			our space
+		</div>
+		<div class="cr-prostir-slider">
+			<div class="prostir-slide" style="background-image:url('<?php echo get_theme_root_uri(); ?>/creative/src/images/slides/spaces/one-1.jpg')"></div>
+			<div class="prostir-slide" style="background-image:url('<?php echo get_theme_root_uri(); ?>/creative/src/images/slides/spaces/one-2.jpg')"></div>
+			<div class="prostir-slide" style="background-image:url('<?php echo get_theme_root_uri(); ?>/creative/src/images/slides/spaces/one-3.jpg')"></div>
 			</div>
 		</div>
-	<?php endif; ?>
+	</div>
+	<div class="hidden">
+		<?php
+		$partners = get_field('partners');
+		if( $partners ): ?>
+			<div class="cr-section mod-black">
+				<div class="container">
+					<div class="cr-section__header">
+						<div class="cr-section__header-top">наші партнери —  </div>
+						partners
+					</div>
+					<div class="row">
+						<?php foreach( $partners as $image ): ?>
+							<div>
+								<div class="col-xs-6 col-md-4"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="cr-partners__logo"/></div>
+							</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
+	</div>
 
 	<?php
 	$recomendation = get_field('recomendation');
 	if( $recomendation ): ?>
-		<div class="cr-section extra-margin hidden-xs hidden-sm">
+		<div class="cr-section extra-margin hidden-xs hidden-sm hidden">
 			<div class="container">
 				<div class="cr-section__header">
 					<div class="cr-section__header-top">рекомендації(3) —  </div>
@@ -124,7 +139,9 @@
 			</div>
 		</div>
 		<div class="cr-block-with-img">
-			<div><img src="<?php the_field('join_image') ?>" alt="" class="img img-responsive"></div>
+			<div style="background-image: url(<?php the_field('join_image') ?>); width: auto; background-size: cover;">
+				<!-- <img src="<?php the_field('join_image') ?>" alt="" class="img img-responsive"> -->
+			</div>
 		</div>
 		<div class="cr-slider__text-block js-paralax-effect2-container">
 			<div class="cr-black-board cooperation js-paralax-effect2 mobile-no-parallax">

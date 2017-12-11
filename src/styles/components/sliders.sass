@@ -57,9 +57,13 @@
   // vertical-align:
   overflow: hidden
   .cr-img-div
-    background-size: cover;
-    width: auto;
-    height: 680px;
+    background-size: cover
+    width: auto
+    height: 680px
+    @include media(to_tablet)
+      background-position: center
+    @include media(mobile)
+      height: 250px
   img
     width: 100%
     height: auto
@@ -140,7 +144,8 @@
         padding: 0
         height: 390px
       @include media(mobile)
-        height: 610px
+        // height: 610px
+        height: 100%
         width: 100%
   @include media(to_tablet)
     width: 93%
@@ -160,11 +165,11 @@
   @include media(to_tablet)
     width: 63%
     margin-top: -150px
-    padding: 46px 46px 0px 56px
+    padding: 46px 46px 30px 56px
   @include media(mobile)
     width: 100%
     margin-top: -90px
-    padding: 42px 13px 70px
+    padding: 42px 25px 20px
 
 
 
@@ -269,7 +274,7 @@
     // height: 545px
     @include media(to_tablet)
       width: 100%
-      height: 500px
+      height: auto
     @include media(mobile)
       width: 100%
       height: 260px
@@ -292,19 +297,18 @@
       margin-bottom: 0 !important
   .slick-arrow
     right: 0
+    bottom: -30px
   .slick-prev
-    bottom: 115px
-    right: -64px
+    right: 45px
     padding: 15px
   .slick-next
-    bottom: 115px
-    right: -100px
+    right: 10px
     padding: 15px
   .slick-dots
     @include media(to_tablet)
       right: 14px
       text-align: right
-      bottom: 103px
+      bottom: 43px
     @include media(mobile)
       bottom: 165px
     li

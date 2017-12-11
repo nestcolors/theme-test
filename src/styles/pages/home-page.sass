@@ -105,9 +105,9 @@
         float: left
         margin-right: 20px
   .scoll-down
-    bottom: 30px
+    bottom: 10px
     position: absolute
-    width: 40px
+    width: 70px
     left: 50%
     margin-left: -20px
     .scroll-icon
@@ -117,29 +117,35 @@
       width: 20px
       background-repeat: no-repeat
       margin: 0 auto
-      animation-delay: 1s
-      animation: jump 2.2s infinite
-      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
-      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
     p
-      display: none
-      margin-top: 0
+      // display: none
+      opacity: 0
+      margin-top: 10px
       color: white
       text-align: center
-      font-size: 20px
+      font-size: 16px
       font-family: $light
+      animation-delay: 1s
+      animation: side-jump 2s infinite
+      -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
 
-@keyframes jump
+@keyframes side-jump
   0%
     transform: translateY(0px)
+    opacity: 1
   40%
     transform: translateY(0px)
-  50%
-    transform: translateY(-5px)
-  60%
-    transform: translateY(0px)
+    opacity: 1
+  90%
+    transform: translateY(30px)
+    opacity: 0
   100%
-    transform: translateY(0px)
+    transform: translateY(50px)
+    opacity: 0
+  // 100%
+  //   transform: translateY(0px)
+  //   opacity: 0
 
 .cr-mobile-hero--info
   position: absolute

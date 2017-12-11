@@ -129,7 +129,7 @@ function category_has_children($term_id)
 
                     <div class="signature-container">
 											<p><span class="course-level course-level-normal-signature">курс</span> &nbsp;- набір проводиться</p>
-											<p><span class="course-level course-level-normal">курс</span> &nbsp;- набір завершився</p>
+											<p><span class="course-level course-level-normal">курс</span> &nbsp;- попередня реєстрація</p>
 										</div>
 
                     <div class="col-xs-12 boxes">

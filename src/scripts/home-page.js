@@ -63,6 +63,26 @@ const homePage = () => {
             $('.slick-dots, .social-container, #school-title').fadeIn();
           }
       }
+
+      // events hello
+      if (scroll > window.innerHeight - (window.innerHeight / 2) ) {
+        $('.events-animations').addClass('cr-animation-from-below');
+      }
+      scroll < 100 && $('.events-animations').removeClass('cr-animation-from-below');
+
+      // tagline hello
+      if (scroll > window.innerHeight + 200 ) {
+        $('.tagline-animations').addClass('cr-animation-from-left');
+      }
+      scroll < 100 && $('.tagline-animations').removeClass('cr-animation-from-left');
+
+      // deHouse hello
+      if (scroll > window.innerHeight + 800) {
+
+        $('.dehouse-hello').addClass('cr-dehouse-appear');
+      }
+      scroll < 100 && $('.dehouse-hello').removeClass('cr-dehouse-appear');
+
   });
 
   $( '.cr-main-menu-wrapper')

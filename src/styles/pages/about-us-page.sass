@@ -3,7 +3,6 @@
     .cr-slider__text-block
       @include media(mobile)
         margin-top: -7px
-
 .slick-prev, .slick-next
   z-index: 8 !important
 .cr-about-us-hero
@@ -48,7 +47,11 @@
     font-size: 35px
     line-height: 1.89
     text-align: left
-
+.cr-block-with-img > div
+  @include media(wide)
+    height: 500px
+  @include media(wide)
+    height: 600px
 .cr-black-board
   width: 527px
   padding: 80px 50px 50px 70px
@@ -58,7 +61,7 @@
   margin-left: -70px
   @include media(xwide)
     &.cooperation
-      padding: 30px 50px 110px 70px !important
+      padding: 70px 50px 60px 70px !important
       // margin-top: 50px !important
   @include media(wide)
     &.cooperation
@@ -148,3 +151,26 @@
   .slick-prev
     right: 150px
     z-index: 999
+#cr-prostir-slider
+  position: relative
+  .cr-section__header
+    position: absolute
+    top: 15%
+    left: 20%
+    z-index: 99
+    .cr-section__header-top
+      color: $white
+  .cr-prostir-slider
+    .prostir-slide
+      height: 100vh
+      width: 100vw
+      background-size: cover
+      background-attachment: fixed
+      background-position: center
+    .slick-dots
+      bottom: 45px
+      text-align: right
+      right: 50px
+      li button:before
+        font-size: 13px
+        color: $mint

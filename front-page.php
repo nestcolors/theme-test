@@ -41,7 +41,7 @@
       </div>
       <div class="scoll-down">
         <div class="scroll-icon"></div>
-        <p>події — </p>
+        <p> — події</p>
       </div>
     </div>
         <?php if ($mega_menu = get_field('mega_menu' )) { ?>
@@ -106,7 +106,7 @@
 		</button> -->
         <!-- <a href="" style="color: black;" class="cr-button__label tc-mint"><img src="./src/images/icons/mouse.svg" alt="">події</a> -->
     </div>
-    <div class="cr-section less-margin">
+    <div class="cr-section less-margin animation-section events-animations animation-section-from-below">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -166,7 +166,7 @@
 	    <?php endif; ?>
     </div>
 
-    <div class="cr-section extra-margin cr-quote-container">
+    <div class="cr-section extra-margin cr-quote-container animation-section tagline-animations animation-section-from-below">
         <div class="container">
             <div class="cr-quote"><?php the_field( 'text' ); ?>
                 <div class="cr-quote__author">
@@ -176,6 +176,6 @@
 
         </div>
     </div>
-<?php include 'dehouse.php' ?>
+  <?php include 'dehouse.php' ?>
 
 <?php get_footer(); ?>

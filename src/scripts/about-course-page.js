@@ -92,9 +92,9 @@ const aboutCoursePage = () => {
     });
     $('.cr-courses-slider').slick({
       slidesToScroll: 1,
-      infinite: true,
-      adaptiveHeight: true,
-      lazyLoad: 'ondemand',
+      // infinite: true,
+      // adaptiveHeight: true,
+      // lazyLoad: 'ondemand',
       arrows: true,
       dots: true,
       slidesToShow: 3,
