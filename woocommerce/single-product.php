@@ -227,8 +227,8 @@ get_header(); ?>
 							</div>
 							<hr>
 							<div class="full-program-body ">
-								<?php the_field('full_text'); ?>
-							</div>
+                  <?php the_field('full_text'); ?>
+              </div>
 						</div>
 					</div>
 				</div>
