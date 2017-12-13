@@ -73,13 +73,13 @@ ob_start('ob_html_compress');
 					                    <?php if ($rm['submenu'] == true) { ?>
                                             <ul class="cr-horizontal-list-sub-menu hidden-sm hidden-xs">
 							                    <?php foreach ($rm['submenu'] as $r) { ?>
-                                                    <li class="cr-sub-menu-item"><a href="<?php echo $r['link'] ?>" class="cr-header__link"><?php echo $r['text'] ?></a></li>
+                                    <li class="cr-sub-menu-item"><a href="<?php echo $r['link'] ?>" class="cr-header__link"><?php echo $r['text'] ?></a></li>
 							                    <?php } ?>
                                             </ul>
 					                    <?php } ?>
                                     </li>
 			                    <?php } ?>
-                                <li class="cr-horizontal-list__item js-popup-container"><a href="" class="cr-header__link">Контакти</a>
+                                <li class="cr-horizontal-list__item js-popup-container"><a href="<?php echo theme() ?>/contacts" class="cr-header__link">Контакти</a>
                                     <div class="cr-header-popup">
                                         <div class="cr-contacts">
 <!--	                                        --><?php //the_field( 'contact_information','option' ); ?>
@@ -87,7 +87,7 @@ ob_start('ob_html_compress');
 	                                            <?php the_field( 'office','option' ); ?>
                                             </div>
                                             <div class="cr-contacts--address">
-	                                            <?php the_field( 'address','option' ); ?>
+	                                            <a target="_blank" class="outher-link" href="https://www.google.com.ua/maps/place/CREATIVE/@49.8292881,24.0517869,19.66z/data=!4m5!3m4!1s0x473add5003f132b7:0xd87ecdd2c87a97a5!8m2!3d49.8295061!4d24.0516586?hl=en"><?php the_field( 'address','option' ); ?></a>
                                             </div>
                                             <div class="cr-contacts--working-hour">
 	                                            <?php the_field( 'hours','option' ); ?>
@@ -99,12 +99,14 @@ ob_start('ob_html_compress');
 	                                        <?php the_field( 'email','option' ); ?>
                                             <hr>
                                             <ul class="cr-social-list">
-                                                <li class="cr-social-list__item"><a href="<?php the_field('facebook','option') ?>" class="outher-link" target="_blank" >
-                                                        <img src="<?php echo theme() ?>/src/images/icons/fb-black.svg" height="23" width="24" alt="">
-                                                    </a></li>
-                                                <li class="cr-social-list__item"><a href="<?php the_field('instagram','option') ?>" class="outher-link" target="_blank" >
-                                                        <img src="<?php echo theme() ?>/src/images/icons/insta-black.svg" height="23" width="24" alt="">
-                                                    </a></li>
+                                              <li class="cr-social-list__item"><a href="<?php the_field('facebook','option') ?>" class="outher-link" target="_blank" >
+                                                <img src="<?php echo theme() ?>/src/images/icons/fb-black.svg" height="23" width="24" alt="">
+                                                  </a>
+                                              </li>
+                                              <li class="cr-social-list__item"><a href="<?php the_field('instagram','option') ?>" class="outher-link" target="_blank" >
+                                                <img src="<?php echo theme() ?>/src/images/icons/insta-black.svg" height="23" width="24" alt="">
+                                                  </a>
+                                              </li>
                                             </ul>
                                         </div>
                                     </div>

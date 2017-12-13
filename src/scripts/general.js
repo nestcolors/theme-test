@@ -35,8 +35,8 @@ const general = () => {
     $('.js-popup-container > .cr-header-popup').fadeIn(0);
     $('.js-popup-container > .cr-header-popup').addClass('show-header-popup');
   }, (i) => {
-    $('.js-popup-container > .cr-header-popup').fadeOut();
-    $('.cr-black-curtain').fadeOut(100);
+    $('.js-popup-container > .cr-header-popup').fadeOut(100);
+    $('.cr-black-curtain').fadeOut(300);
   });
   /*
   on hover show list

@@ -245,9 +245,14 @@ body
 .cr-contacts--location
   font-size: 14px
 .cr-contacts--address
-  color: $black
   font-size: 18px
   font-family: $bold
+  letter-spacing: 0.8px
+  a
+    color: $mint
+    text-decoration: underline !important
+    &:hover
+      color: $black
 .cr-contacts--working-hour
   font-size: 14px
   margin-top: 30px
@@ -269,8 +274,10 @@ body
   border-right: solid 1px #979797
 .cr-contacts--email
   font-size: 16px
+  text-decoration: underline !important
+  color: $mint
   &:hover
-    color: $mint
+    color: $black
 
 .cr-mobile-menu-wrapper
   .cr-social-list

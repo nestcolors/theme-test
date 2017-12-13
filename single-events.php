@@ -15,9 +15,9 @@
 							</div>
 						</div>
 					</div>
-                    <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
-                        <div class="close-icon"></div>
-                    </a>
+          <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
+              <div class="close-icon"></div>
+          </a>
 				</div>
 			</div>
 		</div>
