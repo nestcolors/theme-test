@@ -7,7 +7,7 @@
 	.cr-section__header-top
 		width: 100%
 	img
-		margin: 0 auto 0
+		margin: 0 auto 50px
 		@include media(smwide)
 			height: 550px
 			width: auto
@@ -18,7 +18,11 @@
 		letter-spacing: 2px
 		margin-top: 25px
 	.slick-arrow
-		bottom: -20px
+		bottom: 50%
+		&.slick-next
+			right: -50px
+		&.slick-prev
+			left: -50px
 	.slick-dots
 		bottom: -20px
 		right: inherit

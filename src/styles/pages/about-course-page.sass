@@ -171,11 +171,20 @@
     height: 580px
     overflow-y: auto
 .about-course-our-works
+  .album-link
+    transition: 0.1s
+    img
+      opacity: 0.9
   .album-link:hover
-    a, a:hover
+    img
+      opacity: 1
+    span
       color: $mint !important
-    strong
-      background-color: $mint
+      strong
+        background-color: $mint
+  .work-author
+    text-align: right
+    margin-top: 25px
 
 .m-top-25
   margin-top: 20px

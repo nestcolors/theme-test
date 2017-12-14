@@ -259,14 +259,16 @@ get_header(); ?>
 		if( $posts ) { ?>
             <div class="cr-our-works hidden-xs">
 	            <?php foreach( $posts as $p ): // variable must NOT be called $post (IMPORTANT) ?>
-                    <div>
+                    <div class="album-link">
+											<a href="<?php echo get_permalink( $p->ID ); ?>">
                         <img src="<?php echo get_the_post_thumbnail_url($p->ID) ?>" alt="" class="img img-responsive">
-                        <div class="album-link">
-                            <a href="<?php echo get_permalink( $p->ID ); ?>">
-                                <strong><?php the_field('caption', $p->ID ); ?> <br></strong>
-	                            <?php the_field('author',$p->ID) ?>
-                            </a>
+                        <div class="work-author">
+													<span>
+                            <strong><?php the_field('caption', $p->ID ); ?> <br></strong>
+                          	<?php the_field('author',$p->ID) ?>
+													</span>
                         </div>
+											</a>
                     </div>
 	            <?php endforeach; ?>
             </div>
@@ -294,7 +296,7 @@ get_header(); ?>
 		</div>
 
 	</div>
-	<div class="cr-section sm-margin">
+	<div class="cr-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-3">

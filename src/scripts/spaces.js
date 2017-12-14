@@ -57,6 +57,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    adaptiveHeight: true,
     dots: true,
     responsive: [
         {

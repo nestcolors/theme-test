@@ -15,13 +15,13 @@
         <div class="container">
             <ul class="cr-social-list pull-left">
                 <li class="cr-social-list__item"><a href="<?php the_field('instagram','option') ?>">
-                        <img src="<?php echo theme() ?>/src/images/icons/insta_white.svg" height="18" width="19" alt="">
+                    <img src="<?php echo theme() ?>/src/images/icons/insta_white.svg" height="18" width="19" alt="">
                     </a></li>
                 <li class="cr-social-list__item"><a href="<?php the_field('facebook','option') ?>">
-                        <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="18" width="19" alt="">
+                    <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="18" width="19" alt="">
                     </a></li>
             </ul>
-            <a href="<?php echo home_url() ?>/prostori" class="cr-button mod-white pull-right tc-white">Простір</a>
+            <a href="http://dehouse.com.ua/" target="_blank" class="cr-button mod-white pull-right tc-white outher-link">dehouse</a>
 	        <?php if ($footer_menu = get_field('footer_menu','option' )) { ?>
                 <ul class="cr-horizontal-list">
 	                <?php foreach ($footer_menu as $fm) { ?>

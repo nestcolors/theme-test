@@ -35,6 +35,7 @@ const aboutCoursePage = () => {
       arrows: true,
       dots: false,
       fade: true,
+      adaptiveHeight: true,
       responsive: [
         {
           breakpoint: 992,
@@ -92,9 +93,7 @@ const aboutCoursePage = () => {
     });
     $('.cr-courses-slider').slick({
       slidesToScroll: 1,
-      // infinite: true,
-      // adaptiveHeight: true,
-      // lazyLoad: 'ondemand',
+      adaptiveHeight: true,
       arrows: true,
       dots: true,
       slidesToShow: 3,

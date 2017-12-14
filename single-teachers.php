@@ -62,7 +62,7 @@
 			</div>
 		</div>
 
-		<div class="container members-switcher">
+		<div class="container members-switcher hidden">
 			<div class="row">
 				<div class="col-sm-6 members-switcher-left">
 					<?php if (get_previous_post_link()) { ?>
