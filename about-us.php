@@ -15,7 +15,7 @@
 		<?php endif; ?>
 		<div class="cr-slider__text-block js-paralax-effect1 mobile-no-parallax">
 			<div class="margin-left-md">
-				<div class="cr-text-block__small-title">як це починалося —  </div>
+				<div class="cr-text-block__small-title"><h1 class="header1-small-title">як це починалося —  </h1></div>
 				<div class="cr-text-block__big-title">our story</div>
 			</div>
 			<div class="cr-black-board animation up-from-left">
@@ -29,7 +29,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-5">
 					<div class="cr-section__header">
-						<div class="cr-section__header-top">наша команда —  </div>
+						<div class="cr-section__header-top"><h2 class="header2-small-title">наша команда —  </h2></div>
 						our team
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-md-3">
 							<div class="cr-people-slider__header">
-								<?php echo $t['name_group'] ?>(<?php echo count($t['team']) ?>) —
+								<h3 class="header2-small-title"><?php echo $t['name_group'] ?>(<?php echo count($t['team']) ?>) —</h3>
 
 								<div class="cr-arrow-wrapper arrows-slider-1"></div>
 							</div>
@@ -72,7 +72,7 @@
 
 	<div class="cr-section" id="cr-prostir-slider">
 		<div class="cr-section__header">
-			<div class="cr-section__header-top">наш простір —  </div>
+			<div class="cr-section__header-top"><h2 class="header2-small-title">наш простір —  </h2></div>
 			our space
 		</div>
 		<div class="cr-prostir-slider">

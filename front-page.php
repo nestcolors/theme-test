@@ -2,7 +2,7 @@
 
     <div class="cr-hero cr-home-hero">
         <div id="school-title" class="cr-section__header">
-            <div class="cr-section__header-top">школа <span id="js-dynamic-title-small"></span> —  </div>
+            <div class="cr-section__header-top"><h1 class="header1-small-title">школа <span id="js-dynamic-title-small"></span> —  </h1></div>
             <span id="js-dynamic-title"></span> school
             <div class="courses-list hidden-lg hidden-md">
               <a href="<?php echo theme() ?>/shop" class="cr-button pull-right">всі курси</a>
@@ -31,10 +31,10 @@
 
       <div class="social-container hidden-xs hidden-sm">
         <ul>
-          <li class=""><a target="_blank" class="outher-link" href="<?php the_field('facebook','option') ?>">
+          <li class=""><a target="_blank"  rel="nofollow noopener"class="outher-link" href="<?php the_field('facebook','option') ?>">
                   <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="20" width="20" alt="">
               </a></li>
-          <li class=""><a target="_blank" class="outher-link" href="<?php the_field('instagram','option') ?>">
+          <li class=""><a target="_blank"  rel="nofollow noopener"class="outher-link" href="<?php the_field('instagram','option') ?>">
                   <img src="<?php echo theme() ?>/src/images/icons/insta_white.svg" height="20" width="20" alt="">
               </a></li>
         </ul>
@@ -111,7 +111,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="cr-section__header">
-                        <div class="cr-section__header-top">події —  </div>
+                        <div class="cr-section__header-top"><h2 class="header2-small-title">події школи —  </h2></div>
                         Events
                     </div>
                 </div>

@@ -11,7 +11,7 @@
 						<div class="col-xs-12">
 							<div class="cr-section__header">
 								<div class="cr-section__header-top"><?php the_field( 'event_type' ); ?> —  </div>
-								<?php the_title() ?>
+								<h1 class="header0-small-title"><?php the_title() ?></h1>
 							</div>
 						</div>
 					</div>
@@ -31,7 +31,7 @@
 					<div class="row">
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<div class="col-md-10 col-md-offset-1">
-								<div class="t-bold">ОПИС ПОДІЇ —</div>
+								<div class="t-bold"><h2 class="header2-small-title">ОПИС ПОДІЇ —</h2></div>
 								<div>
 										<?php the_content(); ?>
 								</div>
@@ -87,7 +87,7 @@
 						$prev_post = get_adjacent_post(false, '', true);
 						?>
 						<a href="<?php echo $previous_post_url = get_permalink( get_adjacent_post(false,'',true)->ID ); ?>" class="prev-event">
-							<div class="about-course-title hidden-xs"><?php  echo $prev_post->post_title ?></div>
+							<div class="about-course-title hidden-xs"><h2 class="header2-small-title"><?php  echo $prev_post->post_title ?></h2></div>
 							<div class="hidden-xs"><?php echo get_field('date_time', $prev_post->ID) ?></div>
 						</a>
 					<?php } ?>

@@ -74,7 +74,7 @@ function category_has_children($term_id)
                         <div class="row cr-modal-header">
                             <div class="col-xs-12 col-sm-10 no-paddings">
                                 <div class="cr-section__header">
-                                    <div class="cr-section__header-top">всі <span id='eng-course-ua-title'></span> курси та напрямки —</div>
+                                    <div class="cr-section__header-top"><h1 class="header1-small-title">всі <span id='eng-course-ua-title'></span> курси та напрямки — </h1></div>
                                     <span id='eng-course-title'></span> courses
                                 </div>
 																<div class="level-list-container">
@@ -121,7 +121,7 @@ function category_has_children($term_id)
 													$all_categories = get_top_cat($curent_category->term_id);
 													foreach ($all_categories as $cat) {
 														$category_id = $cat->term_id;
-														echo '<a href="#" class="' . $cat->slug . '" data-filter="' . $cat->slug . '" role="button">' . $cat->name . '</a>';
+														echo '<a href="#" class="' . $cat->slug . '" data-filter="' . $cat->slug . '" role="button"><h2>' . $cat->name . '</h2></a>';
 													}
 													?>
                     </div>
@@ -174,9 +174,9 @@ function category_has_children($term_id)
 											}
 											?>
                                             <span class="course-level course-level-normal"><?php echo $cat_name_inner ?></span>
-                                            <p class="cr-courses__title">
-												<?php echo $post->post_title; ?>
-                                            </p>
+                                            <h4 class="cr-courses__title">
+																							<?php echo $post->post_title; ?>
+																						</h4>
                                             <p class="course-start">
                                                 Початок: <strong><?php the_field('start_mounse', $post->ID); ?></strong>
                                             </p>

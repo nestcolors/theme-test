@@ -21,8 +21,8 @@
 		<div class="container" style="opacity: 0;">
 			<div class="row cr-our-team modal-body">
 				<div class="col-md-7 col-sm-7">
-					<div class="t-bold"><?php the_title(); ?></div>
-					<div><h4><?php the_field( 'position' ); ?></h4></div>
+					<div class="t-bold"><h2 class="header2-small-title"><?php the_title(); ?></h2></div>
+					<div class="teacher-position"><h4><?php the_field( 'position' ); ?></h4></div>
 
 				</div>
 				<div class="col-md-5 col-sm-5 cr-our-team-photo">

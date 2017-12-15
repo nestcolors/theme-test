@@ -21,7 +21,7 @@
                     <img src="<?php echo theme() ?>/src/images/icons/fb-white.svg" height="18" width="19" alt="">
                     </a></li>
             </ul>
-            <a href="http://dehouse.com.ua/" target="_blank" class="cr-button mod-white pull-right tc-white outher-link">dehouse</a>
+            <a href="http://dehouse.com.ua/" target="_blank"  rel="nofollow noopener"rel="nofollow noopener" class="cr-button mod-white pull-right tc-white outher-link">dehouse</a>
 	        <?php if ($footer_menu = get_field('footer_menu','option' )) { ?>
                 <ul class="cr-horizontal-list">
 	                <?php foreach ($footer_menu as $fm) { ?>

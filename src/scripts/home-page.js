@@ -105,6 +105,7 @@ const homePage = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     fade: true,
+    pauseOnHover:false,
   });
 
   $('.cr-mobile-hero-slider').slick({

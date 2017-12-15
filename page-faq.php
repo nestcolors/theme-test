@@ -11,7 +11,7 @@
 					<div class="row cr-modal-header">
 						<div class="col-xs-12">
 							<div class="cr-section__header">
-								<div class="cr-section__header-top">ПОШИРЕНІ ПИТАННЯ ТА ВІДПОВІДІ </div>
+								<div class="cr-section__header-top"><h1 class="header1-small-title">ПОШИРЕНІ ПИТАННЯ ТА ВІДПОВІДІ </h1></div>
 								FAQ
 							</div>
 						</div>
@@ -35,7 +35,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-5">
 						<div class="cr-faq-row-caption">
-							<?php echo $f['question']?>
+							<h3 class="header-small-title"><?php echo $f['question']?></h3>
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-7">

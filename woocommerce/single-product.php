@@ -146,7 +146,7 @@ get_header(); ?>
 						</div>
 						<div class="col-xs-12 col-sm-8">
 							<div class="m-top-25">
-								<p class="t-a-right t-bold mobile-t-center">При розрахунку можна скористатися послугою Оплата частинами від Приватбанку, <a href="https://chast.privatbank.ua/" target="_blank" class="">деталі тут.</a></p>
+								<p class="t-a-right t-bold mobile-t-center">При розрахунку можна скористатися послугою Оплата частинами від Приватбанку, <a href="https://chast.privatbank.ua/" target="_blank"  rel="nofollow noopener"class="">деталі тут.</a></p>
 							</div>
 						</div>
 					</div>
@@ -250,7 +250,7 @@ get_header(); ?>
 	<div class="cr-section about-course-our-works">
 		<div class="container hidden-xs">
 			<div class="cr-section__header">
-				<div class="cr-section__header-top"><?php the_field( 'works_caption' ); ?>(<?php echo count(get_field('works')) ?>) —  </div>
+				<div class="cr-section__header-top"><h2 class="header2-small-title"><?php the_field( 'works_caption' ); ?>(<?php echo count(get_field('works')) ?>) —  </h2></div>
 				<?php the_field( 'works_title' ); ?>
 			</div>
 		</div>
@@ -291,7 +291,7 @@ get_header(); ?>
 				<h3 class="tc-white">РЕЗУЛЬТАТ —</h3>
 				<?php the_field('works_text') ?>
 				<a href="<?php echo home_url() ?>/faq" class="cr-button mod-small mod-white t-c-white mod-left hidden">часті питання</a>
-				<a href="<?php the_field('google_form_link') ?>" target="_blank" class="cr-button-registration mod-small mod-white t-c-white hidden">зареєструватися</a>
+				<a href="<?php the_field('google_form_link') ?>" target="_blank"  rel="nofollow noopener"class="cr-button-registration mod-small mod-white t-c-white hidden">зареєструватися</a>
 			</div>
 		</div>
 

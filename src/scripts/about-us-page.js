@@ -39,6 +39,9 @@ const aboutUsPage = () => {
       dots: true,
       centerMode: true,
       centerPadding: '0px',
+      autoplay: true,
+      infinite: true,
+      autoplaySpeed: 2500,
       fade: true,
       responsive: [
         {
@@ -57,7 +60,8 @@ const aboutUsPage = () => {
       fade: true,
       autoplay: true,
       infinite: true,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 2500,
+      pauseOnHover:false,
     });
     $('.cr-people-slider.about-us-people').slick({
       slidesToShow: 3,

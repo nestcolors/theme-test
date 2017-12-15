@@ -10,14 +10,14 @@
 						<div class="row cr-modal-header">
 							<div class="col-xs-12">
 								<div class="cr-section__header">
-									<div class="cr-section__header-top">список події —  </div>
+									<div class="cr-section__header-top"><h1 class="header2-small-title">список події —  </h1></div>
 									Events List
 								</div>
 							</div>
 						</div>
-                        <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
-                            <div class="close-icon"></div>
-                        </a>
+            <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
+                <div class="close-icon"></div>
+            </a>
 					</div>
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 						<a class="courses-link <?php the_field('mark_events') ?>" href="<?php the_permalink(); ?>">
 							<div class="row">
 								<div class="cr-table__row-caption col-md-4 col-sm-5">
-									<div class="about-course-title"><?php the_title() ?></div>
+									<div class="about-course-title"><h2 class="header-small-title"><?php the_title() ?></h2></div>
 									<div class="about-course-title"><?php the_field( 'author' ); ?></div>
 								</div>
 								<div class="col-md-2 col-sm-3">
